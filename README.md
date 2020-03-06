@@ -4,7 +4,7 @@ hexo製で、ipfsを使ってホストしています。
 
 ## LICENSE
 `source/*`: CC BY-NC-ND     
-others: MIT
+Others: MIT
 
 ## OSS
 ### Apollo Theme
