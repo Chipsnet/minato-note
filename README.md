@@ -14,7 +14,7 @@ https://github.com/pinggod/hexo-theme-apollo/blob/master/LICENSE
 
 ### hexo
 MIT License     
-Copyright (c) 2012-2019 Tommy Chen
+Copyright (c) 2012-2019 Tommy Chen      
 https://github.com/hexojs/hexo/blob/master/LICENSE
 
 ## DONATE
