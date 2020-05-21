@@ -1,7 +1,8 @@
 ---
 title: だから僕はAtomをやめた
 date: 2020-04-13 08:49:27
-tags:
+tags: ["Atom"]
+categories: ["雑記"]
 ---
 
 僕はAtomが好きだ。      

@@ -1,7 +1,8 @@
 ---
 title: IRIAM使ってみて気づいたこと
 date: 2020-02-23 14:29:26
-tags: 雑記
+tags: ["IRIAM"]
+categories: ["アプリレポート"]
 ---
 
 ## IRIAMとは

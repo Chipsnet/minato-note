@@ -1,7 +1,8 @@
 ---
 title: lubuntu 19.10 LXQtにVNCで接続する
 date: 2020-03-03 21:52:25
-tags: 技術
+tags: ["Lubuntu", "VNC"]
+categories: ["技術"]
 ---
 
 Lubuntu 19.10をインストールしたのですが、そこでVNCを使う際つまずいたので覚書。

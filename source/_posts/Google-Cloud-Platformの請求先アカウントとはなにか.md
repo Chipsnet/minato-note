@@ -1,7 +1,8 @@
 ---
 title: Google Cloud Platformの請求先アカウントとはなにか
 date: 2020-04-29 09:32:10
-tags:
+tags: ["GoogleCloudPlatform"]
+categories: ["技術"]
 ---
 
 

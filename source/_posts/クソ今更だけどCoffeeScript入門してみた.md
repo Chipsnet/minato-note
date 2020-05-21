@@ -1,7 +1,8 @@
 ---
 title: クソ今更だけどCoffeeScript入門してみた
 date: 2020-03-13 05:49:11
-tags: 技術, CoffeeScript
+tags: ["CoffeeScript"]
+categories: ["技術"]
 ---
 
 コミュニティ死んでてマジで終わりそうなCoffeeScriptを書きます。

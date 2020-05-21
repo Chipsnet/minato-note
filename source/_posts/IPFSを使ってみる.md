@@ -1,6 +1,8 @@
 ---
 title: IPFSを使ってみる
 date: 2020-02-15
+tags: ["IPFS"]
+categories: ["技術"]
 ---
 
 ## IPFSって何？

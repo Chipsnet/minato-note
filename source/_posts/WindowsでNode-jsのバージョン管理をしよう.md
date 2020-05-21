@@ -1,7 +1,8 @@
 ---
 title: WindowsでNode.jsのバージョン管理をしよう
 date: 2020-04-15 20:36:24
-tags: Node.js
+tags: ["Node.js"]
+categories: ["技術"]
 ---
 # 前提
 

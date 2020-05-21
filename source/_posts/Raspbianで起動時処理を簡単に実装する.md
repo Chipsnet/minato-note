@@ -1,7 +1,8 @@
 ---
 title: Raspbianで起動時処理を簡単に実装する
 date: 2020-03-02 22:28:49
-tags: 技術
+tags: ["Raspbian", "RaspberryPi"]
+categories: ["技術"]
 ---
 
 
