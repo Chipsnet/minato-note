@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="ノートPCにて、Lubuntu 19.10でカバーを閉じるとWi-Fiが勝手に切断される問題が発生したので解決法を共有します。
+確認
+電源管理から、カバーが閉じても何も起こらない設定にする
+/etc/systemd/logind.confのHandleLidSwitchがignoreになっている
+コ">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Minato86">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Lubuntu 19.10 LXQtでカバーを閉じるとWi-Fiが切断される問題"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="MinatoNote"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Lubuntu 19.10 LXQtでカバーを閉じるとWi-Fiが切断される問題 - MinatoNote</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="MinatoNote" type="application/atom+xml">
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="MinatoNote">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="MinatoNote">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="Categories">
+                    Categories
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about.html" 
+                    title="About">
+                    About
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/contact.html" 
+                    title="Contact">
+                    Contact
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Lubuntu 19.10 LXQtでカバーを閉じるとWi-Fiが切断される問題</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2020-03-05</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Lubuntu/">#Lubuntu</a> <a class="fw3 ph1 dib" href="/tags/LXQt/">#LXQt</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>ノートPCにて、Lubuntu 19.10でカバーを閉じるとWi-Fiが勝手に切断される問題が発生したので解決法を共有します。</p>
+<h1 id="確認"><a href="#確認" class="headerlink" title="確認"></a>確認</h1><ul>
+<li>電源管理から、カバーが閉じても何も起こらない設定にする</li>
+<li><code>/etc/systemd/logind.conf</code>の<code>HandleLidSwitch</code>がignoreになっている<ul>
+<li>コレやってない場合は<a href="https://www.yokoweb.net/2018/05/11/ubuntu18-notepc-suspend-ignore/" target="_blank" rel="noopener">ここ</a>を参考に設定</li>
+</ul>
+</li>
+</ul>
+<h1 id="システムログを見る"><a href="#システムログを見る" class="headerlink" title="システムログを見る"></a>システムログを見る</h1><p>私の場合は上記方法でも解決できなかったので、他の方法を模索しました。<br>まずはシステムログを見ます。</p>
+<p><code>/var/log/dmesg</code>を見ます。</p>
+<p>すると、ログの中に</p>
+<p><code>Started Load/Save RF Kill Switch Status.</code>というログを見つけました。</p>
+<p>どうやらRF Killというものが働いて問題が起こっているようです。</p>
+<h1 id="RF-Killは消せない"><a href="#RF-Killは消せない" class="headerlink" title="RF Killは消せない"></a>RF Killは消せない</h1><p>これ、どういう仕組かは知りませんが、aptから削除しても作動します。<br>おそらくシステムの一部なのかな～と思います。</p>
+<p>Linuxでwlanを使えるように頑張ってみた - Folioscope <a href="http://folioscope.hatenablog.jp/entry/2013/03/26/232921#" target="_blank" rel="noopener">http://folioscope.hatenablog.jp/entry/2013/03/26/232921#</a></p>
+<p>Raspbian Stretch Lite で突然無線LANに接続不能になったとき - 今日も微速転進 <a href="https://a244.hateblo.jp/entry/2017/12/28/024238" target="_blank" rel="noopener">https://a244.hateblo.jp/entry/2017/12/28/024238</a></p>
+<p>上記サイトでは、コレに関する解決法を掲載していました。<br>しかし私はこれでは治りませんでした。</p>
+<h1 id="物理的な原因だった"><a href="#物理的な原因だった" class="headerlink" title="物理的な原因だった"></a>物理的な原因だった</h1><p>原因は、<strong>本体のワイヤレススイッチがONになっていた</strong>でした。</p>
+<p>OFFならわかるけど、ONって・・・・</p>
+<p>わかるわけないだろ！！！！！！！！！！！！！！！！！！！</p>
+<p>と、いうわけで、どういうことかは知りませんが、あっさりと治ってしまいました。<br>コレのせいで2日潰れたけどね</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Lubuntu/">#Lubuntu</a> <a class="fw3 ph1 dib" href="/tags/LXQt/">#LXQt</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Minato86">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/技術/">技術</a>
+        </p>
+    
+        <p>
+            <a href="/categories/技術/不具合/">不具合</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/04/29/Google-Cloud-Platform%E3%81%AE%E8%AB%8B%E6%B1%82%E5%85%88%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%AB%E3%81%8B/">Google Cloud Platformの請求先アカウントとはなにか</a>
+        </p>
+    
+        <p>
+            <a href="/2020/04/18/%E3%82%AF%E3%83%AA%E6%A3%AE%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/">クリ森公式サイトの振り返り</a>
+        </p>
+    
+        <p>
+            <a href="/2020/04/15/Kyash%E3%81%AE%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%8C%E3%83%91%E3%83%B3%E3%82%AF%E3%81%97%E3%81%A6%E3%82%8B/">Kyashのサポートセンターがパンクしてる</a>
+        </p>
+    
+        <p>
+            <a href="/2020/04/15/Windows%E3%81%A7Node-js%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86%E3%82%92%E3%81%97%E3%82%88%E3%81%86/">WindowsでNode.jsのバージョン管理をしよう</a>
+        </p>
+    
+        <p>
+            <a href="/2020/04/13/%E3%81%A0%E3%81%8B%E3%82%89%E5%83%95%E3%81%AFAtom%E3%82%92%E3%82%84%E3%82%81%E3%81%9F/">だから僕はAtomをやめた</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://twitter.com/?lang=en" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/klugjo/hexo-theme-anodyne" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
+                            <i class="fa fa-500px"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:test@example.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                ©2020 Minami Minato
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

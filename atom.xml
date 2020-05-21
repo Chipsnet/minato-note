@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MinatoNote</title>
+  
+  <subtitle>感じたことの全部</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.minato86.me/"/>
+  <updated>2020-05-21T00:28:53.001Z</updated>
+  <id>https://blog.minato86.me/</id>
+  
+  <author>
+    <name>Minato86</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google Cloud Platformの請求先アカウントとはなにか</title>
+    <link href="https://blog.minato86.me/2020/04/29/Google-Cloud-Platform%E3%81%AE%E8%AB%8B%E6%B1%82%E5%85%88%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%AB%E3%81%8B/"/>
+    <id>https://blog.minato86.me/2020/04/29/Google-Cloud-Platform%E3%81%AE%E8%AB%8B%E6%B1%82%E5%85%88%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%AB%E3%81%8B/</id>
+    <published>2020-04-29T00:32:10.000Z</published>
+    <updated>2020-05-21T00:28:53.001Z</updated>
+    
+    <content type="html"><![CDATA[<p>結論からいうと、請求情報が入った箱みたいなやつ</p><h1 id="請求先アカウント、必要ある？"><a href="#請求先アカウント、必要ある？" class="headerlink" title="請求先アカウント、必要ある？"></a>請求先アカウント、必要ある？</h1><ul><li>プロジェクトごとの請求先（クレジットカードとか）が分けられるので管理が楽になるぞ</li><li>請求先アカウントごとに費用のレポートや概要が出るので、プロジェクトごとの費用がわかりやすいぞ</li><li>請求先アカウントごとに予算が決定できるので、柔軟な予算設定ができるぞ</li></ul><p>といった感じでした。</p><p>Azureで言うところのサブスクリプションですね。</p><h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>料金設定や管理を柔軟にするための仕組みでした</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;結論からいうと、請求情報が入った箱みたいなやつ&lt;/p&gt;
+&lt;h1 id=&quot;請求先アカウント、必要ある？&quot;&gt;&lt;a href=&quot;#請求先アカウント、必要ある？&quot; class=&quot;headerlink&quot; title=&quot;請求先アカウント、必要ある？&quot;&gt;&lt;/a&gt;請求先アカウント、必要ある
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="GoogleCloudPlatform" scheme="https://blog.minato86.me/tags/GoogleCloudPlatform/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>クリ森公式サイトの振り返り</title>
+    <link href="https://blog.minato86.me/2020/04/18/%E3%82%AF%E3%83%AA%E6%A3%AE%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/"/>
+    <id>https://blog.minato86.me/2020/04/18/%E3%82%AF%E3%83%AA%E6%A3%AE%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/</id>
+    <published>2020-04-18T13:14:04.000Z</published>
+    <updated>2020-05-21T00:36:10.265Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは。</p><p>先日、「引きこもれ！クリエイターの森」という企画のHPデザインを担当しました。<br>そこでこだわった点をちょっと話したいと思います。</p><p><a href="https://forest.open-w.net/" target="_blank" rel="noopener">https://forest.open-w.net/</a></p><h1 id="スピードと最適化"><a href="#スピードと最適化" class="headerlink" title="スピードと最適化"></a>スピードと最適化</h1><p>今回は、スピードと最適化に重点を置いて制作しました。<br>スピードというのは</p><ul><li>開発スピード</li><li>表示スピード</li></ul><p>以上の2つです。</p><h2 id="開発スピード"><a href="#開発スピード" class="headerlink" title="開発スピード"></a>開発スピード</h2><p>今回のサイトは、デザインの骨組み作成2時間、デザイン5時間、最適化2時間の計9時間で作りました。</p><p>今回の企画が、そもそもかなり短い期間で準備をしなければならなかったので、そのために早めた感じですね。</p><p>開発スピードを上げるために</p><ul><li>極力Bootstrapを使って記述を最小限にする</li><li>無駄な要素を配置しない</li><li>Githubを活用する</li></ul><p>などを行いました。</p><p>最近はGithubの扱いに慣れてきたこともあって、なかなか良い開発ができたと思っています。</p><p>CSSに関しては、Bootstrapを用いることで最小限にして、少ない記述でサイトを組み立てました。</p><h2 id="表示スピード"><a href="#表示スピード" class="headerlink" title="表示スピード"></a>表示スピード</h2><p>今回は、表示スピードを早めるために</p><ul><li>アイコンをSVG化</li><li>画像をWebP化</li><li>自作CSSをベタ書き</li></ul><p>という手段を取りました。</p><p>これにより、Google insightsで100点を取ることができました</p><p><a href="https://gyazo.com/cf8628bf933ffcfafe5fcf4078cbb3e4" target="_blank" rel="noopener"><img src="https://i.gyazo.com/cf8628bf933ffcfafe5fcf4078cbb3e4.gif" alt="Image from Gyazo"></a></p><h1 id="辛かったこと"><a href="#辛かったこと" class="headerlink" title="辛かったこと"></a>辛かったこと</h1><p>めっちゃ急ぎで作ったので超辛かった<br>てかもっとこだわりたかった</p><p>あとサイトに動きがまったくないので、軽量化しつつどうサイトに動きを付けていくかは今後の課題としたいと思ってます（APNGやWebMなども試してみたいな～）</p><h1 id="良かったこと"><a href="#良かったこと" class="headerlink" title="良かったこと"></a>良かったこと</h1><p>めっちゃ急いで開発する知見を得た</p><p>あとはやっぱりWebPは速い<br>あと画質良い</p><h1 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h1><p>今回のサイトは個人的にはやりたいことができて満足でした。<br>今回のサイト、お金もらってないので良かったら寄付してください。</p><p><a href="https://www.patreon.com/minato86" target="_blank" rel="noopener">https://www.patreon.com/minato86</a></p><p><a href="https://brave.com/ope682" target="_blank" rel="noopener">Braveブラウザ</a>を使えば、継続的に支援することもできますよ。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;こんにちは。&lt;/p&gt;
+&lt;p&gt;先日、「引きこもれ！クリエイターの森」という企画のHPデザインを担当しました。&lt;br&gt;そこでこだわった点をちょっと話したいと思います。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://forest.open-w.net/&quot; target=&quot;_bl
+      
+    
+    </summary>
+    
+    
+      <category term="イベントレポート" scheme="https://blog.minato86.me/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
+    
+    
+      <category term="HTML5" scheme="https://blog.minato86.me/tags/HTML5/"/>
+    
+      <category term="CSS" scheme="https://blog.minato86.me/tags/CSS/"/>
+    
+      <category term="WebP" scheme="https://blog.minato86.me/tags/WebP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Kyashのサポートセンターがパンクしてる</title>
+    <link href="https://blog.minato86.me/2020/04/15/Kyash%E3%81%AE%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%8C%E3%83%91%E3%83%B3%E3%82%AF%E3%81%97%E3%81%A6%E3%82%8B/"/>
+    <id>https://blog.minato86.me/2020/04/15/Kyash%E3%81%AE%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%8C%E3%83%91%E3%83%B3%E3%82%AF%E3%81%97%E3%81%A6%E3%82%8B/</id>
+    <published>2020-04-15T11:38:15.000Z</published>
+    <updated>2020-05-21T00:30:32.099Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="返金されなかったのでサポセンに問い合わせした"><a href="#返金されなかったのでサポセンに問い合わせした" class="headerlink" title="返金されなかったのでサポセンに問い合わせした"></a>返金されなかったのでサポセンに問い合わせした</h1><p>なんか最近Kyashのサポートからメールが一切返ってこない。</p><p>Google Domainsで移管手続きをしたら、２回失敗して、Kyashに返金されたはずが一週間経っても返ってこなかったので、Kyashに問い合わせました。</p><p>（Googleからは、カード会社に問い合わせてねって言われた）</p><h1 id="時系列"><a href="#時系列" class="headerlink" title="時系列"></a>時系列</h1><table><thead><tr><th>日付</th><th>内容</th></tr></thead><tbody><tr><td>3月30日</td><td>Kyashサポートにフォームから問い合わせ</td></tr><tr><td>4月7日(8日経過)</td><td>Kyashサポートから、取引番号の確認メール（当日10:39に返信済み）</td></tr><tr><td>4月15日(16日経過)</td><td>未だ返信来ず（イマココ）</td></tr></tbody></table><h1 id="俺だけじゃないっぽい"><a href="#俺だけじゃないっぽい" class="headerlink" title="俺だけじゃないっぽい"></a>俺だけじゃないっぽい</h1><p>Twitterで <code>Kyash サポート</code> って検索すると、かなり多くの「返信こない」ツイートがあった</p><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Kyashは初日に申し込んで1ヶ月以上経過しても届かないし、サポートは返信さえしてこないことがザラだし、カードを誰にも届けていないのに４月頭に還元キャンペーン（新規のみ）するし、4月申込を先に届けるとか頭おかしいんじゃないの？？？</p>&mdash; ばん🦉謎解き (@ban20151031) <a href="https://twitter.com/ban20151031/status/1250286615508860929?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">2020年4月15日</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Kyash、もう何日も連絡返ってこない。。。<br><br>電話番号かわっていつまでもログインできん。のに、請求だけ来る......<br>applepayも対応したのに電話番号変更のせいでSMS認証できず使えないし、、<br><br>還元率も還元方法も年々悪くなってるし、このサポートの悪さだと潮時かも</p>&mdash; darai0512 (@darai_0512) <a href="https://twitter.com/darai_0512/status/1248306655894200321?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">2020年4月9日</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">Kyashサポートの質落ちた</p>&mdash; ひろ@ニコニコネット超会議2020 (@nico_nico_dev) <a href="https://twitter.com/nico_nico_dev/status/1247458262825316352?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">2020年4月7日</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><h1 id="なんでだろうね"><a href="#なんでだろうね" class="headerlink" title="なんでだろうね"></a>なんでだろうね</h1><p>個人的な見解（？）としては、Kyash Cardの発行でめちゃくちゃ忙しいんじゃないかなぁと思ってます。<br>それに加えてコロナで出社もだいぶキツいだろうしね</p><p>とりあえずクソ金欠なので早くお金返してほしいです（）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;返金されなかったのでサポセンに問い合わせした&quot;&gt;&lt;a href=&quot;#返金されなかったのでサポセンに問い合わせした&quot; class=&quot;headerlink&quot; title=&quot;返金されなかったのでサポセンに問い合わせした&quot;&gt;&lt;/a&gt;返金されなかったのでサポセンに問い合わせ
+      
+    
+    </summary>
+    
+    
+      <category term="雑記" scheme="https://blog.minato86.me/categories/%E9%9B%91%E8%A8%98/"/>
+    
+    
+      <category term="Kyash" scheme="https://blog.minato86.me/tags/Kyash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WindowsでNode.jsのバージョン管理をしよう</title>
+    <link href="https://blog.minato86.me/2020/04/15/Windows%E3%81%A7Node-js%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86%E3%82%92%E3%81%97%E3%82%88%E3%81%86/"/>
+    <id>https://blog.minato86.me/2020/04/15/Windows%E3%81%A7Node-js%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86%E3%82%92%E3%81%97%E3%82%88%E3%81%86/</id>
+    <published>2020-04-15T11:36:24.000Z</published>
+    <updated>2020-05-21T00:33:55.162Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><ul><li>Chocolaty導入済み</li><li>Node.js導入済み</li><li>Windows10</li></ul><h1 id="選択肢"><a href="#選択肢" class="headerlink" title="選択肢"></a>選択肢</h1><p>WindowsのNode.jsバージョン管理ツールには２種類ある</p><ul><li>nodist</li><li>nvm-windows</li></ul><p>nvm-windowsとnodist、どちらも人気があるように思える<br>とりあえず今回は頻繁にメンテナンスされている（ように見える）nvm-windowsを使う</p><h1 id="Node-jsのアンインストール"><a href="#Node-jsのアンインストール" class="headerlink" title="Node.jsのアンインストール"></a>Node.jsのアンインストール</h1><p>Node.jsがあるとnvm的に問題がある（nvm側に切り替わらない）らしく、まずはNode.jsをアンインストールしておく。</p><p>これは各自やってください。</p><h1 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h1><p><code>choco install nvm -y</code></p><p>これで勝手にインストールされます。<br>やったぜ</p><h1 id="バージョン切り替え"><a href="#バージョン切り替え" class="headerlink" title="バージョン切り替え"></a>バージョン切り替え</h1><p><code>nvm list available</code> で、インストールできるNodeバージョン（一部）がリストで出ます。</p><p><code>nvm install [version]</code> で指定したバージョンのNode.js（とnpm）がインストールされます。</p><p><code>nvm list</code> で、インストール済みのNode.js一覧が見れます。</p><p><code>nvm use [version]</code> で、インストールしたNode.jsに切り替わります。</p><blockquote><p>nvm use を実行しないと切り替わらないので注意</p></blockquote><h1 id="おわり"><a href="#おわり" class="headerlink" title="おわり"></a>おわり</h1><p>めちゃ簡単でしたね。これでいろいろ楽になりそうです。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Chocolaty導入済み&lt;/li&gt;
+&lt;li&gt;Node.js導入済み&lt;/li&gt;
+&lt;li&gt;Windows10&lt;/li&gt;
+&lt;/ul&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="Node.js" scheme="https://blog.minato86.me/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>だから僕はAtomをやめた</title>
+    <link href="https://blog.minato86.me/2020/04/13/%E3%81%A0%E3%81%8B%E3%82%89%E5%83%95%E3%81%AFAtom%E3%82%92%E3%82%84%E3%82%81%E3%81%9F/"/>
+    <id>https://blog.minato86.me/2020/04/13/%E3%81%A0%E3%81%8B%E3%82%89%E5%83%95%E3%81%AFAtom%E3%82%92%E3%82%84%E3%82%81%E3%81%9F/</id>
+    <published>2020-04-12T23:49:27.000Z</published>
+    <updated>2020-05-21T00:40:46.628Z</updated>
+    
+    <content type="html"><![CDATA[<p>僕はAtomが好きだ。<br>どのエディターよりも愛していた。<br>だからこそ、僕はAtomをやめた。</p><p>….という茶番は置いといて、今回はAtomを使うのをやめた経緯をお話しようと思います。</p><h1 id="Atomが好きだった"><a href="#Atomが好きだった" class="headerlink" title="Atomが好きだった"></a>Atomが好きだった</h1><p>僕はAtomが好きでした。<br>一番最初に導入したエディターがAtomということもありますが、なによりデザインが良い。</p><p>あのマットな感じのデザイン、シンタックスハイライト、そのどれもが僕の好みでした。</p><p>ずっとAtomを使い続けるだろうな、そう思ってました。</p><h1 id="VSCodeを導入した"><a href="#VSCodeを導入した" class="headerlink" title="VSCodeを導入した"></a>VSCodeを導入した</h1><p>VSCodeを導入した第一印象は「ごちゃごちゃしてるなぁ」でした。<br>Atomのように統一感がなく、アイコンもなんかすっげえ意味不明（今は結構マシになってますね）</p><p>私は、ごちゃごちゃしてるのが非常に嫌いです。<br>気が散るし、なにより考えることが増えるからです。<br>そういうのがめっちゃ苦手で、気が散るとすぐ他のモノに意識を奪われてしまうんですよね。</p><h1 id="それでも乗り換えた"><a href="#それでも乗り換えた" class="headerlink" title="それでも乗り換えた"></a>それでも乗り換えた</h1><p>そんな、アンチVSCodeから始まった私ですが、開発を進め、どんどん難しいことに挑戦していくにつれ、徐々にAtomの欠点とVSCodeの利点に気づいていきます。</p><h2 id="オートコンプリートが弱い"><a href="#オートコンプリートが弱い" class="headerlink" title="オートコンプリートが弱い"></a>オートコンプリートが弱い</h2><p>Atomのオートコンプリートが弱すぎます。<br>HTMLとCSSを書いてるときは、VSCodeのほうが弱いと感じる場面があった（今はない）のですが、その他では全敗。</p><p>VSCodeは、標準でほとんどの言語をサポートしているにも関わらず、Atomではほとんどの言語をサポートしていません。開発言語であるJavaScriptやCoffeeScriptでさえ、十分にオートコンプリートしてくれません。</p><p>また、オートコンプリートしてくれる追加パッケージも、AtomよりもVSCodeのほうが多いように感じました。<br>Atomはそもそもオートコンプリートしてくれる追加パッケージが無い場合が多く、どうしようもなかったです。</p><h2 id="バグが多い"><a href="#バグが多い" class="headerlink" title="バグが多い"></a>バグが多い</h2><p>Atomはバグが多いです。</p><p>Atomだと、何回かソフトが落ちる経験をしているんですが、今の所VSCodeでは落ちた試しがありません。</p><h2 id="タスクバーでまとまらない"><a href="#タスクバーでまとまらない" class="headerlink" title="タスクバーでまとまらない"></a>タスクバーでまとまらない</h2><p>Atomはタスクバーでまとまってくれません。<br>pin留めしておくと、pin留めしたアイコンではないところで起動します。</p><p>VSCodeではそんなことはありません。</p><h2 id="Git関連の機能が弱い"><a href="#Git関連の機能が弱い" class="headerlink" title="Git関連の機能が弱い"></a>Git関連の機能が弱い</h2><p>Github製のエディタにも関わらず、Git関連の機能が圧倒的にVSCodeには多いです。<br>また、操作も非常に簡単です。</p><p>なんでこうなったし</p><h2 id="動作が遅い"><a href="#動作が遅い" class="headerlink" title="動作が遅い"></a>動作が遅い</h2><p>自分自身はあまり感じていなかったんですが、比較を見ると、明らかに動作が遅いらしいです。<br>（ぶっちゃけ僕はどっちも変わらないな～と思ってた）</p><h2 id="単純に将来性が危うい"><a href="#単純に将来性が危うい" class="headerlink" title="単純に将来性が危うい"></a>単純に将来性が危うい</h2><p>Atomのコミュニティは、かなり小規模になっていっています。<br>一方、VSCodeのコミュニティはどんどん大規模になっています。</p><p>現在、Githubにおいてコミット数は単純に２倍近くの差になっています。</p><p>issueやpull requestの差も比になりません。</p><p>また、インターネットを見ていると「AtomからVSCodeに乗り換えました」という記事を多く見かけます。<br>一方、「VSCodeからAtomに乗り換えました」という記事は、見たことがありません（多分あるとは思いますが、それほど少ないということです）</p><h2 id="その他細かい所"><a href="#その他細かい所" class="headerlink" title="その他細かい所"></a>その他細かい所</h2><ul><li>gitignoreにファイル追加してもすぐに反映してくれない</li><li>Markdownを自動スクロールしてくれない</li></ul><h1 id="さようなら、Atom"><a href="#さようなら、Atom" class="headerlink" title="さようなら、Atom"></a>さようなら、Atom</h1><p>かなり長い間お世話になったAtomですが、卒業することにしました。<br>もしも上記の問題が解決されたら、また戻ってくるかもしれませんが。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;僕はAtomが好きだ。&lt;br&gt;どのエディターよりも愛していた。&lt;br&gt;だからこそ、僕はAtomをやめた。&lt;/p&gt;
+&lt;p&gt;….という茶番は置いといて、今回はAtomを使うのをやめた経緯をお話しようと思います。&lt;/p&gt;
+&lt;h1 id=&quot;Atomが好きだった&quot;&gt;&lt;a href=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="雑記" scheme="https://blog.minato86.me/categories/%E9%9B%91%E8%A8%98/"/>
+    
+    
+      <category term="Atom" scheme="https://blog.minato86.me/tags/Atom/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CoffeeScript + RaspberryPiでRedisを使ってみる</title>
+    <link href="https://blog.minato86.me/2020/03/13/CoffeeScript-RaspberryPi%E3%81%A7Redis%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/"/>
+    <id>https://blog.minato86.me/2020/03/13/CoffeeScript-RaspberryPi%E3%81%A7Redis%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</id>
+    <published>2020-03-13T05:17:15.000Z</published>
+    <updated>2020-05-21T00:25:53.755Z</updated>
+    
+    <content type="html"><![CDATA[<p>mongoDB入れようと思ったらラズパイでインストールできるバージョン古すぎて使えなかったので<br>CoffeeScriptからRedisを使う覚書</p><h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><ul><li>Server<ul><li>Raspberry Pi Zero（Raspberry Pi 3に置き換え予定）</li><li>OS: Raspbian（debian系）</li></ul></li><li>Client<ul><li>G-GEAR（ゲーミングノート）</li><li>OS: Windows10 Home</li></ul></li><li>CoffeeScript<ul><li>v2.5.1</li></ul></li><li>Node.js<ul><li>v12.13.1</li></ul></li><li>Yarn<ul><li>v1.21.1</li></ul></li></ul><h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><ul><li>CoffeeScript導入済み</li><li>Node.js導入済み</li><li>Yarn(or npm)導入済み</li><li>Raspberry PiとはSSH通信可能</li></ul><h1 id="Redisのインストール"><a href="#Redisのインストール" class="headerlink" title="Redisのインストール"></a>Redisのインストール</h1><h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><p>まずは<code>sudo apt update</code>でアップデート</p><p>その後に<code>sudo apt install redis-server</code>でRedisをインストールします。</p><p><code>ps aux | grep redis</code>でredisが動いているのを確認できます。</p><p><code>redis-cli</code>で対話的に操作することもできます。<br><code>quit</code>で終了できます。</p><h2 id="外部からの接続を許可"><a href="#外部からの接続を許可" class="headerlink" title="外部からの接続を許可"></a>外部からの接続を許可</h2><p><code>sudo nano /etc/redis/redis.conf</code>でコンフィグファイルを開いて編集します。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- bind 127.0.0.1 ::1</span><br><span class="line">+ # bind 127.0.0.1 ::1</span><br></pre></td></tr></table></figure><p>また、パスワードも設定します。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- # requirepass ...</span><br><span class="line">+ requirepass ...</span><br></pre></td></tr></table></figure><p><code>sudo service redis-server restart</code>で再起動します。</p><h1 id="接続する"><a href="#接続する" class="headerlink" title="接続する"></a>接続する</h1><p>まずは接続のためにCoffeeScriptを書きます。<br>接続にはredisパッケージを使います。</p><p><code>yarn add redis</code>でインストールします。</p><p>そして、<code>redis.coffee</code>（名前なんてどうでもいいですけど）を作って認証情報諸々書きます</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">redis = <span class="built_in">require</span> <span class="string">'redis'</span></span><br><span class="line"></span><br><span class="line">config =</span><br><span class="line">    host: <span class="string">'192.168.x.x'</span>,</span><br><span class="line">    port: <span class="string">'6379'</span>,</span><br><span class="line">    password: <span class="string">'xxxx'</span></span><br><span class="line"></span><br><span class="line">client = redis.createClient config</span><br><span class="line"></span><br><span class="line">client.<span class="literal">on</span> <span class="string">'ready'</span>, <span class="function"><span class="params">(err)</span> -&gt;</span></span><br><span class="line">    <span class="built_in">console</span>.log <span class="string">'connected.'</span></span><br></pre></td></tr></table></figure><p>hostにはラズパイのローカルIPアドレスを入れます。<br>passwordにはさっきファイルに書き込んだパスワードを入れます。</p><p>正常に接続できれば<code>connected.</code>と表示されるはずです。</p><h1 id="おわり"><a href="#おわり" class="headerlink" title="おわり"></a>おわり</h1><p>結構簡単でびっくりしました。<br>まだセキュリティのかけらもないので、諸々やっていきたいと思います。</p><p>CoffeeScript書きやすいわ。いいね。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;mongoDB入れようと思ったらラズパイでインストールできるバージョン古すぎて使えなかったので&lt;br&gt;CoffeeScriptからRedisを使う覚書&lt;/p&gt;
+&lt;h1 id=&quot;環境&quot;&gt;&lt;a href=&quot;#環境&quot; class=&quot;headerlink&quot; title=&quot;環境&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+      <category term="データベース" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/"/>
+    
+    
+      <category term="CoffeeScript" scheme="https://blog.minato86.me/tags/CoffeeScript/"/>
+    
+      <category term="RaspberryPi" scheme="https://blog.minato86.me/tags/RaspberryPi/"/>
+    
+      <category term="Redis" scheme="https://blog.minato86.me/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>クソ今更だけどCoffeeScript入門してみた</title>
+    <link href="https://blog.minato86.me/2020/03/13/%E3%82%AF%E3%82%BD%E4%BB%8A%E6%9B%B4%E3%81%A0%E3%81%91%E3%81%A9CoffeeScript%E5%85%A5%E9%96%80%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/"/>
+    <id>https://blog.minato86.me/2020/03/13/%E3%82%AF%E3%82%BD%E4%BB%8A%E6%9B%B4%E3%81%A0%E3%81%91%E3%81%A9CoffeeScript%E5%85%A5%E9%96%80%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</id>
+    <published>2020-03-12T20:49:11.000Z</published>
+    <updated>2020-05-21T00:34:48.664Z</updated>
+    
+    <content type="html"><![CDATA[<p>コミュニティ死んでてマジで終わりそうなCoffeeScriptを書きます。<br>覚書がてら環境構築をしていく。</p><h1 id="なぜ今更？"><a href="#なぜ今更？" class="headerlink" title="なぜ今更？"></a>なぜ今更？</h1><ul><li>Pythonっぽかったから</li><li>JavaScript書くの飽きたから</li><li>単純に面白そうだったから</li></ul><p>やっていこう</p><h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><ul><li>Node.jsがインストールされている<ul><li>今回のバージョンは<code>v12.13.1</code></li></ul></li><li>npmがインストールされている<ul><li>今回のバージョンは<code>v6.12.1</code></li></ul></li></ul><h1 id="CoffeeScriptのインストール"><a href="#CoffeeScriptのインストール" class="headerlink" title="CoffeeScriptのインストール"></a>CoffeeScriptのインストール</h1><p>WindowsならコマンドプロンプトとかPowershell、その他ならTerminalで以下のコマンドを実行するだけ</p><p><code>npm install --global coffeescript</code></p><p>一発で入ってしまう。</p><p>ちなみにそのプロジェクトだけで使いたい場合は<code>--global</code>を<code>--save-dev</code>に読み替えてください。</p><p><code>coffee -v</code>と打ってバージョン情報が出たらOK</p><p>出なかったらシェルを再起動してください。</p><h1 id="やってみる"><a href="#やってみる" class="headerlink" title="やってみる"></a>やってみる</h1><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello = <span class="string">"hello"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log hello</span><br></pre></td></tr></table></figure><p>これでhelloができる（変数作る必要なかったろというツッコミはなしで）</p><p>これを<code>index.coffee</code>で保存、<code>coffee index.coffee</code>で実行できます。</p><h1 id="やってみる②"><a href="#やってみる②" class="headerlink" title="やってみる②"></a>やってみる②</h1><p>APIにリクエストして結果を得るやつやってみます。</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cat_api = <span class="string">'https://aws.random.cat/meow'</span></span><br><span class="line"></span><br><span class="line">request.get &#123;</span><br><span class="line">    uri: cat_api,</span><br><span class="line">    headers: &#123;<span class="string">'Content-type'</span>: <span class="string">'application/json'</span>&#125;,</span><br><span class="line">    json: <span class="literal">true</span></span><br><span class="line">&#125;, <span class="function"><span class="params">(err, req, data)</span> -&gt;</span></span><br><span class="line">    <span class="built_in">console</span>.log data.file</span><br></pre></td></tr></table></figure><p>明らかに書きやすい。</p><h1 id="やってみる③"><a href="#やってみる③" class="headerlink" title="やってみる③"></a>やってみる③</h1><p>DiscordBot作成に使ってみた。</p><h2 id="コマンドリストにprefixつけるやつ"><a href="#コマンドリストにprefixつけるやつ" class="headerlink" title="コマンドリストにprefixつけるやつ"></a>コマンドリストにprefixつけるやつ</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">command_list = [<span class="string">'cat'</span>, <span class="string">'help'</span>]</span><br><span class="line"></span><br><span class="line">command_list_withprefix = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> command_list</span><br><span class="line">    command_list_withprefix.push prefix+i</span><br></pre></td></tr></table></figure><p>Pythonみたいですごく書きやすい</p><p>// 追記 2020-03-13</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command_list_withprefix = command_list.map (element) -&gt; prefix+element</span><br></pre></td></tr></table></figure><p>こっちのほうが賢そう</p><h2 id="Botは弾くやつ"><a href="#Botは弾くやつ" class="headerlink" title="Botは弾くやつ"></a>Botは弾くやつ</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> message.author.bot <span class="keyword">and</span> message.author <span class="keyword">is</span> <span class="keyword">not</span> client.user</span><br><span class="line">    <span class="keyword">return</span></span><br></pre></td></tr></table></figure><p>これもPythonみたいな書き方ができるので、コードがとても読みやすい</p><p>（カッコとかカギカッコだらけだとやっぱり読みづらい）</p><h2 id="開発モードをコマンドライン引数から判断する"><a href="#開発モードをコマンドライン引数から判断する" class="headerlink" title="開発モードをコマンドライン引数から判断する"></a>開発モードをコマンドライン引数から判断する</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devmode = <span class="keyword">if</span> process.argv[<span class="number">2</span>]? <span class="keyword">and</span> process.argv[<span class="number">2</span>] <span class="keyword">is</span> <span class="string">'true'</span> <span class="keyword">then</span> <span class="literal">true</span> <span class="keyword">else</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><p>nullとかundefinedを?って書くだけで判断してくれる神仕様</p><h2 id="開発モードと通常モードでトークンを分ける"><a href="#開発モードと通常モードでトークンを分ける" class="headerlink" title="開発モードと通常モードでトークンを分ける"></a>開発モードと通常モードでトークンを分ける</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">token_dev = <span class="string">'dev token here'</span></span><br><span class="line">token_default = <span class="string">'default token here'</span></span><br><span class="line"></span><br><span class="line">token = <span class="keyword">if</span> devmode <span class="keyword">then</span> token_dev <span class="keyword">else</span> token_default</span><br></pre></td></tr></table></figure><p>こんな簡単に書けちゃうのか・・・・<br>最高すぎ</p><h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1><p>ここまで使いやすい言語とは思わなかったです。<br>めちゃ使いやすかったので（正直今後の保証はないけど）これからはCoffeeScriptで書いてみようと思います。</p><p>また何かCoffeeScriptに関する知見があればここに書いていきます。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;コミュニティ死んでてマジで終わりそうなCoffeeScriptを書きます。&lt;br&gt;覚書がてら環境構築をしていく。&lt;/p&gt;
+&lt;h1 id=&quot;なぜ今更？&quot;&gt;&lt;a href=&quot;#なぜ今更？&quot; class=&quot;headerlink&quot; title=&quot;なぜ今更？&quot;&gt;&lt;/a&gt;なぜ今更？&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="CoffeeScript" scheme="https://blog.minato86.me/tags/CoffeeScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lubuntu 19.10 LXQtでカバーを閉じるとWi-Fiが切断される問題</title>
+    <link href="https://blog.minato86.me/2020/03/05/Lubuntu-19-10-LXQt%E3%81%A7%E3%82%AB%E3%83%90%E3%83%BC%E3%82%92%E9%96%89%E3%81%98%E3%82%8B%E3%81%A8Wi-Fi%E3%81%8C%E5%88%87%E6%96%AD%E3%81%95%E3%82%8C%E3%82%8B%E5%95%8F%E9%A1%8C/"/>
+    <id>https://blog.minato86.me/2020/03/05/Lubuntu-19-10-LXQt%E3%81%A7%E3%82%AB%E3%83%90%E3%83%BC%E3%82%92%E9%96%89%E3%81%98%E3%82%8B%E3%81%A8Wi-Fi%E3%81%8C%E5%88%87%E6%96%AD%E3%81%95%E3%82%8C%E3%82%8B%E5%95%8F%E9%A1%8C/</id>
+    <published>2020-03-05T03:34:04.000Z</published>
+    <updated>2020-05-21T00:32:22.310Z</updated>
+    
+    <content type="html"><![CDATA[<p>ノートPCにて、Lubuntu 19.10でカバーを閉じるとWi-Fiが勝手に切断される問題が発生したので解決法を共有します。</p><h1 id="確認"><a href="#確認" class="headerlink" title="確認"></a>確認</h1><ul><li>電源管理から、カバーが閉じても何も起こらない設定にする</li><li><code>/etc/systemd/logind.conf</code>の<code>HandleLidSwitch</code>がignoreになっている<ul><li>コレやってない場合は<a href="https://www.yokoweb.net/2018/05/11/ubuntu18-notepc-suspend-ignore/" target="_blank" rel="noopener">ここ</a>を参考に設定</li></ul></li></ul><h1 id="システムログを見る"><a href="#システムログを見る" class="headerlink" title="システムログを見る"></a>システムログを見る</h1><p>私の場合は上記方法でも解決できなかったので、他の方法を模索しました。<br>まずはシステムログを見ます。</p><p><code>/var/log/dmesg</code>を見ます。</p><p>すると、ログの中に</p><p><code>Started Load/Save RF Kill Switch Status.</code>というログを見つけました。</p><p>どうやらRF Killというものが働いて問題が起こっているようです。</p><h1 id="RF-Killは消せない"><a href="#RF-Killは消せない" class="headerlink" title="RF Killは消せない"></a>RF Killは消せない</h1><p>これ、どういう仕組かは知りませんが、aptから削除しても作動します。<br>おそらくシステムの一部なのかな～と思います。</p><p>Linuxでwlanを使えるように頑張ってみた - Folioscope <a href="http://folioscope.hatenablog.jp/entry/2013/03/26/232921#" target="_blank" rel="noopener">http://folioscope.hatenablog.jp/entry/2013/03/26/232921#</a></p><p>Raspbian Stretch Lite で突然無線LANに接続不能になったとき - 今日も微速転進 <a href="https://a244.hateblo.jp/entry/2017/12/28/024238" target="_blank" rel="noopener">https://a244.hateblo.jp/entry/2017/12/28/024238</a></p><p>上記サイトでは、コレに関する解決法を掲載していました。<br>しかし私はこれでは治りませんでした。</p><h1 id="物理的な原因だった"><a href="#物理的な原因だった" class="headerlink" title="物理的な原因だった"></a>物理的な原因だった</h1><p>原因は、<strong>本体のワイヤレススイッチがONになっていた</strong>でした。</p><p>OFFならわかるけど、ONって・・・・</p><p>わかるわけないだろ！！！！！！！！！！！！！！！！！！！</p><p>と、いうわけで、どういうことかは知りませんが、あっさりと治ってしまいました。<br>コレのせいで2日潰れたけどね</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;ノートPCにて、Lubuntu 19.10でカバーを閉じるとWi-Fiが勝手に切断される問題が発生したので解決法を共有します。&lt;/p&gt;
+&lt;h1 id=&quot;確認&quot;&gt;&lt;a href=&quot;#確認&quot; class=&quot;headerlink&quot; title=&quot;確認&quot;&gt;&lt;/a&gt;確認&lt;/h1&gt;&lt;u
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+      <category term="不具合" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
+    
+    
+      <category term="Lubuntu" scheme="https://blog.minato86.me/tags/Lubuntu/"/>
+    
+      <category term="LXQt" scheme="https://blog.minato86.me/tags/LXQt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lubuntu 19.10 LXQtにVNCで接続する</title>
+    <link href="https://blog.minato86.me/2020/03/03/lubuntu-19-10-LXQt%E3%81%ABVNC%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B/"/>
+    <id>https://blog.minato86.me/2020/03/03/lubuntu-19-10-LXQt%E3%81%ABVNC%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B/</id>
+    <published>2020-03-03T12:52:25.000Z</published>
+    <updated>2020-05-21T00:32:51.670Z</updated>
+    
+    <content type="html"><![CDATA[<p>Lubuntu 19.10をインストールしたのですが、そこでVNCを使う際つまずいたので覚書。</p><p>いつもは<code>tigervnc-standalone-server</code>というパッケージを利用しているのですが、LXQtに対応していないのかは知りませんがバグりまくって使い物にならなかったので、今回は別の手段でやっていきます。</p><h2 id="X11VNC-Serverを使う"><a href="#X11VNC-Serverを使う" class="headerlink" title="X11VNC Serverを使う"></a>X11VNC Serverを使う</h2><p>まずはインストールです。</p><p><code>sudo apt install x11vnc</code>でx11vncをインストールします。<br>その後、<code>x11vnc -storepasswd</code>と入力するとpasswordを聞かれるので、好きなものを指定してください。</p><p>最後に<code>x11vnc</code>と打って実行すると、vncサーバーが立ち上がります。</p><p>あとは簡単、他のPCからローカルIPを使って接続すればおｋです。</p><p>ただ、terminal閉じるとサーバーも閉じちゃうので、screenとかで実行したほうがいいと思います。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Lubuntu 19.10をインストールしたのですが、そこでVNCを使う際つまずいたので覚書。&lt;/p&gt;
+&lt;p&gt;いつもは&lt;code&gt;tigervnc-standalone-server&lt;/code&gt;というパッケージを利用しているのですが、LXQtに対応していないのかは知りませ
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="Lubuntu" scheme="https://blog.minato86.me/tags/Lubuntu/"/>
+    
+      <category term="VNC" scheme="https://blog.minato86.me/tags/VNC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Raspbianで起動時処理を簡単に実装する</title>
+    <link href="https://blog.minato86.me/2020/03/02/Raspbian%E3%81%A7%E8%B5%B7%E5%8B%95%E6%99%82%E5%87%A6%E7%90%86%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B/"/>
+    <id>https://blog.minato86.me/2020/03/02/Raspbian%E3%81%A7%E8%B5%B7%E5%8B%95%E6%99%82%E5%87%A6%E7%90%86%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B/</id>
+    <published>2020-03-02T13:28:49.000Z</published>
+    <updated>2020-05-21T00:33:29.123Z</updated>
+    
+    <content type="html"><![CDATA[<p>私、めんどくさいのが大嫌いなので、超簡単に起動時処理を実装します。</p><p>ほとんどの記事ではlocal.rcで実装してたんですが、rootで実行されるのとうまくいかなかったので今回はcronで実装します。</p><h2 id="raspi-configの設定"><a href="#raspi-configの設定" class="headerlink" title="raspi-configの設定"></a>raspi-configの設定</h2><p>まずは、ネットが接続されるまで処理を待つ設定をします。</p><p>（これをしないと正常に動作しないときがあるみたい）</p><p><a href="https://gyazo.com/56439f0ba30a869d8c1fe7a73a84fb91" target="_blank" rel="noopener"><img src="https://i.gyazo.com/56439f0ba30a869d8c1fe7a73a84fb91.png" alt="Image from Gyazo"></a></p><p><code>sudo raspi-config</code>を入力</p><p><a href="https://gyazo.com/a948e12d11adbd8f49ad45b2f623b44e" target="_blank" rel="noopener"><img src="https://i.gyazo.com/a948e12d11adbd8f49ad45b2f623b44e.png" alt="Image from Gyazo"></a></p><p>Boot Optionsを選択</p><p><a href="https://gyazo.com/2413e127a71c44c27d86b1096519ef82" target="_blank" rel="noopener"><img src="https://i.gyazo.com/2413e127a71c44c27d86b1096519ef82.png" alt="Image from Gyazo"></a></p><p>Wait for Network at Bootを選択</p><p><a href="https://gyazo.com/98b1ab3d7834ed281b4442edf8779717" target="_blank" rel="noopener"><img src="https://i.gyazo.com/98b1ab3d7834ed281b4442edf8779717.png" alt="Image from Gyazo"></a></p><p>はいを選択</p><p><a href="https://gyazo.com/96f182577ba2f6de15e61e110cda42bb" target="_blank" rel="noopener"><img src="https://i.gyazo.com/96f182577ba2f6de15e61e110cda42bb.png" alt="Image from Gyazo"></a></p><p>了解を選択</p><p>これでOK</p><h2 id="crontabのログ設定"><a href="#crontabのログ設定" class="headerlink" title="crontabのログ設定"></a>crontabのログ設定</h2><p>実行されているか確認するために、ログが残るよう設定しましょう。</p><p><code>sudo nano /etc/rsyslog.conf</code></p><p>でファイルを開き</p><p><code>#cron.* /var/log/cron.log</code></p><p>と書いてある行を見つけて、#を外します（コメントアウト）</p><p><code>cron.* /var/log/cron.log</code></p><p>あとはCtrl+Xを押して、保存するか聞かれるのでyを押す。<br>終わったらログの設定は完了です。</p><h2 id="crontabの設定"><a href="#crontabの設定" class="headerlink" title="crontabの設定"></a>crontabの設定</h2><p>crontabには@rebootという、起動時に処理されるトリガがあり、今回はこれを利用していきます。<br>raspbianには標準で備わっているので、利用していきましょう。</p><p><code>crontab -e</code>で編集します。</p><p>初回はどのエディタを使うか確認されます。nanoでよければEnterを、他がよければ数字で選択してください。<br>（私はnano使いなのでそのままEnter）</p><p>そしたら、nanoが起動して編集可能になるので、一番下に<code>@reboot [実行したいコマンド]</code>を追記してください。<br>今回はVNCサーバーが起動時に立ち上がるようにしたかったので、<code>@reboot vncserver -localhost no</code>を追記しました。</p><p>そしたら保存して、<code>crontab -l</code>で今入力した内容があるかを確認してください。</p><h2 id="再起動"><a href="#再起動" class="headerlink" title="再起動"></a>再起動</h2><p>再起動して実行されていればOK。</p><h2 id="実行されていなかった場合"><a href="#実行されていなかった場合" class="headerlink" title="実行されていなかった場合"></a>実行されていなかった場合</h2><p>しっかりcrontabが動いているかはログで確認できます。</p><p><code>sudo cat /var/log/cron.log</code>を確認して、エラーだったり、入力したコマンドがないようでしたら検索してみてください。</p><p>こんな感じで簡単に実装できました。やったぜ。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;私、めんどくさいのが大嫌いなので、超簡単に起動時処理を実装します。&lt;/p&gt;
+&lt;p&gt;ほとんどの記事ではlocal.rcで実装してたんですが、rootで実行されるのとうまくいかなかったので今回はcronで実装します。&lt;/p&gt;
+&lt;h2 id=&quot;raspi-configの設定&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="RaspberryPi" scheme="https://blog.minato86.me/tags/RaspberryPi/"/>
+    
+      <category term="Raspbian" scheme="https://blog.minato86.me/tags/Raspbian/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ウチのWifiが異様の遅いのでどうにかしてみる</title>
+    <link href="https://blog.minato86.me/2020/03/02/%E3%82%A6%E3%83%81%E3%81%AEWifi%E3%81%8C%E7%95%B0%E6%A7%98%E3%81%AE%E9%81%85%E3%81%84%E3%81%AE%E3%81%A7%E3%81%A9%E3%81%86%E3%81%AB%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/"/>
+    <id>https://blog.minato86.me/2020/03/02/%E3%82%A6%E3%83%81%E3%81%AEWifi%E3%81%8C%E7%95%B0%E6%A7%98%E3%81%AE%E9%81%85%E3%81%84%E3%81%AE%E3%81%A7%E3%81%A9%E3%81%86%E3%81%AB%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/</id>
+    <published>2020-03-02T11:23:28.000Z</published>
+    <updated>2020-05-21T00:34:27.798Z</updated>
+    
+    <content type="html"><![CDATA[<p>私の家には3つのSSIDがあって</p><table><thead><tr><th>SSID</th><th>周波数</th></tr></thead><tbody><tr><td>pr500m-*-3</td><td>5GHz</td></tr><tr><td>pr500m-*-1</td><td>2.4GHz</td></tr><tr><td>MyPlace_*</td><td>2.4GHz</td></tr></tbody></table><p>という3つのWi-FiのSSIDがあります。</p><p>上のpr500mから始まる２つは、NTTから貸し出しされている「PR500MI」というルーター（ONUの機能も持っている）から出ているWi-Fiです。</p><p>下のMyPlaceは、Fonというルーター（ちょっと特殊なやつ）の電波です。<br>（まぁ今回はFonはあんまり関係ないです。）</p><p>そして、<strong>PR500MIの2.4GHzが異様に遅い。</strong></p><p>記憶では、使い始めは結構早かったと思うんですよ。<br>でも異様に遅い。</p><p>速度を測定すると</p><p><a href="https://gyazo.com/466cf818ded75c6a353f9265c87bff73" target="_blank" rel="noopener"><img src="https://i.gyazo.com/466cf818ded75c6a353f9265c87bff73.png" alt="Image from Gyazo"></a></p><p>こんな感じ。</p><p>「家のネットが遅いんじゃないの？」とお思いのアナタ。</p><p><a href="https://gyazo.com/080b3ca15a6ae41f79e22a589cdb1950" target="_blank" rel="noopener"><img src="https://i.gyazo.com/080b3ca15a6ae41f79e22a589cdb1950.png" alt="Image from Gyazo"></a></p><p>5GHzはこんな感じ。</p><p>「流石に差がありすぎじゃない？」</p><p>と思ったので、なんとかしてみようと思います。</p><h2 id="チャンネルの設定"><a href="#チャンネルの設定" class="headerlink" title="チャンネルの設定"></a>チャンネルの設定</h2><p><a href="https://gyazo.com/b5b4309022daad7d04d2184975b74b5d" target="_blank" rel="noopener"><img src="https://i.gyazo.com/b5b4309022daad7d04d2184975b74b5d.png" alt="Image from Gyazo"></a></p><p>とりあえずチャンネルがこのように設定されているので、競合していないチャンネルを探します。</p><p>それに使用するのは、<a href="https://www.microsoft.com/ja-jp/p/wifi-analyzer/9nblggh33n0n#activetab=pivot:overviewtab" target="_blank" rel="noopener">WiFi Analyzer</a>というWindowsアプリケーションです。</p><p><a href="https://gyazo.com/24d88856d55a167bcbefe21f12f949a7" target="_blank" rel="noopener"><img src="https://i.gyazo.com/24d88856d55a167bcbefe21f12f949a7.png" alt="Image from Gyazo"></a></p><p>現在はこのようになっています。</p><p><a href="https://gyazo.com/c3fe9811b97a5ff3d0acf451d610d569" target="_blank" rel="noopener"><img src="https://i.gyazo.com/c3fe9811b97a5ff3d0acf451d610d569.png" alt="Image from Gyazo"></a></p><p>現在はCH1ですが、これは他のWiFiと干渉しているようです。</p><p><a href="https://gyazo.com/25977972f9d5c8d9359fd3d0684512e6" target="_blank" rel="noopener"><img src="https://i.gyazo.com/25977972f9d5c8d9359fd3d0684512e6.png" alt="Image from Gyazo"></a></p><p>ですので、CH3に変更してみました。</p><p>さらに、pr500mには2というアクセスポイントもありますが、通常使用しないので無効にしてみます。</p><p><a href="https://gyazo.com/00ee799fd91fb27ea011bc6ec39ca0f0" target="_blank" rel="noopener"><img src="https://i.gyazo.com/00ee799fd91fb27ea011bc6ec39ca0f0.png" alt="Image from Gyazo"></a></p><p>結果、通信速度が2ケタになるようになりました。</p><p>これでまぁ実用的に使えるようになってしまったので、とりあえず大丈夫としましょう。</p><p>チャンネル変更、結構効果ありました。お試しあれ。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;私の家には3つのSSIDがあって&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;SSID&lt;/th&gt;
+&lt;th&gt;周波数&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;pr500m-*-3&lt;/td&gt;
+&lt;td&gt;5GHz&lt;/td&gt;
+&lt;/tr&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="ネットワーク" scheme="https://blog.minato86.me/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/"/>
+    
+      <category term="Wi-Fi" scheme="https://blog.minato86.me/tags/Wi-Fi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IRIAM使ってみて気づいたこと</title>
+    <link href="https://blog.minato86.me/2020/02/23/IRIAM%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%A6%E6%B0%97%E3%81%A5%E3%81%84%E3%81%9F%E3%81%93%E3%81%A8/"/>
+    <id>https://blog.minato86.me/2020/02/23/IRIAM%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%A6%E6%B0%97%E3%81%A5%E3%81%84%E3%81%9F%E3%81%93%E3%81%A8/</id>
+    <published>2020-02-23T05:29:26.000Z</published>
+    <updated>2020-05-21T00:29:54.290Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="IRIAMとは"><a href="#IRIAMとは" class="headerlink" title="IRIAMとは"></a>IRIAMとは</h2><p>VTuberが気軽に雑談配信できるプラットフォーム。<br>スマホ対応のみ。</p><p>運営会社はミライアカリプロジェクトなどを運営する株式会社ZIZAI（旧株式会社DUO）。</p><h2 id="どうして使ったのか？"><a href="#どうして使ったのか？" class="headerlink" title="どうして使ったのか？"></a>どうして使ったのか？</h2><p>私の知り合いの絵師さんに<a href="https://twitter.com/jyotadayo" target="_blank" rel="noopener">ジョウタ</a>って人がいるんですけど、なんとその人がVTuberの親になったそうで、その人の初配信を見るために入れました。</p><p>VTuberは三日月ルナちゃんって子。<a href="https://twitter.com/3kaduki_runa" target="_blank" rel="noopener">https://twitter.com/3kaduki_runa</a></p><h2 id="クソ重い"><a href="#クソ重い" class="headerlink" title="クソ重い"></a>クソ重い</h2><p>マジで重い。</p><p>というか登録すらできませんでしたね、最初。</p><p><a href="https://gyazo.com/4a3e7b4056e89dbc78b74622d5f28d9f" target="_blank" rel="noopener"><img src="https://i.gyazo.com/4a3e7b4056e89dbc78b74622d5f28d9f.jpg" alt="Image from Gyazo"></a></p><p>5分くらいしたら登録できるようになったんですが、そこからもひどかった。</p><p>配信落ちまくり、音声途切れまくり、モーションデータがぷつぷつなのでライバーさんがガッタガタ。</p><p>う～ん、ひどい。</p><h2 id="バグ多い"><a href="#バグ多い" class="headerlink" title="バグ多い"></a>バグ多い</h2><p>マジでバグが多い。</p><p>すぐエラー出るし、キャラが荒ぶることもあるし、何度タップしても反応しないときもある。</p><p>そして一番ひどかったバグが「課金したのにポイント入ってない」というバグ。</p><p>今まだ運営からの返事待ちなんですが、う～ん、ひどいね。</p><p>コンテンツ的にはとても良いものだと思います。</p><p>また、映像を配信せず、モーションデータと初回ロード時に立ち絵を送るという方法はなかなか良いと思いました。</p><p>ですが、荒削りな部分も多いです。とりあえずサーバー強化してください。重いだけならまぁマシなんですが、実用に耐えないレベルで重いです。</p><p>それから、バグをもう少しなくす努力をしてほしいです。</p><p>今後のアップデートに期待します。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;IRIAMとは&quot;&gt;&lt;a href=&quot;#IRIAMとは&quot; class=&quot;headerlink&quot; title=&quot;IRIAMとは&quot;&gt;&lt;/a&gt;IRIAMとは&lt;/h2&gt;&lt;p&gt;VTuberが気軽に雑談配信できるプラットフォーム。&lt;br&gt;スマホ対応のみ。&lt;/p&gt;
+&lt;p&gt;運営会社
+      
+    
+    </summary>
+    
+    
+      <category term="アプリレポート" scheme="https://blog.minato86.me/categories/%E3%82%A2%E3%83%97%E3%83%AA%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
+    
+    
+      <category term="IRIAM" scheme="https://blog.minato86.me/tags/IRIAM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>はじめての海外でハワイにいったぞ</title>
+    <link href="https://blog.minato86.me/2020/02/22/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E6%B5%B7%E5%A4%96%E3%81%A7%E3%83%8F%E3%83%AF%E3%82%A4%E3%81%AB%E3%81%84%E3%81%A3%E3%81%9F%E3%81%9E/"/>
+    <id>https://blog.minato86.me/2020/02/22/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E6%B5%B7%E5%A4%96%E3%81%A7%E3%83%8F%E3%83%AF%E3%82%A4%E3%81%AB%E3%81%84%E3%81%A3%E3%81%9F%E3%81%9E/</id>
+    <published>2020-02-22T12:48:07.000Z</published>
+    <updated>2020-05-21T00:41:02.685Z</updated>
+    
+    <content type="html"><![CDATA[<p>なんと私の高校は、修学旅行がハワイということでして、今回はじめて海外に行ってきたのでそのレポートをつらつらと書いていきたいと思います。</p><h2 id="初めての海外"><a href="#初めての海外" class="headerlink" title="初めての海外"></a>初めての海外</h2><p>なにせ人生で海の外に出た経験が無いわけですから、海外に行くというのはとても貴重な体験だったわけです。<br>とりあえず海外に行くには必要なものがあります。そう、パスポート。</p><p>というわけで、大都会所沢にあるパスポートセンターみたいなところに行って申請してきました。<br>最近の（？）パスポートはICチップが入っているらしくハイテクですごかったです。</p><p>しかしパスポートは外装が革かなにかの素材でできていると思っていたのですが、普通に紙でした。濡れたら終わりやん。</p><p>他にも準備しなければならないものはたくさんあります。</p><p>パスポートケースとか大量のマスクとかマスクとか…………………………….</p><p>この時期（コロナウイルス）の海外渡航はマジで危険です。</p><h2 id="旅行前の悲劇"><a href="#旅行前の悲劇" class="headerlink" title="旅行前の悲劇"></a>旅行前の悲劇</h2><p><strong>足腫れた。</strong>なんか僕持病でめっちゃ免疫力低いんですけど、そのせいで<em>virus</em>入ってめちゃ腫れました。<br>これが発覚したのが海外渡航前日です。オイ</p><p>特にどうしようもなかったので抗生物質食べてました。結果治ったけど</p><h2 id="成田空港でかい"><a href="#成田空港でかい" class="headerlink" title="成田空港でかい"></a>成田空港でかい</h2><p>今まで羽田しか利用したことなかったんですが、マジででかかったです。</p><p><a href="https://gyazo.com/f7aa25cf4b1984ac2455d4f7d961a356" target="_blank" rel="noopener"><img src="https://i.gyazo.com/f7aa25cf4b1984ac2455d4f7d961a356.jpg" alt="Image from Gyazo"></a></p><p>アルファベットが上に書かれた結構よく見る景色が見れてよかったです。</p><p>この時に、「ここ、何台モニターあるんだろうね！」って友達に言ったら「知らない」って言われました。そりゃそうだ。</p><p><a href="https://gyazo.com/c3854f5a26e34f2e0ae8a30aacd16ed2" target="_blank" rel="noopener"><img src="https://i.gyazo.com/c3854f5a26e34f2e0ae8a30aacd16ed2.jpg" alt="Image from Gyazo"></a></p><p>展望デッキもあり、柵の間から飛行機を盗撮することができました。</p><p>一眼レフとかで撮影する人向けに、それっぽい穴がちゃんと作られてて、優しいなぁと思いました。</p><p><a href="https://gyazo.com/a26a19e22f80361ba2bfc3edb2f03052" target="_blank" rel="noopener"><img src="https://i.gyazo.com/a26a19e22f80361ba2bfc3edb2f03052.jpg" alt="Image from Gyazo"></a></p><p>↑中国行のほとんどの飛行機が欠航になっていた</p><h2 id="セキュリティクソ怖い"><a href="#セキュリティクソ怖い" class="headerlink" title="セキュリティクソ怖い"></a>セキュリティクソ怖い</h2><p>なんかめっちゃ怖い人が怖い目つきしてこっち見とる。めっちゃ怖い。（いやそういうお仕事なのは知っているけども）</p><p>成田空港のセキュリティチェックはめちゃくちゃ優秀で、かばんの中に全てブチ込んでても全部機械が勝手に検査して、弾くやつは弾いてくれるみたいです。優秀すぎる。</p><p>ちなみに友達は小学校から７年間連れ添ったハサミ没収されてました。ウケる。</p><p>僕は抗生物質とか常備薬とか入ってたんですが、普通にスルーされてました。違法じゃなくてよかったです。</p><h2 id="出国審査"><a href="#出国審査" class="headerlink" title="出国審査"></a>出国審査</h2><p>出国審査、何があるんだろうと思ったら、パスポートスキャンして顔撮影されるだけでした。<br>今の時代は出国も無人なんですね。すげえ。</p><p>出国審査抜けた先で友達とマック食べてたんですけど、なんかそこに</p><p><a href="https://gyazo.com/2a4821178c3d3ef14aa495394c4f7f55" target="_blank" rel="noopener"><img src="https://i.gyazo.com/2a4821178c3d3ef14aa495394c4f7f55.jpg" alt="Image from Gyazo"></a></p><p>Dust MEって書いてあって面白かったです。</p><h2 id="出国・離陸"><a href="#出国・離陸" class="headerlink" title="出国・離陸"></a>出国・離陸</h2><p>いよいよ出国です。</p><p>ちなみに私が乗った飛行機はANAのやつでした。モロチンエコノミー</p><p><a href="https://gyazo.com/c5beac143f9eabb71e17706cbe1966ed" target="_blank" rel="noopener"><img src="https://i.gyazo.com/c5beac143f9eabb71e17706cbe1966ed.jpg" alt="Image from Gyazo"></a></p><p>間隔が狭く、これで６時間過ごすのか～と思いました。<br>しかもF席だったので真ん中です。ゴミカス</p><p><a href="https://gyazo.com/2ab1560b2f9c060a641e6cc813f342b2" target="_blank" rel="noopener"><img src="https://i.gyazo.com/2ab1560b2f9c060a641e6cc813f342b2.jpg" alt="Image from Gyazo"></a></p><p>一番に機内に入ったら、誰もいなくてすごかった</p><p>さて、その後無事に離陸しまして、1.5時間くらいしたら機内食が出てきました</p><p><a href="https://gyazo.com/c8919b2fda409a67562c5fbeb2ea0b20" target="_blank" rel="noopener"><img src="https://i.gyazo.com/c8919b2fda409a67562c5fbeb2ea0b20.jpg" alt="Image from Gyazo"></a></p><p>タンドリーチキンみたいなやつです。<br>エビアレルギーです！！！！って事前に言ったらこうなりました。</p><p>隣の人はとんかつみたいなの食べてたのでそっちのほうがよかったな～と思いました。</p><p>あと、ぶどうジュースがめちゃくちゃ濃くてびっくりしました。</p><p><a href="https://gyazo.com/763239e6586ce5f16eb3d673e3b59ca5" target="_blank" rel="noopener"><img src="https://i.gyazo.com/763239e6586ce5f16eb3d673e3b59ca5.jpg" alt="Image from Gyazo"></a></p><p>機内のモニターでは、飛行機からの景色がカメラで見えましたが、肝心の離陸・着陸シーンではカメラがOFFになってて悲しくなりました。そこ見せてよ。</p><h2 id="ハワイに到達"><a href="#ハワイに到達" class="headerlink" title="ハワイに到達"></a>ハワイに到達</h2><p>ついに海外に来ました。全然実感がありませんでしたが、誘導のおっちゃんがめちゃ英語だったので「ここハワイだわ」となりました。</p><p><a href="https://gyazo.com/f4969b9bb46c3507c6f8efbedf7e03fe" target="_blank" rel="noopener"><img src="https://i.gyazo.com/f4969b9bb46c3507c6f8efbedf7e03fe.jpg" alt="Image from Gyazo"></a></p><p>はじめてハワイで見た景色です。<br>ハワイっぽい木がありました。</p><p>空港のスポットから到着口をつなぐバスの名前が「Wiki Wiki Shuttle」だったので、「Wikipediaの語源じゃん！！！！！」と一人で騒いでいました。</p><h2 id="この木なんの木"><a href="#この木なんの木" class="headerlink" title="この木なんの木"></a>この木なんの木</h2><p><a href="https://gyazo.com/f5f95aad7983a6a42399ce2a1f85b0b8" target="_blank" rel="noopener"><img src="https://i.gyazo.com/f5f95aad7983a6a42399ce2a1f85b0b8.jpg" alt="Image from Gyazo"></a></p><p>通称日立の木というらしいです。<br>この木なんの木という曲と共に、長年日立のコマーシャルで愛されている木です。</p><p>そして現在、この木たちを整備するための費用を日立が出資しているそうです。</p><p>とても良い関係ですね～。すばらしい</p><h2 id="ホテル"><a href="#ホテル" class="headerlink" title="ホテル"></a>ホテル</h2><p>プリンスワイキキというところに泊まりました（クソ高いとこです）</p><p><a href="https://gyazo.com/a092a59bcdf170ca9528294860477440" target="_blank" rel="noopener"><img src="https://i.gyazo.com/a092a59bcdf170ca9528294860477440.jpg" alt="Image from Gyazo"></a></p><p>テレビがでかい</p><p>ネットフリックス見れるやん！！と思ったら契約必須でした。なんでよ。</p><p><a href="https://gyazo.com/2c0ee0f38e7573ccea6b115c3cd202cc" target="_blank" rel="noopener"><img src="https://i.gyazo.com/2c0ee0f38e7573ccea6b115c3cd202cc.jpg" alt="Image from Gyazo"></a></p><p>夕飯です。<br>極端に甘いor極端にしょっぱいの味付けで、とてもアメリカっぽいと思いました。<br>そもそもアメリカをしらんけど</p><p><a href="https://gyazo.com/4d5e9e0afe02f79da1b40822e6dcc11f" target="_blank" rel="noopener"><img src="https://i.gyazo.com/4d5e9e0afe02f79da1b40822e6dcc11f.jpg" alt="Image from Gyazo"></a></p><p>ロビーです。<br>上に付け爪みたいなやつがたくさんあってすごかったです。</p><p><a href="https://gyazo.com/4539d3b5930a5bce3a89dae9b6306475" target="_blank" rel="noopener"><img src="https://i.gyazo.com/4539d3b5930a5bce3a89dae9b6306475.jpg" alt="Image from Gyazo"></a></p><p>これは帰りに撮影した外見</p><p>ちなみにこのホテルは日本の西武グループが所有しているらしいです。<br>だから西武ライオンズの選手がけっこう泊まってるらしいですよ（ライオンズファンのやつが言ってた）。</p><h2 id="他行ったところ"><a href="#他行ったところ" class="headerlink" title="他行ったところ"></a>他行ったところ</h2><h3 id="田中オブ東京"><a href="#田中オブ東京" class="headerlink" title="田中オブ東京"></a>田中オブ東京</h3><p>とても日本的な（名前の）鉄板焼屋</p><p><a href="https://gyazo.com/48c7bea9719d7e39410fd96654eecd86" target="_blank" rel="noopener"><img src="https://i.gyazo.com/48c7bea9719d7e39410fd96654eecd86.jpg" alt="Image from Gyazo"></a></p><h3 id="ワイキキビーチ"><a href="#ワイキキビーチ" class="headerlink" title="ワイキキビーチ"></a>ワイキキビーチ</h3><p><a href="https://gyazo.com/aaf60ff2a2573781b1751c79a32a1c4b" target="_blank" rel="noopener"><img src="https://i.gyazo.com/aaf60ff2a2573781b1751c79a32a1c4b.jpg" alt="Image from Gyazo"></a></p><p>青くてとても綺麗だった</p><p>おっさんが違法薬物吸っててすごかった（現地の大学生が「違法薬物だから近づくなよ～」って言ってた）。</p><h3 id="なんちゃら水族館"><a href="#なんちゃら水族館" class="headerlink" title="なんちゃら水族館"></a>なんちゃら水族館</h3><p><a href="https://gyazo.com/03396cc82dcf2b7a55252bdc5b475aeb" target="_blank" rel="noopener"><img src="https://i.gyazo.com/03396cc82dcf2b7a55252bdc5b475aeb.jpg" alt="Image from Gyazo"></a></p><p>とくに見どころがなかった</p><h3 id="ダイヤモンドヘッド"><a href="#ダイヤモンドヘッド" class="headerlink" title="ダイヤモンドヘッド"></a>ダイヤモンドヘッド</h3><p><a href="https://gyazo.com/769e38b4c0da812c38cd5d406c5ac58d" target="_blank" rel="noopener"><img src="https://i.gyazo.com/769e38b4c0da812c38cd5d406c5ac58d.jpg" alt="Image from Gyazo"></a></p><p><a href="https://gyazo.com/896ba1536fe1a80afca384e0fc1bf17c" target="_blank" rel="noopener"><img src="https://i.gyazo.com/896ba1536fe1a80afca384e0fc1bf17c.jpg" alt="Image from Gyazo"></a></p><p>死ぬほどキツかったけどいい景色が見れたのでよかったです。</p><h3 id="ポリネシアン文化センター"><a href="#ポリネシアン文化センター" class="headerlink" title="ポリネシアン文化センター"></a>ポリネシアン文化センター</h3><p><a href="https://gyazo.com/03a785d442cbd4bde9ce461255a4f68f" target="_blank" rel="noopener"><img src="https://i.gyazo.com/03a785d442cbd4bde9ce461255a4f68f.jpg" alt="Image from Gyazo"></a></p><p>なんかいろいろ展示されてました</p><h2 id="体調崩した"><a href="#体調崩した" class="headerlink" title="体調崩した"></a>体調崩した</h2><p>そんなこんなで観光してたら、体調崩しました….orz</p><p>たぶん足腫れてるのに無理してダイヤモンドヘッド登ったり、慣れない食事を食べたり、<del><a href="https://twitter.com/3kaduki_runa" target="_blank" rel="noopener">推しのVTuber</a>の配信をホノルル現地時間3時（日本時間22時）で見たり</del>したからだと思います。</p><p>朝飯にオレンジジュースを飲んだんですが、オレンジジュースすら吐いちゃって、熱出て、何も食えなくてヤバかったです。解熱剤飲んで寝たら数時間でなおったけど。</p><h2 id="帰国"><a href="#帰国" class="headerlink" title="帰国"></a>帰国</h2><p><a href="https://gyazo.com/cc5f0ffbcd875c63390c169f65a3f8e6" target="_blank" rel="noopener"><img src="https://i.gyazo.com/cc5f0ffbcd875c63390c169f65a3f8e6.jpg" alt="Image from Gyazo"></a></p><p>ハワイ仕様の嵐ジェットがいてすごかった。</p><p><a href="https://gyazo.com/cfc07d7cb4efd69d1f3973ea2f2efc08" target="_blank" rel="noopener"><img src="https://i.gyazo.com/cfc07d7cb4efd69d1f3973ea2f2efc08.jpg" alt="Image from Gyazo"></a></p><p>情報を表示するモニターが死ぬほどダサかった。<br>やっぱり日本のデザインセンスはすげぇと思いましたね。</p><p><a href="https://gyazo.com/74d974e6d4d3df113045b89dbe4508cf" target="_blank" rel="noopener"><img src="https://i.gyazo.com/74d974e6d4d3df113045b89dbe4508cf.jpg" alt="Image from Gyazo"></a></p><p>お腹が空いたので、ワッパージュニアを食べましたが、このあとめちゃくちゃ機内食が出て死んでしまったので、皆様はお気をつけください。</p><p><a href="https://gyazo.com/787d57f6335013d450f7242416f10919" target="_blank" rel="noopener"><img src="https://i.gyazo.com/787d57f6335013d450f7242416f10919.jpg" alt="Image from Gyazo"></a></p><p>というわけでサイナラ。</p><h2 id="感想・まとめ"><a href="#感想・まとめ" class="headerlink" title="感想・まとめ"></a>感想・まとめ</h2><p>というわけで初めての海外はこんな感じでした。</p><ul><li>飯でかい</li><li>観光地もでかい</li><li>どこも陽気</li><li>いろいろ大雑把</li><li>スーパー（ウォルマートに行ったよ）の規模がエグい</li></ul><p>こんな感じです。</p><p>「海外に行くと日本のありがたみがわかる」ということを聞いたのですが、たしかにそうでした。<br>日本清潔だし、飯うまいし、何より安心感が違う。（日本人だからネ）</p><p>海外の空港は日本よりバカでかくて進んでると思っていたのですが、ハワイ空港（ダニエル・K・イノウエ空港）は少なくとも、日本よりも遅れているなぁと感じました。</p><p>日本のほうが清潔だし、設備も新しいです。</p><p>設備といえば、最初に乗ったwiki wiki Shuttleは二台が連結したバスだったんですが、連結部分がマジで引きちぎれそうになってて、大雑把だなぁ～～と思いました。</p><p>これも設備なんですが、ハワイの帰りにセキュリティチェック受けたとき、日本のセキュリティチェックは機械が自動でやってたんですが、ハワイのやつは、機械でスキャンされたやつを職員が目視で判断しててクソ遅かったです。</p><p>しかも、張り紙に「Please remove all electrics lager than cell phone」みたいなことが書いてあって、これ、「スマホ（携帯？）よりでけぇ電子機器全部出せよ」っていう意味なんですが、PC持ってたのでめんどくさかったです。</p><p>とりあえずそのくらいだったかな。</p><p>自然が綺麗で、人も優しかったのでとても楽しかった。<br>ありがとうハワイ。</p><p>いつかはアメリカ本土に行きたいですね。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;なんと私の高校は、修学旅行がハワイということでして、今回はじめて海外に行ってきたのでそのレポートをつらつらと書いていきたいと思います。&lt;/p&gt;
+&lt;h2 id=&quot;初めての海外&quot;&gt;&lt;a href=&quot;#初めての海外&quot; class=&quot;headerlink&quot; title=&quot;初めての海
+      
+    
+    </summary>
+    
+    
+      <category term="旅行" scheme="https://blog.minato86.me/categories/%E6%97%85%E8%A1%8C/"/>
+    
+    
+      <category term="ハワイ" scheme="https://blog.minato86.me/tags/%E3%83%8F%E3%83%AF%E3%82%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IPFSを使ってみる</title>
+    <link href="https://blog.minato86.me/2020/02/15/IPFS%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/"/>
+    <id>https://blog.minato86.me/2020/02/15/IPFS%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</id>
+    <published>2020-02-14T15:00:00.000Z</published>
+    <updated>2020-05-21T00:29:13.362Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="IPFSって何？"><a href="#IPFSって何？" class="headerlink" title="IPFSって何？"></a>IPFSって何？</h2><blockquote><p>インターネット上の情報も同様です。同一の内容であればどのサーバ上から取得したか？どの名前のファイルから取得したかなどという入手先はほとんどの場合で重要ではありません。そのためその情報の「場所」ではなく、「こういう内容の情報」というコンテンツの内容自体を直接指定して情報にアクセスする仕組みを考えることができます。これが「コンテンツ指向」になります。</p><p>引用: <a href="https://ipfs-book.decentralized-web.jp/what_is_ipfs/" target="_blank" rel="noopener">https://ipfs-book.decentralized-web.jp/what_is_ipfs/</a></p></blockquote><p>要するに、トレントみたいに世界に大量のサーバー置いてウェブサイトとかアプリケーションとか公開しようぜ！って感じですかね。</p><p>→つまりIPFS入れてる人みんながサーバーになるということ</p><p>「セキュリティは？」って思うかもしれませんが、そこはハッシュ値で厳重に管理されているので改ざんの心配はなさそうです。</p><h2 id="使ってみよう"><a href="#使ってみよう" class="headerlink" title="使ってみよう"></a>使ってみよう</h2><p><a href="https://gyazo.com/79b6f2f7b06c994839923c843e239d8b" target="_blank" rel="noopener"><img src="https://i.gyazo.com/79b6f2f7b06c994839923c843e239d8b.png" alt="Image from Gyazo"></a></p><p><a href="https://github.com/ipfs-shipyard/ipfs-desktop" target="_blank" rel="noopener">公式のGithubページ</a>から実行ファイルを落としましょう<br>ちなみにこの他にもLinuxようにtar, debなどのファイルがあります。</p><p><a href="https://gyazo.com/703e5b4b43134977390b59c60c5de8c3" target="_blank" rel="noopener"><img src="https://i.gyazo.com/703e5b4b43134977390b59c60c5de8c3.png" alt="Image from Gyazo"></a></p><p>インストールは全部日本語です。<br>基本次へでおｋ</p><p><a href="https://gyazo.com/b1dee1b05e5a3f694d8f72237edc8a92" target="_blank" rel="noopener"><img src="https://i.gyazo.com/b1dee1b05e5a3f694d8f72237edc8a92.png" alt="Image from Gyazo"></a></p><p>初期状態ではIPFSのファイルPINに入っていました。</p><p><a href="https://gyazo.com/6d5941dab092bdc1bee7a551443b5fac" target="_blank" rel="noopener"><img src="https://i.gyazo.com/6d5941dab092bdc1bee7a551443b5fac.png" alt="Image from Gyazo"></a></p><p>こんな感じで接続状態も確認できました。</p><p><a href="https://gyazo.com/c5a691489c6d9733f7517521c4a392b9" target="_blank" rel="noopener"><img src="https://i.gyazo.com/c5a691489c6d9733f7517521c4a392b9.png" alt="Image from Gyazo"></a></p><p>2分ほどでアクセスがここまで増えました。<br>大きいファイルをホストするとより多くの帯域を使いそうですが、今の所は許容範囲ですかね…</p><p><a href="https://gyazo.com/a09f073101d6d7ff5dff4aefdad836f9" target="_blank" rel="noopener"><img src="https://i.gyazo.com/a09f073101d6d7ff5dff4aefdad836f9.png" alt="Image from Gyazo"></a></p><p>残念ながら日本語対応はしてませんでした。</p><h2 id="ウェブサイトを公開する"><a href="#ウェブサイトを公開する" class="headerlink" title="ウェブサイトを公開する"></a>ウェブサイトを公開する</h2><p><a href="https://gyazo.com/264b9234d28696eb76b380b85a836348" target="_blank" rel="noopener"><img src="https://i.gyazo.com/264b9234d28696eb76b380b85a836348.png" alt="Image from Gyazo"></a></p><p>こんな感じのカスみたいなサイトを作りました</p><p><a href="https://gyazo.com/e1c0233a77faafe794508ae0549de473" target="_blank" rel="noopener"><img src="https://i.gyazo.com/e1c0233a77faafe794508ae0549de473.png" alt="Image from Gyazo"></a></p><p>ローカルで表示するとこうです。<br>これを今から公開しましょう。</p><p><a href="https://gyazo.com/a0f169a400343f84dfb5fca501ef8e20" target="_blank" rel="noopener"><img src="https://i.gyazo.com/a0f169a400343f84dfb5fca501ef8e20.png" alt="Image from Gyazo"></a></p><p>さっきのクソサイトはこのtestフォルダに入っています。</p><p><code>ipfs add -r test/</code>を実行しすると、フォルダ内部のすべてのファイルをアップロードします。</p><p>この際、前まで必要だったpinする動作が不要になっているようです。</p><p><a href="https://gyazo.com/12e481d21c934764ae3a235cae47ad46" target="_blank" rel="noopener"><img src="https://i.gyazo.com/12e481d21c934764ae3a235cae47ad46.png" alt="Image from Gyazo"></a></p><p>このように、勝手にpinされていました。</p><p><a href="https://gyazo.com/e3af1d8138ec828b7af1715c72b7da89" target="_blank" rel="noopener"><img src="https://i.gyazo.com/e3af1d8138ec828b7af1715c72b7da89.png" alt="Image from Gyazo"></a></p><p>右クリックしてリンクを取得しましょう</p><p><a href="https://gyazo.com/252599ff9bc54c2c8d5e14269f62a626" target="_blank" rel="noopener"><img src="https://i.gyazo.com/252599ff9bc54c2c8d5e14269f62a626.png" alt="Image from Gyazo"></a></p><p>ipfs.ioのドメインでホストされていることが確認できました。</p><h2 id="独自ドメインを使ってみる"><a href="#独自ドメインを使ってみる" class="headerlink" title="独自ドメインを使ってみる"></a>独自ドメインを使ってみる</h2><p>このクソサイトに独自ドメインを付けてみましょう。<br>今回はtest.m86.workを付けたいと思います。</p><p>ドメインの設定ですが、オススメはCloudFlareです。<br>理由はSSL通信ができるから。</p><p>ネームサーバーを変更していない人はCloudFlareに変更してもいいかも</p><p><a href="https://gyazo.com/7113676df233505370063c41ba2fb577" target="_blank" rel="noopener"><img src="https://i.gyazo.com/7113676df233505370063c41ba2fb577.png" alt="Image from Gyazo"></a></p><p>まずはCNAME。Nameに設定したいドメインを、Targetには<code>ipfs.io</code>を指定。<br>SSL通信を利用したい人はProxiedにしておきましょう。</p><p><img src="https://gyazo.com/0a6d0340d09e89e5df0cc561557f392d.png" alt="img"><br><a href="https://gyazo.com/0a6d0340d09e89e5df0cc561557f392d" target="_blank" rel="noopener">https://gyazo.com/0a6d0340d09e89e5df0cc561557f392d</a></p><p>次にTXTですが、こちらのipfs.io以下をコピーしてください。</p><p><a href="https://gyazo.com/9bc05a501ae26da076085d7ffb5a9d89" target="_blank" rel="noopener"><img src="https://i.gyazo.com/9bc05a501ae26da076085d7ffb5a9d89.png" alt="Image from Gyazo"></a></p><p>次にNameを好きなドメイン、Contantに<code>dnslink=[さっきコピーしたやつ]</code>を貼ります。</p><p>これで</p><p><a href="https://gyazo.com/a8fef6f65ff289b98b53d3f9de4bd89b" target="_blank" rel="noopener"><img src="https://i.gyazo.com/a8fef6f65ff289b98b53d3f9de4bd89b.png" alt="Image from Gyazo"></a></p><p>test.m86.workでクソサイトに接続できるようになりました。</p><p>SSLもやりましょう。</p><p><a href="https://gyazo.com/88dc719b12a8e5abb2d94956d433a2e1" target="_blank" rel="noopener"><img src="https://i.gyazo.com/88dc719b12a8e5abb2d94956d433a2e1.png" alt="Image from Gyazo"></a></p><p>といってもここをflexibleにするだけです。</p><h2 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h2><p>なんとなく使ってみましたが、普通に楽しかったです。<br>いろいろできそうなのでまたいじっていきたいと思ってます。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;IPFSって何？&quot;&gt;&lt;a href=&quot;#IPFSって何？&quot; class=&quot;headerlink&quot; title=&quot;IPFSって何？&quot;&gt;&lt;/a&gt;IPFSって何？&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;インターネット上の情報も同様です。同一の内容であればどのサーバ上か
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="IPFS" scheme="https://blog.minato86.me/tags/IPFS/"/>
+    
+  </entry>
+  
+</feed>

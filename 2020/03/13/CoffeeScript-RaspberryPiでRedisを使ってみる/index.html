@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="mongoDB入れようと思ったらラズパイでインストールできるバージョン古すぎて使えなかったのでCoffeeScriptからRedisを使う覚書
+環境
+Server
+Raspberry Pi Zero（Raspberry Pi 3に置き換え予定）
+OS: Raspbian（debian系）
+
+
+Cli">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Minato86">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="CoffeeScript + RaspberryPiでRedisを使ってみる"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="MinatoNote"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>CoffeeScript + RaspberryPiでRedisを使ってみる - MinatoNote</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="MinatoNote" type="application/atom+xml">
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="MinatoNote">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="MinatoNote">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="Categories">
+                    Categories
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about.html" 
+                    title="About">
+                    About
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/contact.html" 
+                    title="Contact">
+                    Contact
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">CoffeeScript + RaspberryPiでRedisを使ってみる</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2020-03-13</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/CoffeeScript/">#CoffeeScript</a> <a class="fw3 ph1 dib" href="/tags/RaspberryPi/">#RaspberryPi</a> <a class="fw3 ph1 dib" href="/tags/Redis/">#Redis</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>mongoDB入れようと思ったらラズパイでインストールできるバージョン古すぎて使えなかったので<br>CoffeeScriptからRedisを使う覚書</p>
+<h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><ul>
+<li>Server<ul>
+<li>Raspberry Pi Zero（Raspberry Pi 3に置き換え予定）</li>
+<li>OS: Raspbian（debian系）</li>
+</ul>
+</li>
+<li>Client<ul>
+<li>G-GEAR（ゲーミングノート）</li>
+<li>OS: Windows10 Home</li>
+</ul>
+</li>
+<li>CoffeeScript<ul>
+<li>v2.5.1</li>
+</ul>
+</li>
+<li>Node.js<ul>
+<li>v12.13.1</li>
+</ul>
+</li>
+<li>Yarn<ul>
+<li>v1.21.1</li>
+</ul>
+</li>
+</ul>
+<h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><ul>
+<li>CoffeeScript導入済み</li>
+<li>Node.js導入済み</li>
+<li>Yarn(or npm)導入済み</li>
+<li>Raspberry PiとはSSH通信可能</li>
+</ul>
+<h1 id="Redisのインストール"><a href="#Redisのインストール" class="headerlink" title="Redisのインストール"></a>Redisのインストール</h1><h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><p>まずは<code>sudo apt update</code>でアップデート</p>
+<p>その後に<code>sudo apt install redis-server</code>でRedisをインストールします。</p>
+<p><code>ps aux | grep redis</code>でredisが動いているのを確認できます。</p>
+<p><code>redis-cli</code>で対話的に操作することもできます。<br><code>quit</code>で終了できます。</p>
+<h2 id="外部からの接続を許可"><a href="#外部からの接続を許可" class="headerlink" title="外部からの接続を許可"></a>外部からの接続を許可</h2><p><code>sudo nano /etc/redis/redis.conf</code>でコンフィグファイルを開いて編集します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- bind 127.0.0.1 ::1</span><br><span class="line">+ # bind 127.0.0.1 ::1</span><br></pre></td></tr></table></figure>
+
+<p>また、パスワードも設定します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- # requirepass ...</span><br><span class="line">+ requirepass ...</span><br></pre></td></tr></table></figure>
+
+<p><code>sudo service redis-server restart</code>で再起動します。</p>
+<h1 id="接続する"><a href="#接続する" class="headerlink" title="接続する"></a>接続する</h1><p>まずは接続のためにCoffeeScriptを書きます。<br>接続にはredisパッケージを使います。</p>
+<p><code>yarn add redis</code>でインストールします。</p>
+<p>そして、<code>redis.coffee</code>（名前なんてどうでもいいですけど）を作って認証情報諸々書きます</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">redis = <span class="built_in">require</span> <span class="string">'redis'</span></span><br><span class="line"></span><br><span class="line">config =</span><br><span class="line">    host: <span class="string">'192.168.x.x'</span>,</span><br><span class="line">    port: <span class="string">'6379'</span>,</span><br><span class="line">    password: <span class="string">'xxxx'</span></span><br><span class="line"></span><br><span class="line">client = redis.createClient config</span><br><span class="line"></span><br><span class="line">client.<span class="literal">on</span> <span class="string">'ready'</span>, <span class="function"><span class="params">(err)</span> -&gt;</span></span><br><span class="line">    <span class="built_in">console</span>.log <span class="string">'connected.'</span></span><br></pre></td></tr></table></figure>
+
+<p>hostにはラズパイのローカルIPアドレスを入れます。<br>passwordにはさっきファイルに書き込んだパスワードを入れます。</p>
+<p>正常に接続できれば<code>connected.</code>と表示されるはずです。</p>
+<h1 id="おわり"><a href="#おわり" class="headerlink" title="おわり"></a>おわり</h1><p>結構簡単でびっくりしました。<br>まだセキュリティのかけらもないので、諸々やっていきたいと思います。</p>
+<p>CoffeeScript書きやすいわ。いいね。</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/CoffeeScript/">#CoffeeScript</a> <a class="fw3 ph1 dib" href="/tags/RaspberryPi/">#RaspberryPi</a> <a class="fw3 ph1 dib" href="/tags/Redis/">#Redis</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Minato86">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/技術/">技術</a>
+        </p>
+    
+        <p>
+            <a href="/categories/技術/データベース/">データベース</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/04/29/Google-Cloud-Platform%E3%81%AE%E8%AB%8B%E6%B1%82%E5%85%88%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%AB%E3%81%8B/">Google Cloud Platformの請求先アカウントとはなにか</a>
+        </p>
+    
+        <p>
+            <a href="/2020/04/18/%E3%82%AF%E3%83%AA%E6%A3%AE%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A/">クリ森公式サイトの振り返り</a>
+        </p>
+    
+        <p>
+            <a href="/2020/04/15/Kyash%E3%81%AE%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%8C%E3%83%91%E3%83%B3%E3%82%AF%E3%81%97%E3%81%A6%E3%82%8B/">Kyashのサポートセンターがパンクしてる</a>
+        </p>
+    
+        <p>
+            <a href="/2020/04/15/Windows%E3%81%A7Node-js%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86%E3%82%92%E3%81%97%E3%82%88%E3%81%86/">WindowsでNode.jsのバージョン管理をしよう</a>
+        </p>
+    
+        <p>
+            <a href="/2020/04/13/%E3%81%A0%E3%81%8B%E3%82%89%E5%83%95%E3%81%AFAtom%E3%82%92%E3%82%84%E3%82%81%E3%81%9F/">だから僕はAtomをやめた</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://twitter.com/?lang=en" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/klugjo/hexo-theme-anodyne" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
+                            <i class="fa fa-500px"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:test@example.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                ©2020 Minami Minato
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
