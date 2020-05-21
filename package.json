@@ -5,13 +5,14 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "ipfs add -r ./public",
+    "deploy": "hexo generate && gh-pages -d public",
     "server": "hexo server"
   },
   "hexo": {
-    "version": "4.2.0"
+    "version": "4.2.1"
   },
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "hexo": "4.2.1",
     "hexo-browsersync": "0.3.0",
     "hexo-generator-archive": "1.0.0",
