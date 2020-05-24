@@ -10,8 +10,16 @@
 
     <!--Description-->
     
-        <meta name="description" content="Lubuntu 19.10をインストールしたのですが、そこでVNCを使う際つまずいたので覚書。
-いつもはtigervnc-standalone-serverというパッケージを利用しているのですが、LXQtに対応していないのかは知りませんがバグりまくって使い物にならなかったので、今回は別の手段でやって">
+        <meta name="description" content="こんな表示がでてGeForce Shadow Playの録画ができない。
+
+最新のGeForce Game Ready Driverを導入済み
+GeForce Experienceも最新
+
+こんな感じ。
+スペック的には
+
+こんな感じ。一応必要な要件は満たしてる。
+DDU使ってみるDDUを使ってみよう">
     
 
     <!--Author-->
@@ -21,7 +29,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="lubuntu 19.10 LXQtにVNCで接続する"/>
+        <meta property="og:title" content="俺のGeForce Shadow Playが録画してくれない"/>
     
 
     <!--Open Graph Description-->
@@ -43,7 +51,7 @@
 
     <!-- Title -->
     
-    <title>lubuntu 19.10 LXQtにVNCで接続する - MinatoNote</title>
+    <title>俺のGeForce Shadow Playが録画してくれない - MinatoNote</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -126,8 +134,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">lubuntu 19.10 LXQtにVNCで接続する</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2020-03-03</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">俺のGeForce Shadow Playが録画してくれない</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2020-05-24</p>
         </div>
     </div>
 
@@ -147,25 +155,35 @@
                     
                         <div class="tags-container-vertical">
                             <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/Lubuntu/">#Lubuntu</a> <a class="fw3 ph1 dib" href="/tags/VNC/">#VNC</a>
+                                <a class="fw3 ph1 dib" href="/tags/GeForce/">#GeForce</a> <a class="fw3 ph1 dib" href="/tags/グラフィックボード/">#グラフィックボード</a> <a class="fw3 ph1 dib" href="/tags/ドライバ/">#ドライバ</a>
                             </div>
                         </div>
                     
 
                     <!-- Main Post Content -->
-                    <p>Lubuntu 19.10をインストールしたのですが、そこでVNCを使う際つまずいたので覚書。</p>
-<p>いつもは<code>tigervnc-standalone-server</code>というパッケージを利用しているのですが、LXQtに対応していないのかは知りませんがバグりまくって使い物にならなかったので、今回は別の手段でやっていきます。</p>
-<h2 id="X11VNC-Serverを使う"><a href="#X11VNC-Serverを使う" class="headerlink" title="X11VNC Serverを使う"></a>X11VNC Serverを使う</h2><p>まずはインストールです。</p>
-<p><code>sudo apt install x11vnc</code>でx11vncをインストールします。<br>その後、<code>x11vnc -storepasswd</code>と入力するとpasswordを聞かれるので、好きなものを指定してください。</p>
-<p>最後に<code>x11vnc</code>と打って実行すると、vncサーバーが立ち上がります。</p>
-<p>あとは簡単、他のPCからローカルIPを使って接続すればおｋです。</p>
-<p>ただ、terminal閉じるとサーバーも閉じちゃうので、screenとかで実行したほうがいいと思います。</p>
+                    <p><a href="https://gyazo.com/bcc59ecc25348acaa2630b47f158f7b5" target="_blank" rel="noopener"><img src="https://i.gyazo.com/bcc59ecc25348acaa2630b47f158f7b5.png" alt="Image from Gyazo"></a></p>
+<p>こんな表示がでてGeForce Shadow Playの録画ができない。</p>
+<ul>
+<li>最新のGeForce Game Ready Driverを導入済み</li>
+<li>GeForce Experienceも最新</li>
+</ul>
+<p>こんな感じ。</p>
+<p>スペック的には</p>
+<p><a href="https://gyazo.com/632295ab455798906a43c34506fa0472" target="_blank" rel="noopener"><img src="https://i.gyazo.com/632295ab455798906a43c34506fa0472.png" alt="Image from Gyazo"></a></p>
+<p>こんな感じ。<br>一応必要な要件は満たしてる。</p>
+<h1 id="DDU使ってみる"><a href="#DDU使ってみる" class="headerlink" title="DDU使ってみる"></a>DDU使ってみる</h1><p>DDUを使ってみよう。<br>というか検索してもほとんどこれだし。</p>
+<h2 id="DDUってなーに"><a href="#DDUってなーに" class="headerlink" title="DDUってなーに"></a>DDUってなーに</h2><p>Display Driver Uninstallerです。</p>
+<p>普通にドライバアンインストールすると、いろいろ残ったりするんですが、こいつは跡形もなく消し去ってくれます。<br>グラボ周辺の機能問題で異常が出たときはこれをやるといいっていうのがセオリーみたいです。</p>
+<h2 id="使い方"><a href="#使い方" class="headerlink" title="使い方"></a>使い方</h2><p>以下の記事を参照に。<br>私は一応セーフモードにしました。</p>
+<p><a href="http://www.himajin-block30.com/entry/2018/12/01/165457" target="_blank" rel="noopener">【Shadowplay】録画が機能しなくなった時の対処法一例 - 暇人雑記</a></p>
+<h2 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h2><p>とりあえず動いてる</p>
+<p>まぁいつも、数回録画できてからいきなり不可になるので、今後どうなるかはわかりません。<br>もしも問題起きたら追記するので、追記がなかったら問題がなかったということです。</p>
 
                     
                     <!-- Tags Bottom -->
                     
                         <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Lubuntu/">#Lubuntu</a> <a class="fw3 ph1 dib" href="/tags/VNC/">#VNC</a>
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/GeForce/">#GeForce</a> <a class="fw3 ph1 dib" href="/tags/グラフィックボード/">#グラフィックボード</a> <a class="fw3 ph1 dib" href="/tags/ドライバ/">#ドライバ</a>
                         </div>
                     
 
@@ -199,7 +217,7 @@
     <h3>Categories</h3>
     
         <p>
-            <a href="/categories/技術/">技術</a>
+            <a href="/categories/不具合/">不具合</a>
         </p>
     
 </div>
