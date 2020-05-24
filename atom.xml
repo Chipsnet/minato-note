@@ -254,7 +254,7 @@
     <link href="https://blog.minato86.me/2020/03/05/Lubuntu-19-10-LXQt%E3%81%A7%E3%82%AB%E3%83%90%E3%83%BC%E3%82%92%E9%96%89%E3%81%98%E3%82%8B%E3%81%A8Wi-Fi%E3%81%8C%E5%88%87%E6%96%AD%E3%81%95%E3%82%8C%E3%82%8B%E5%95%8F%E9%A1%8C/"/>
     <id>https://blog.minato86.me/2020/03/05/Lubuntu-19-10-LXQt%E3%81%A7%E3%82%AB%E3%83%90%E3%83%BC%E3%82%92%E9%96%89%E3%81%98%E3%82%8B%E3%81%A8Wi-Fi%E3%81%8C%E5%88%87%E6%96%AD%E3%81%95%E3%82%8C%E3%82%8B%E5%95%8F%E9%A1%8C/</id>
     <published>2020-03-05T03:34:04.000Z</published>
-    <updated>2020-05-21T00:32:22.310Z</updated>
+    <updated>2020-05-24T07:36:05.587Z</updated>
     
     <content type="html"><![CDATA[<p>ノートPCにて、Lubuntu 19.10でカバーを閉じるとWi-Fiが勝手に切断される問題が発生したので解決法を共有します。</p><h1 id="確認"><a href="#確認" class="headerlink" title="確認"></a>確認</h1><ul><li>電源管理から、カバーが閉じても何も起こらない設定にする</li><li><code>/etc/systemd/logind.conf</code>の<code>HandleLidSwitch</code>がignoreになっている<ul><li>コレやってない場合は<a href="https://www.yokoweb.net/2018/05/11/ubuntu18-notepc-suspend-ignore/" target="_blank" rel="noopener">ここ</a>を参考に設定</li></ul></li></ul><h1 id="システムログを見る"><a href="#システムログを見る" class="headerlink" title="システムログを見る"></a>システムログを見る</h1><p>私の場合は上記方法でも解決できなかったので、他の方法を模索しました。<br>まずはシステムログを見ます。</p><p><code>/var/log/dmesg</code>を見ます。</p><p>すると、ログの中に</p><p><code>Started Load/Save RF Kill Switch Status.</code>というログを見つけました。</p><p>どうやらRF Killというものが働いて問題が起こっているようです。</p><h1 id="RF-Killは消せない"><a href="#RF-Killは消せない" class="headerlink" title="RF Killは消せない"></a>RF Killは消せない</h1><p>これ、どういう仕組かは知りませんが、aptから削除しても作動します。<br>おそらくシステムの一部なのかな～と思います。</p><p>Linuxでwlanを使えるように頑張ってみた - Folioscope <a href="http://folioscope.hatenablog.jp/entry/2013/03/26/232921#" target="_blank" rel="noopener">http://folioscope.hatenablog.jp/entry/2013/03/26/232921#</a></p><p>Raspbian Stretch Lite で突然無線LANに接続不能になったとき - 今日も微速転進 <a href="https://a244.hateblo.jp/entry/2017/12/28/024238" target="_blank" rel="noopener">https://a244.hateblo.jp/entry/2017/12/28/024238</a></p><p>上記サイトでは、コレに関する解決法を掲載していました。<br>しかし私はこれでは治りませんでした。</p><h1 id="物理的な原因だった"><a href="#物理的な原因だった" class="headerlink" title="物理的な原因だった"></a>物理的な原因だった</h1><p>原因は、<strong>本体のワイヤレススイッチがONになっていた</strong>でした。</p><p>OFFならわかるけど、ONって・・・・</p><p>わかるわけないだろ！！！！！！！！！！！！！！！！！！！</p><p>と、いうわけで、どういうことかは知りませんが、あっさりと治ってしまいました。<br>コレのせいで2日潰れたけどね</p>]]></content>
     
@@ -269,9 +269,7 @@
     </summary>
     
     
-      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
-    
-      <category term="不具合" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
+      <category term="不具合" scheme="https://blog.minato86.me/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
     
     
       <category term="Lubuntu" scheme="https://blog.minato86.me/tags/Lubuntu/"/>
