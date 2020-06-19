@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-05-24T07:38:22.228Z</updated>
+  <updated>2020-06-19T17:00:19.510Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Crowdin高いからほかの使おうぜ</title>
+    <link href="https://blog.minato86.me/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/"/>
+    <id>https://blog.minato86.me/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/</id>
+    <published>2020-06-19T16:58:34.000Z</published>
+    <updated>2020-06-19T17:00:19.510Z</updated>
+    
+    <content type="html"><![CDATA[<p>Crowdinは、リポジトリのファイルを翻訳とかできるやつなんですけど<br>クソ高いので他のやつないか模索してみた</p><p>Github MarketPlace見てみると</p><ul><li>Crowdin</li><li>POEditor</li><li>GitLocalize</li></ul><p>があった。</p><p>1プロジェクトの最低価格的には以下のような感じ</p><table><thead><tr><th>アプリケーション</th><th>プラン名</th><th>文字列数</th><th>価格</th></tr></thead><tbody><tr><td>Crowdin</td><td>Micro</td><td>500</td><td>$16/month</td></tr><tr><td>POEditor</td><td>Free</td><td>1000</td><td>-</td></tr><tr><td>GitLocalize</td><td>-</td><td>-</td><td>-</td></tr></tbody></table><p>こんな感じ。</p><p>GitLocalizeは完全無料っぽいけどサポートしてるファイルが少なそう。<br>現時点では</p><ul><li>Markdown</li><li>PO（なにこの拡張子）</li><li>JSON</li><li>HTML</li><li>YAML</li><li>Localizable Strings（iOS）</li></ul><p>に対応してるっぽい。</p><p>とりあえず完全無料っぽいのでGitLocalizeをテストで使ってみる。</p><p>サイトにアクセス</p><p>GitLocalize - Continuous Localization for GitHub Projects <a href="https://gitlocalize.com/" target="_blank" rel="noopener">https://gitlocalize.com/</a></p><p>Githubアカウントでログインする</p><p><a href="https://gyazo.com/5bb2317875f600a03702222f0eb1632d" target="_blank" rel="noopener"><img src="https://i.gyazo.com/5bb2317875f600a03702222f0eb1632d.png" alt="Image from Gyazo"></a></p><p>こうなった。</p><p>そしたらAdd repository</p><p><a href="https://gyazo.com/887ebb26d82221944c7b4fd63893fdaf" target="_blank" rel="noopener"><img src="https://i.gyazo.com/887ebb26d82221944c7b4fd63893fdaf.png" alt="Image from Gyazo"></a></p><p>リポジトリを設定</p><p><a href="https://gyazo.com/d7564d5091f6fd1ff4161d0c64c546e9" target="_blank" rel="noopener"><img src="https://i.gyazo.com/d7564d5091f6fd1ff4161d0c64c546e9.png" alt="Image from Gyazo"></a></p><p>ターゲットパスを設定</p><p>あとはGithubと連携すれば設定は完了です。<br>かんたんですね。</p><p><a href="https://gyazo.com/b1aab64acbfc0c6f0683a67e0d1ec7cc" target="_blank" rel="noopener"><img src="https://i.gyazo.com/b1aab64acbfc0c6f0683a67e0d1ec7cc.png" alt="Image from Gyazo"></a></p><p>必要な機能は一通り揃っています。<br>正直これくらいあれば随分という気がする。</p><p>結論: Crowdinにお金払わなくてもGitLocalizeでそこそこやっていける</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Crowdinは、リポジトリのファイルを翻訳とかできるやつなんですけど&lt;br&gt;クソ高いので他のやつないか模索してみた&lt;/p&gt;
+&lt;p&gt;Github MarketPlace見てみると&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crowdin&lt;/li&gt;
+&lt;li&gt;POEditor&lt;/li&gt;
+&lt;li
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>俺のGeForce Shadow Playが録画してくれない</title>
