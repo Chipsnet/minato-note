@@ -2,7 +2,7 @@
 title: Lubuntu 19.10 LXQtでカバーを閉じるとWi-Fiが切断される問題
 date: 2020-03-05 12:34:04
 tags: ["Lubuntu", "LXQt"]
-categories: ["技術", "不具合"]
+categories: 不具合
 ---
 
 ノートPCにて、Lubuntu 19.10でカバーを閉じるとWi-Fiが勝手に切断される問題が発生したので解決法を共有します。
