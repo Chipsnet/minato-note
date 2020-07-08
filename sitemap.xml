@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.minato86.me/2020/03/03/lubuntu-19-10-LXQt%E3%81%ABVNC%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B/</loc>
+    
+    <lastmod>2020-07-08T18:34:11.990Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.minato86.me/2020/07/09/Material-UI%E3%81%AETabs%E3%81%AEindicator%E3%81%AECSS%E3%82%92%E3%81%84%E3%81%98%E3%82%8B/</loc>
+    
+    <lastmod>2020-07-08T18:33:21.152Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.minato86.me/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/</loc>
     
     <lastmod>2020-06-21T07:52:16.950Z</lastmod>
@@ -68,13 +82,6 @@
     <loc>https://blog.minato86.me/2020/03/02/Raspbian%E3%81%A7%E8%B5%B7%E5%8B%95%E6%99%82%E5%87%A6%E7%90%86%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B/</loc>
     
     <lastmod>2020-05-21T00:33:29.123Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.minato86.me/2020/03/03/lubuntu-19-10-LXQt%E3%81%ABVNC%E3%81%A7%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B/</loc>
-    
-    <lastmod>2020-05-21T00:32:51.670Z</lastmod>
     
   </url>
   
