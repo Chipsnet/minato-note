@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-07-08T18:33:21.152Z</updated>
+  <updated>2020-07-10T13:07:53.815Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google Cloud SDKでUnicodeEncodeErrorが出る</title>
+    <link href="https://blog.minato86.me/2020/07/10/Google-Cloud-SDK%E3%81%A7UnicodeEncodeError%E3%81%8C%E5%87%BA%E3%82%8B/"/>
+    <id>https://blog.minato86.me/2020/07/10/Google-Cloud-SDK%E3%81%A7UnicodeEncodeError%E3%81%8C%E5%87%BA%E3%82%8B/</id>
+    <published>2020-07-10T13:02:51.000Z</published>
+    <updated>2020-07-10T13:07:53.815Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>はてなブログで過去に公開した記事を移行しました<br>元リンクはこちら <a href="https://minato86.hatenablog.com/entry/2019/12/06/025130" target="_blank" rel="noopener">https://minato86.hatenablog.com/entry/2019/12/06/025130</a></p></blockquote><p>こんなエラーが出た</p><p><code>ERROR: gcloud crashed (UnicodeEncodeError): &#39;ascii&#39; codec can&#39;t encode characters in position 3-8: ordinal not in range(128)</code></p><p>エラーから察するに文字コード系のエラーっぽい。</p><p>このエラーはGAEにデプロイする時やGCSDKのアップデートをする時とかに出るっぽい。</p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>何故かWindowsのPowerShellで<code>gcloud</code>コマンドを使用すると<code>ascii</code>を使ってしまうらしい。<br>それが悪さしてるっぽい</p><h2 id="解決策"><a href="#解決策" class="headerlink" title="解決策"></a>解決策</h2><p>Git導入してGitbashを使いましょう</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;はてなブログで過去に公開した記事を移行しました&lt;br&gt;元リンクはこちら &lt;a href=&quot;https://minato86.hatenablog.com/entry/2019/12/06/025130&quot; target=&quot;_blank&quot; rel=&quot;n
+      
+    
+    </summary>
+    
+    
+      <category term="不具合" scheme="https://blog.minato86.me/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
+    
+    
+      <category term="GoogleCloudPlatform" scheme="https://blog.minato86.me/tags/GoogleCloudPlatform/"/>
+    
+      <category term="GitBash" scheme="https://blog.minato86.me/tags/GitBash/"/>
+    
+  </entry>
   
   <entry>
     <title>Material UIのTabsのindicatorのCSSをいじる</title>
