@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-07-10T13:07:53.815Z</updated>
+  <updated>2020-07-10T17:35:37.315Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>限界映像大会が第100回になります</title>
+    <link href="https://blog.minato86.me/2020/07/11/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A%E3%81%8C%E7%AC%AC100%E5%9B%9E%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99/"/>
+    <id>https://blog.minato86.me/2020/07/11/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A%E3%81%8C%E7%AC%AC100%E5%9B%9E%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99/</id>
+    <published>2020-07-10T17:28:53.000Z</published>
+    <updated>2020-07-10T17:35:37.315Z</updated>
+    
+    <content type="html"><![CDATA[<p>2018年12月19日に第1回限界映像大会が開催されてから、1年6ヶ月と22日。<br>本日2020年7月11日に限界映像大会は第100回を迎えます。</p><p>多くの人に支えられて限界映像大会はここまでこれました。<br>本当にありがとうございました。</p><p>限界大会は、最初は限界創作村というコミュニティーサーバーのモデリング大会から始まり、限界大会公式サーバーができ、その後限界映像大会などの大会を増やし、ここまで運営してきました。<br>途中なんども運営を断念しようとしたりしましたが、多くの人に支えられ、これまで続いています。</p><p>これはひとえに参加して頂いている皆様のおかげです。ありがとうございます。<br>また、限界映像大会への楽曲利用に協力していただいた作曲者の皆様に、この場を借りてお礼申しあげます。</p><p>100回という数字、運営である私自信が１番現実味がありません。<br>どうしてこうなってしまったんだ。。。。。。。。。。。。。</p><p>さて、これからも限界大会は続いていきます。<br>どうかご支援、ご参加、よろしくお願いします！</p><p>限界大会への参加はこちら<br><a href="https://genkai.open-w.net/" target="_blank" rel="noopener">限界大会 - TeamOpenWorld</a></p><p><a href="https://ko-fi.com/A0A81VPXD" target="_blank" rel="noopener"><img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;2018年12月19日に第1回限界映像大会が開催されてから、1年6ヶ月と22日。&lt;br&gt;本日2020年7月11日に限界映像大会は第100回を迎えます。&lt;/p&gt;
+&lt;p&gt;多くの人に支えられて限界映像大会はここまでこれました。&lt;br&gt;本当にありがとうございました。&lt;/p&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="お知らせ" scheme="https://blog.minato86.me/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"/>
+    
+    
+      <category term="運営" scheme="https://blog.minato86.me/tags/%E9%81%8B%E5%96%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Google Cloud SDKでUnicodeEncodeErrorが出る</title>
