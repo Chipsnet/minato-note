@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-07-10T17:39:54.395Z</updated>
+  <updated>2020-07-17T06:50:12.470Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ぼくのリポジトリが北極に保存された</title>
+    <link href="https://blog.minato86.me/2020/07/17/%E3%81%BC%E3%81%8F%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8C%E5%8C%97%E6%A5%B5%E3%81%AB%E4%BF%9D%E5%AD%98%E3%81%95%E3%82%8C%E3%81%9F/"/>
+    <id>https://blog.minato86.me/2020/07/17/%E3%81%BC%E3%81%8F%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8C%E5%8C%97%E6%A5%B5%E3%81%AB%E4%BF%9D%E5%AD%98%E3%81%95%E3%82%8C%E3%81%9F/</id>
+    <published>2020-07-17T06:48:54.000Z</published>
+    <updated>2020-07-17T06:50:12.470Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.gyazo.com/df7d68a765003b8b3568067dd77c7077.png" alt="df7d68a765003b8b3568067dd77c7077.png"></p><p>こんな感じのバッジをGithubで貰いました。<br>なにこれ？って思って調べたら、千年くらいプログラムのリポジトリを北極に保存するプロジェクトで、あなたのプログラムが保存されましたよってことらしいです。</p><h2 id="Arctic-Code-Vault"><a href="#Arctic-Code-Vault" class="headerlink" title="Arctic Code Vault"></a>Arctic Code Vault</h2><p>Arcticとは北極圏のことです。<br>Vaultとは保管庫という意味で、北極圏のコード保管庫という意味になります。</p><p>その名の通り、後世にプログラムを残していこうという試みみたいです。</p><p>これは、Github Archive Programの一環で、他にも石英ガラスにデータを保存する方法などが開発・進行しているようです。</p><h2 id="保管方法"><a href="#保管方法" class="headerlink" title="保管方法"></a>保管方法</h2><p>なんと、piqlFilmというフィルムに、物理的に保存されているようです。すげえ。<br>自分のプログラムがフィルムに保存されて北極にあるってなんか感動しますよね。</p><p>フィルムにはコードが文字としてではなく、QRコードのようなもので保存されていて</p><p><img src="https://i.gyazo.com/a684277b5d63072721ddbf6df740932a.jpg" alt="a684277b5d63072721ddbf6df740932a.jpg"><br>（公式動画より）</p><p>このように拡大すると、バーコードなどが確認できます。</p><iframe width="560" height="315" src="https://www.youtube.com/embed/fzI9FNjXQ0o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><h2 id="対象"><a href="#対象" class="headerlink" title="対象"></a>対象</h2><ul><li>2019/11/13 ~ 2020/02/02までのリポジトリ</li><li>2019/02/03 ~ 2020/02/02までに星が1つ以上付いたリポジトリ</li><li>期間問わず、250以上の星が付いたリポジトリ</li></ul><p>らしいです。<br>自分の場合は、星の付いたリポジトリと期間内のコミットと両方あったので、たぶん10リポジトリくらい保存されたと思います。</p><p>みなさんも自分にバッジが付いているか確認してみてはどうでしょうか？</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://i.gyazo.com/df7d68a765003b8b3568067dd77c7077.png&quot; alt=&quot;df7d68a765003b8b3568067dd77c7077.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;こんな感じのバッジをGithubで貰
+      
+    
+    </summary>
+    
+    
+      <category term="雑記" scheme="https://blog.minato86.me/categories/%E9%9B%91%E8%A8%98/"/>
+    
+    
+      <category term="Github" scheme="https://blog.minato86.me/tags/Github/"/>
+    
+  </entry>
   
   <entry>
     <title>限界映像大会が第100回になります</title>
