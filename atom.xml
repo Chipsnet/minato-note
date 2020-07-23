@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-07-23T01:57:07.786Z</updated>
+  <updated>2020-07-23T16:44:41.772Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google Drive FileStream上でYarnは使えない</title>
+    <link href="https://blog.minato86.me/2020/07/24/Google-Drive-FileStream%E4%B8%8A%E3%81%A7Yarn%E3%81%AF%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/"/>
+    <id>https://blog.minato86.me/2020/07/24/Google-Drive-FileStream%E4%B8%8A%E3%81%A7Yarn%E3%81%AF%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/</id>
+    <published>2020-07-23T16:42:38.000Z</published>
+    <updated>2020-07-23T16:44:41.772Z</updated>
+    
+    <content type="html"><![CDATA[<p>Google Drive File Stream（以下DriveFS）、知ってますか？<br>GSuiteの人限定で使える、Google Driveを外部ストレージとしてマウントするソフトウェアです。</p><p>GSuiteのプランでGoogle Driveを無制限で使用できるようにしておけば、PCの容量を気にせず作業できるので、非常に便利で重宝しています。</p><h1 id="DriveFS上でYarnを使いたい"><a href="#DriveFS上でYarnを使いたい" class="headerlink" title="DriveFS上でYarnを使いたい"></a>DriveFS上でYarnを使いたい</h1><p>Yarn Pkg（以下Yarn）は、Node.jsのパッケージ管理ソフトです。<br>npmとかありますが、僕はYarn派です。</p><p>んでそのYarnなんですが、DriveFS上で使いたいんですよ。<br>てかこれ使えないとNode.jsアプリケーション開発できないし。</p><p>結論から言うと、無理です。</p><h1 id="DriveFS上でYarnは使えない"><a href="#DriveFS上でYarnは使えない" class="headerlink" title="DriveFS上でYarnは使えない"></a>DriveFS上でYarnは使えない</h1><p><code>yarn install</code>を実行すると、以下のエラーが発生します。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">error An unexpected error occurred: <span class="string">"EEXIST: file already exists, mkdir 'G:\\path-to-repos\\node_modules\\@electron\\get\\node_modules'"</span>.</span><br><span class="line">info If you think this is a bug, please open a bug report with the information provided <span class="keyword">in</span> <span class="string">"G:\\path-to-repos\\yarn-error.log"</span>.</span><br><span class="line">info Visit https://yarnpkg.com/en/docs/cli/install <span class="keyword">for</span> documentation about this <span class="built_in">command</span>.</span><br></pre></td></tr></table></figure><p>ファイルは既に存在しますというエラーですが、おそらくダウンロードされたファイルから順番にDriveFSによって処理されていくので、それでファイルチェックの整合性が取れなくなっているんじゃないかと思います。</p><p>兎にも角にもDriveFSでYarnは使えません。残念。</p><p>ちなみに、pipとかは依存関係のインストールをリポジトリフォルダ内ではなくPC内に行うので、PythonとかはDriveFS内で作業できます。</p><p>たぶんnpmも同じ感じで依存関係インストールするので、npmもDriveFS内で使えないと思います。はい。</p><blockquote><p>追記:<br>npmも使えませんでした。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Google Drive File Stream（以下DriveFS）、知ってますか？&lt;br&gt;GSuiteの人限定で使える、Google Driveを外部ストレージとしてマウントするソフトウェアです。&lt;/p&gt;
+&lt;p&gt;GSuiteのプランでGoogle Driveを無制限で使
+      
+    
+    </summary>
+    
+    
+      <category term="不具合" scheme="https://blog.minato86.me/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
+    
+    
+      <category term="Node.js" scheme="https://blog.minato86.me/tags/Node-js/"/>
+    
+      <category term="Yarn" scheme="https://blog.minato86.me/tags/Yarn/"/>
+    
+  </entry>
   
   <entry>
     <title>ブラウザを変えたので入れてる拡張機能を紹介する</title>
@@ -576,33 +605,6 @@
       <category term="ネットワーク" scheme="https://blog.minato86.me/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/"/>
     
       <category term="Wi-Fi" scheme="https://blog.minato86.me/tags/Wi-Fi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IRIAM使ってみて気づいたこと</title>
-    <link href="https://blog.minato86.me/2020/02/23/IRIAM%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%A6%E6%B0%97%E3%81%A5%E3%81%84%E3%81%9F%E3%81%93%E3%81%A8/"/>
-    <id>https://blog.minato86.me/2020/02/23/IRIAM%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%A6%E6%B0%97%E3%81%A5%E3%81%84%E3%81%9F%E3%81%93%E3%81%A8/</id>
-    <published>2020-02-23T05:29:26.000Z</published>
-    <updated>2020-05-21T00:29:54.290Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="IRIAMとは"><a href="#IRIAMとは" class="headerlink" title="IRIAMとは"></a>IRIAMとは</h2><p>VTuberが気軽に雑談配信できるプラットフォーム。<br>スマホ対応のみ。</p><p>運営会社はミライアカリプロジェクトなどを運営する株式会社ZIZAI（旧株式会社DUO）。</p><h2 id="どうして使ったのか？"><a href="#どうして使ったのか？" class="headerlink" title="どうして使ったのか？"></a>どうして使ったのか？</h2><p>私の知り合いの絵師さんに<a href="https://twitter.com/jyotadayo" target="_blank" rel="noopener">ジョウタ</a>って人がいるんですけど、なんとその人がVTuberの親になったそうで、その人の初配信を見るために入れました。</p><p>VTuberは三日月ルナちゃんって子。<a href="https://twitter.com/3kaduki_runa" target="_blank" rel="noopener">https://twitter.com/3kaduki_runa</a></p><h2 id="クソ重い"><a href="#クソ重い" class="headerlink" title="クソ重い"></a>クソ重い</h2><p>マジで重い。</p><p>というか登録すらできませんでしたね、最初。</p><p><a href="https://gyazo.com/4a3e7b4056e89dbc78b74622d5f28d9f" target="_blank" rel="noopener"><img src="https://i.gyazo.com/4a3e7b4056e89dbc78b74622d5f28d9f.jpg" alt="Image from Gyazo"></a></p><p>5分くらいしたら登録できるようになったんですが、そこからもひどかった。</p><p>配信落ちまくり、音声途切れまくり、モーションデータがぷつぷつなのでライバーさんがガッタガタ。</p><p>う～ん、ひどい。</p><h2 id="バグ多い"><a href="#バグ多い" class="headerlink" title="バグ多い"></a>バグ多い</h2><p>マジでバグが多い。</p><p>すぐエラー出るし、キャラが荒ぶることもあるし、何度タップしても反応しないときもある。</p><p>そして一番ひどかったバグが「課金したのにポイント入ってない」というバグ。</p><p>今まだ運営からの返事待ちなんですが、う～ん、ひどいね。</p><p>コンテンツ的にはとても良いものだと思います。</p><p>また、映像を配信せず、モーションデータと初回ロード時に立ち絵を送るという方法はなかなか良いと思いました。</p><p>ですが、荒削りな部分も多いです。とりあえずサーバー強化してください。重いだけならまぁマシなんですが、実用に耐えないレベルで重いです。</p><p>それから、バグをもう少しなくす努力をしてほしいです。</p><p>今後のアップデートに期待します。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;IRIAMとは&quot;&gt;&lt;a href=&quot;#IRIAMとは&quot; class=&quot;headerlink&quot; title=&quot;IRIAMとは&quot;&gt;&lt;/a&gt;IRIAMとは&lt;/h2&gt;&lt;p&gt;VTuberが気軽に雑談配信できるプラットフォーム。&lt;br&gt;スマホ対応のみ。&lt;/p&gt;
-&lt;p&gt;運営会社
-      
-    
-    </summary>
-    
-    
-      <category term="アプリレポート" scheme="https://blog.minato86.me/categories/%E3%82%A2%E3%83%97%E3%83%AA%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
-    
-    
-      <category term="IRIAM" scheme="https://blog.minato86.me/tags/IRIAM/"/>
     
   </entry>
   
