@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-07-17T06:50:12.470Z</updated>
+  <updated>2020-07-23T01:30:04.706Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>俺はBraveブラウザという幻想に縛られている</title>
+    <link href="https://blog.minato86.me/2020/07/23/%E4%BF%BA%E3%81%AFBrave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A8%E3%81%84%E3%81%86%E5%B9%BB%E6%83%B3%E3%81%AB%E7%B8%9B%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B/"/>
+    <id>https://blog.minato86.me/2020/07/23/%E4%BF%BA%E3%81%AFBrave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A8%E3%81%84%E3%81%86%E5%B9%BB%E6%83%B3%E3%81%AB%E7%B8%9B%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B/</id>
+    <published>2020-07-23T01:28:42.000Z</published>
+    <updated>2020-07-23T01:30:04.706Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Braveなら、理想のインターネットを作ってくれる。そう信じていた"><a href="#Braveなら、理想のインターネットを作ってくれる。そう信じていた" class="headerlink" title="Braveなら、理想のインターネットを作ってくれる。そう信じていた"></a>Braveなら、理想のインターネットを作ってくれる。そう信じていた</h1><p>みなさんはBraveブラウザをご存知だろうか。</p><p>2020年6月に月間アクティブユーザー1500万人を達成した、新しいブラウザである。</p><p>特徴は</p><ul><li>標準搭載のAIによる広告・トラッカーブロック機能</li><li>通知型広告を受け取ることでBATという仮想通貨（なお日本はおま国なのでBATポイントと呼ばれるポイント）がもらえる</li><li>BATを用いてDonateできる</li><li>履歴を一切外部に漏らさない</li><li>暗号通貨ウォレットを標準搭載</li><li>Torプライベートブラウジング機能</li></ul><p>など、”プライベートに重きを置いたブラウザ”であることがわかる。</p><p>キャッチコピーは”インターネットをもっと素晴らしく”<br>初めて見つけた時、心が踊ったのを覚えている。</p><h1 id="理想のインターネットなんて、無かった。"><a href="#理想のインターネットなんて、無かった。" class="headerlink" title="理想のインターネットなんて、無かった。"></a>理想のインターネットなんて、無かった。</h1><p>私はBraveブラウザの過度な期待を抱いていた。</p><p>Braveなら、インターネットの収益システムを正しく変えてくれるだろう、そう思っていた。</p><p>だからBraveの広告の不安定には驚いた。</p><p>来るときは一日に15件ほど広告が来る（これでも少ない）</p><p>来ない日は1件も来ない。</p><p>4,5月頃は割と頻繁に広告が来ていたと記憶しているが、今はそんなことは無くなってしまった。<br>2日に1回来れば良いほうだろう。その程度である。</p><p>広告主が集まらない理由、それはBraveの広告システムに原因があると思う。</p><p>Brave広告は、クリックすればBATがもらえる。<br>だからクリックが作業のように繰り返しの動作になり、宣伝効果が薄れてしまう。</p><p>普通の広告の場合、嫌でも画像を見ることになり、多少なり記憶に何かしらの影響を起こす。</p><p>「この広告、見たことあるぞ・・？」という風に、自分は記憶していなくても、脳が勝手に記憶しているものである。</p><p>こういった効果がBrave広告には無い。<br>だから広告主が少ないのではないかと私は思う。</p><h1 id="Braveブラウザという幻想に縛られている"><a href="#Braveブラウザという幻想に縛られている" class="headerlink" title="Braveブラウザという幻想に縛られている"></a>Braveブラウザという幻想に縛られている</h1><p>Braveブラウザは幻想だ。</p><p>Braveブラウザの目指す、広告で手に入れたBATを送り合い、サイト運営者を支援する世界は、きっと訪れない。</p><p>でも、私は今までずっと”いつかは変わるだろう”と思い、言わば惰性でBraveを使っていた。</p><p>使いやすさから目を背け、Brave Rewardsという幻のためにブラウザを使ってきた。</p><p>Braveブラウザのどこが使いにくかったのか、数個挙げてみようと思う。</p><h2 id="Brave-Shields"><a href="#Brave-Shields" class="headerlink" title="Brave Shields"></a>Brave Shields</h2><p>これは、Braveの広告・トラッカーブロックのことである。</p><p>こいつ、AIによって処理されていて、通常のAdblockでは消せない広告を消せるらしい。</p><p>と聞いていた。が、実際は酷かった。</p><p>広告は消えるものと消えないものがまばら、トラッカーブロック機能が暴走してまともにサイトが動かない</p><p>実用に耐えない場面が多かった。</p><p>「あれ、このサイトなんか動作がおかしいぞ」と思うと、だいたいこいつのせいだった。</p><p>これなら普通にAdblock拡張機能入れたほうがマシだった。</p><h2 id="Brave-Rewards"><a href="#Brave-Rewards" class="headerlink" title="Brave Rewards"></a>Brave Rewards</h2><p>BraveのBATなどのDonate機能の総称である。</p><p>よくバグる。</p><p>一ヶ月に1回しか受け取れないのに、それがバグって受け取れないことがある。</p><p>たまに意味不明なエラー（支援してないのに支援エラーがずっと出る）などがある。</p><p>広告も全くと行っていいほどでなくなった。</p><p>これが1番の魅力なのに。</p><h2 id="メモリ消費"><a href="#メモリ消費" class="headerlink" title="メモリ消費"></a>メモリ消費</h2><p>メモリ消費がすごい</p><p>単純比較Chromeの1.5倍あった。<br>ただでさえメモリ消費の鬼であるChromeの1.5倍なのだ。</p><p>たぶん、裏でBrave Shieldsとか、その他の機能が動いているからだと思う。</p><p>改めてHPを確認してみると、Chrome, Firefoxより高速というのは書いてあるが、メモリ消費については一切触れられていなかった。</p><blockquote><p>追記<br>実はCNETの記事で「Braveは、モバイルとデスクトップの両方で、私が今年使った中で最も高速なブラウザです。ブラウザのメモリ使用量は他のほとんどのブラウザをはるかに下回っており、ウェブサイトの読み込みははるかに速くなっています。」<br>と書かれていました。それがHPに載ってた。<br>でも、インストール直後で比較してもBraveがメモリ消費で勝ってることなんてなかったので、これガセでは？となっている</p></blockquote><p>つまりはそういうことである。</p><h2 id="高速ではない"><a href="#高速ではない" class="headerlink" title="高速ではない"></a>高速ではない</h2><p>初期の読み込みがワンテンポ遅い。</p><p>CNNのBrave, Chrome, Firefoxの比較動画を見てほしい</p><p><a href="https://player.vimeo.com/video/371512354?dnt=true" target="_blank" rel="noopener">https://player.vimeo.com/video/371512354?dnt=true</a></p><p>これを見れば、Braveは広告を読み込まないから高速なだけというのがわかると思う。</p><p>つまり、アンフェアな検証だ。</p><p>ChromeとFirefoxだって、広告ブロッカー拡張を入れれば、たぶんBraveと同じレベルで高速化できる。</p><p>Braveは早くない。むしろワンテンポ遅い。</p><h2 id="細かいフリーズ"><a href="#細かいフリーズ" class="headerlink" title="細かいフリーズ"></a>細かいフリーズ</h2><p>たまに固まる。</p><p>スクロールとか、クリックとか、タブ移動とか。</p><p>いちいちストレスが溜まっていく。</p><h2 id="いつ実装されるかわからない同期機能"><a href="#いつ実装されるかわからない同期機能" class="headerlink" title="いつ実装されるかわからない同期機能"></a>いつ実装されるかわからない同期機能</h2><p>Brave syncという、同期機能がある。</p><p>これはブックマーク共有のための機能であるが、これがいつまで経っても実装されない。</p><p>実は有効化することはできる。</p><p>brave://flagsにアクセスして、brave syncを有効にすると、使うことができる。</p><p>が、アップデートで設定時に落ちるようになってしまった。なんで。</p><p>まともに使えない。</p><p>ブックマーク同期ができないのは、非常に迷惑である。</p><p>スマホとブックマーク同期ができれば、もっと簡単にスムーズなインターネット体験ができるはずだ。</p><p>なのにまだ実装されない。どうして。</p><h1 id="効率だいじに"><a href="#効率だいじに" class="headerlink" title="効率だいじに"></a>効率だいじに</h1><p>今まで、Braveでできないことは全部Chromeを起動してやってきた。<br>（たまにBrave Shields外しても正常動作しないサイトがある）</p><p>Chromeなら、Brave Rewards以外普通のブラウザ機能は全部揃ってる。</p><p>果たしてどっちが優秀な選択か、考えなくてもわかる。</p><p>そろそろ、幻想を見るのはやめます。</p><p>Braveが本当の”Brave ブラウザー”になったとき、また戻ってきます。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Braveなら、理想のインターネットを作ってくれる。そう信じていた&quot;&gt;&lt;a href=&quot;#Braveなら、理想のインターネットを作ってくれる。そう信じていた&quot; class=&quot;headerlink&quot; title=&quot;Braveなら、理想のインターネットを作ってくれる。
+      
+    
+    </summary>
+    
+    
+      <category term="ソフトウェアレポート" scheme="https://blog.minato86.me/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
+    
+    
+      <category term="ブラウザ" scheme="https://blog.minato86.me/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>ぼくのリポジトリが北極に保存された</title>
@@ -575,33 +601,6 @@
     
     
       <category term="ハワイ" scheme="https://blog.minato86.me/tags/%E3%83%8F%E3%83%AF%E3%82%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IPFSを使ってみる</title>
-    <link href="https://blog.minato86.me/2020/02/15/IPFS%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/"/>
-    <id>https://blog.minato86.me/2020/02/15/IPFS%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/</id>
-    <published>2020-02-14T15:00:00.000Z</published>
-    <updated>2020-05-21T00:29:13.362Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="IPFSって何？"><a href="#IPFSって何？" class="headerlink" title="IPFSって何？"></a>IPFSって何？</h2><blockquote><p>インターネット上の情報も同様です。同一の内容であればどのサーバ上から取得したか？どの名前のファイルから取得したかなどという入手先はほとんどの場合で重要ではありません。そのためその情報の「場所」ではなく、「こういう内容の情報」というコンテンツの内容自体を直接指定して情報にアクセスする仕組みを考えることができます。これが「コンテンツ指向」になります。</p><p>引用: <a href="https://ipfs-book.decentralized-web.jp/what_is_ipfs/" target="_blank" rel="noopener">https://ipfs-book.decentralized-web.jp/what_is_ipfs/</a></p></blockquote><p>要するに、トレントみたいに世界に大量のサーバー置いてウェブサイトとかアプリケーションとか公開しようぜ！って感じですかね。</p><p>→つまりIPFS入れてる人みんながサーバーになるということ</p><p>「セキュリティは？」って思うかもしれませんが、そこはハッシュ値で厳重に管理されているので改ざんの心配はなさそうです。</p><h2 id="使ってみよう"><a href="#使ってみよう" class="headerlink" title="使ってみよう"></a>使ってみよう</h2><p><a href="https://gyazo.com/79b6f2f7b06c994839923c843e239d8b" target="_blank" rel="noopener"><img src="https://i.gyazo.com/79b6f2f7b06c994839923c843e239d8b.png" alt="Image from Gyazo"></a></p><p><a href="https://github.com/ipfs-shipyard/ipfs-desktop" target="_blank" rel="noopener">公式のGithubページ</a>から実行ファイルを落としましょう<br>ちなみにこの他にもLinuxようにtar, debなどのファイルがあります。</p><p><a href="https://gyazo.com/703e5b4b43134977390b59c60c5de8c3" target="_blank" rel="noopener"><img src="https://i.gyazo.com/703e5b4b43134977390b59c60c5de8c3.png" alt="Image from Gyazo"></a></p><p>インストールは全部日本語です。<br>基本次へでおｋ</p><p><a href="https://gyazo.com/b1dee1b05e5a3f694d8f72237edc8a92" target="_blank" rel="noopener"><img src="https://i.gyazo.com/b1dee1b05e5a3f694d8f72237edc8a92.png" alt="Image from Gyazo"></a></p><p>初期状態ではIPFSのファイルPINに入っていました。</p><p><a href="https://gyazo.com/6d5941dab092bdc1bee7a551443b5fac" target="_blank" rel="noopener"><img src="https://i.gyazo.com/6d5941dab092bdc1bee7a551443b5fac.png" alt="Image from Gyazo"></a></p><p>こんな感じで接続状態も確認できました。</p><p><a href="https://gyazo.com/c5a691489c6d9733f7517521c4a392b9" target="_blank" rel="noopener"><img src="https://i.gyazo.com/c5a691489c6d9733f7517521c4a392b9.png" alt="Image from Gyazo"></a></p><p>2分ほどでアクセスがここまで増えました。<br>大きいファイルをホストするとより多くの帯域を使いそうですが、今の所は許容範囲ですかね…</p><p><a href="https://gyazo.com/a09f073101d6d7ff5dff4aefdad836f9" target="_blank" rel="noopener"><img src="https://i.gyazo.com/a09f073101d6d7ff5dff4aefdad836f9.png" alt="Image from Gyazo"></a></p><p>残念ながら日本語対応はしてませんでした。</p><h2 id="ウェブサイトを公開する"><a href="#ウェブサイトを公開する" class="headerlink" title="ウェブサイトを公開する"></a>ウェブサイトを公開する</h2><p><a href="https://gyazo.com/264b9234d28696eb76b380b85a836348" target="_blank" rel="noopener"><img src="https://i.gyazo.com/264b9234d28696eb76b380b85a836348.png" alt="Image from Gyazo"></a></p><p>こんな感じのカスみたいなサイトを作りました</p><p><a href="https://gyazo.com/e1c0233a77faafe794508ae0549de473" target="_blank" rel="noopener"><img src="https://i.gyazo.com/e1c0233a77faafe794508ae0549de473.png" alt="Image from Gyazo"></a></p><p>ローカルで表示するとこうです。<br>これを今から公開しましょう。</p><p><a href="https://gyazo.com/a0f169a400343f84dfb5fca501ef8e20" target="_blank" rel="noopener"><img src="https://i.gyazo.com/a0f169a400343f84dfb5fca501ef8e20.png" alt="Image from Gyazo"></a></p><p>さっきのクソサイトはこのtestフォルダに入っています。</p><p><code>ipfs add -r test/</code>を実行しすると、フォルダ内部のすべてのファイルをアップロードします。</p><p>この際、前まで必要だったpinする動作が不要になっているようです。</p><p><a href="https://gyazo.com/12e481d21c934764ae3a235cae47ad46" target="_blank" rel="noopener"><img src="https://i.gyazo.com/12e481d21c934764ae3a235cae47ad46.png" alt="Image from Gyazo"></a></p><p>このように、勝手にpinされていました。</p><p><a href="https://gyazo.com/e3af1d8138ec828b7af1715c72b7da89" target="_blank" rel="noopener"><img src="https://i.gyazo.com/e3af1d8138ec828b7af1715c72b7da89.png" alt="Image from Gyazo"></a></p><p>右クリックしてリンクを取得しましょう</p><p><a href="https://gyazo.com/252599ff9bc54c2c8d5e14269f62a626" target="_blank" rel="noopener"><img src="https://i.gyazo.com/252599ff9bc54c2c8d5e14269f62a626.png" alt="Image from Gyazo"></a></p><p>ipfs.ioのドメインでホストされていることが確認できました。</p><h2 id="独自ドメインを使ってみる"><a href="#独自ドメインを使ってみる" class="headerlink" title="独自ドメインを使ってみる"></a>独自ドメインを使ってみる</h2><p>このクソサイトに独自ドメインを付けてみましょう。<br>今回はtest.m86.workを付けたいと思います。</p><p>ドメインの設定ですが、オススメはCloudFlareです。<br>理由はSSL通信ができるから。</p><p>ネームサーバーを変更していない人はCloudFlareに変更してもいいかも</p><p><a href="https://gyazo.com/7113676df233505370063c41ba2fb577" target="_blank" rel="noopener"><img src="https://i.gyazo.com/7113676df233505370063c41ba2fb577.png" alt="Image from Gyazo"></a></p><p>まずはCNAME。Nameに設定したいドメインを、Targetには<code>ipfs.io</code>を指定。<br>SSL通信を利用したい人はProxiedにしておきましょう。</p><p><img src="https://gyazo.com/0a6d0340d09e89e5df0cc561557f392d.png" alt="img"><br><a href="https://gyazo.com/0a6d0340d09e89e5df0cc561557f392d" target="_blank" rel="noopener">https://gyazo.com/0a6d0340d09e89e5df0cc561557f392d</a></p><p>次にTXTですが、こちらのipfs.io以下をコピーしてください。</p><p><a href="https://gyazo.com/9bc05a501ae26da076085d7ffb5a9d89" target="_blank" rel="noopener"><img src="https://i.gyazo.com/9bc05a501ae26da076085d7ffb5a9d89.png" alt="Image from Gyazo"></a></p><p>次にNameを好きなドメイン、Contantに<code>dnslink=[さっきコピーしたやつ]</code>を貼ります。</p><p>これで</p><p><a href="https://gyazo.com/a8fef6f65ff289b98b53d3f9de4bd89b" target="_blank" rel="noopener"><img src="https://i.gyazo.com/a8fef6f65ff289b98b53d3f9de4bd89b.png" alt="Image from Gyazo"></a></p><p>test.m86.workでクソサイトに接続できるようになりました。</p><p>SSLもやりましょう。</p><p><a href="https://gyazo.com/88dc719b12a8e5abb2d94956d433a2e1" target="_blank" rel="noopener"><img src="https://i.gyazo.com/88dc719b12a8e5abb2d94956d433a2e1.png" alt="Image from Gyazo"></a></p><p>といってもここをflexibleにするだけです。</p><h2 id="まとめ"><a href="#まとめ" class="headerlink" title="まとめ"></a>まとめ</h2><p>なんとなく使ってみましたが、普通に楽しかったです。<br>いろいろできそうなのでまたいじっていきたいと思ってます。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;IPFSって何？&quot;&gt;&lt;a href=&quot;#IPFSって何？&quot; class=&quot;headerlink&quot; title=&quot;IPFSって何？&quot;&gt;&lt;/a&gt;IPFSって何？&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;インターネット上の情報も同様です。同一の内容であればどのサーバ上か
-      
-    
-    </summary>
-    
-    
-      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-      <category term="IPFS" scheme="https://blog.minato86.me/tags/IPFS/"/>
     
   </entry>
   
