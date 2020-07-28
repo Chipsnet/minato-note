@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-07-28T12:06:19.193Z</updated>
+  <updated>2020-07-28T19:26:05.962Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go言語ことはじめ</title>
+    <link href="https://blog.minato86.me/2020/07/29/Go%E8%A8%80%E8%AA%9E%E3%81%93%E3%81%A8%E3%81%AF%E3%81%98%E3%82%81/"/>
+    <id>https://blog.minato86.me/2020/07/29/Go%E8%A8%80%E8%AA%9E%E3%81%93%E3%81%A8%E3%81%AF%E3%81%98%E3%82%81/</id>
+    <published>2020-07-28T19:23:08.000Z</published>
+    <updated>2020-07-28T19:26:05.962Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><ul><li>Windows10</li><li>Chocolatey導入済み</li></ul><h1 id="Go言語の導入"><a href="#Go言語の導入" class="headerlink" title="Go言語の導入"></a>Go言語の導入</h1><p><code>choco install golang</code> を実行すると、Go言語をインストールできます。<br>更新するときは <code>choco upgrade golang</code> でできます。</p><h1 id="VSCodeに拡張機能を導入"><a href="#VSCodeに拡張機能を導入" class="headerlink" title="VSCodeに拡張機能を導入"></a>VSCodeに拡張機能を導入</h1><p><a href="https://gyazo.com/da73eb8a0e215e2b77ce03713816199e" target="_blank" rel="noopener"><img src="https://i.gyazo.com/da73eb8a0e215e2b77ce03713816199e.png" alt="Image from Gyazo"></a></p><p>拡張機能検索に<code>Go</code>と入力すると、一番上に公式の拡張機能が出てくるのでインストールします。</p><p>インストールが終わったら、コマンドパレット（Ctrl+Shift+P）を開き、<code>Go: Install/Update Tools</code>を検索して、実行します。</p><p>すると、拡張機能の動作に必要なツール一式がダウンロードされます。</p><p>これで拡張機能の導入は完了です。</p><h1 id="書いてみる"><a href="#書いてみる" class="headerlink" title="書いてみる"></a>書いてみる</h1><p><code>hello.go</code>を作成します。<br>内容を以下のように作成します。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line"><span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">fmt.Println(<span class="string">"Hello, world."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>そして保存、<code>go run hello.go</code>を実行すると<code>Hello, world.</code>が実行されます。</p><h1 id="解説"><a href="#解説" class="headerlink" title="解説"></a>解説</h1><h2 id="package"><a href="#package" class="headerlink" title="package"></a>package</h2><p>感覚的にはJavaやC#などの名前空間に近いですが、厳密には違うものみたいです。</p><p>これは、importするときに指定される名前です。</p><p>基本的にはディレクトリ名を付けることが推奨されていて、例えば<code>app</code>というディレクトリに<code>main.go</code>を作ったとすると、最初を<code>package app</code>とすることが推奨されているということです。</p><p>Go Modulesの仕様上、外部からダウンロードしたパッケージと被っても問題ありません。</p><p>そこらへんはここに書いてます <a href="http://localhost:4000/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/" target="_blank" rel="noopener">Goで独自パッケージがimportできない - MinatoNote</a></p><p>そしてこれが最も重要ですが、ルートディレクトリに配置されているプログラムは<code>package main</code>とする必要がります。</p><p>そうしないと<code>go run: cannot run non-main package</code>というエラーで実行できません。</p><h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><p>パッケージをimportします。</p><p>今回は、fmtというgolangの入出力を司るパッケージをimportしました。</p><p>golangには、github上に無数のパッケージが存在していて、<code>go get [repos]</code>というコマンドで簡単にダウンロード、importすることができます。</p><p>これによって、開発を高速化することが可能です。</p><h2 id="func-main"><a href="#func-main" class="headerlink" title="func main()"></a>func main()</h2><p><code>func</code>と聞けば関数ということはまぁわかると思うんですが、golangでは、main()という関数が一番最初に実行されます。</p><p>なので、<code>func main()</code>としています。</p><p>mainパッケージ内では、かならずmain関数を書かなければなりません。</p><p>mainパッケージにmain関数が存在しない場合は <code>function main is undeclared in the main package</code> エラーが発生します。</p><h1 id="おわり"><a href="#おわり" class="headerlink" title="おわり"></a>おわり</h1><p>以上がGo言語ことはじめです。</p><p>正直今回は、Goを使う上での目玉機能には全く触れていません。</p><ul><li>めっっちゃ楽な並列処理</li><li>ビルドして高速実行できる機能</li></ul><p>など、Goには素晴らしい機能が何個かあります。<br>これはもしかしたら続きの記事を作るかもしれないです。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;環境&quot;&gt;&lt;a href=&quot;#環境&quot; class=&quot;headerlink&quot; title=&quot;環境&quot;&gt;&lt;/a&gt;環境&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Windows10&lt;/li&gt;
+&lt;li&gt;Chocolatey導入済み&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;Go言語の導入&quot;&gt;&lt;a
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="Golang" scheme="https://blog.minato86.me/tags/Golang/"/>
+    
+  </entry>
   
   <entry>
     <title>Goで独自パッケージがimportできない</title>
@@ -564,36 +594,6 @@
       <category term="Lubuntu" scheme="https://blog.minato86.me/tags/Lubuntu/"/>
     
       <category term="VNC" scheme="https://blog.minato86.me/tags/VNC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Raspbianで起動時処理を簡単に実装する</title>
-    <link href="https://blog.minato86.me/2020/03/02/Raspbian%E3%81%A7%E8%B5%B7%E5%8B%95%E6%99%82%E5%87%A6%E7%90%86%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B/"/>
-    <id>https://blog.minato86.me/2020/03/02/Raspbian%E3%81%A7%E8%B5%B7%E5%8B%95%E6%99%82%E5%87%A6%E7%90%86%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B/</id>
-    <published>2020-03-02T13:28:49.000Z</published>
-    <updated>2020-05-21T00:33:29.123Z</updated>
-    
-    <content type="html"><![CDATA[<p>私、めんどくさいのが大嫌いなので、超簡単に起動時処理を実装します。</p><p>ほとんどの記事ではlocal.rcで実装してたんですが、rootで実行されるのとうまくいかなかったので今回はcronで実装します。</p><h2 id="raspi-configの設定"><a href="#raspi-configの設定" class="headerlink" title="raspi-configの設定"></a>raspi-configの設定</h2><p>まずは、ネットが接続されるまで処理を待つ設定をします。</p><p>（これをしないと正常に動作しないときがあるみたい）</p><p><a href="https://gyazo.com/56439f0ba30a869d8c1fe7a73a84fb91" target="_blank" rel="noopener"><img src="https://i.gyazo.com/56439f0ba30a869d8c1fe7a73a84fb91.png" alt="Image from Gyazo"></a></p><p><code>sudo raspi-config</code>を入力</p><p><a href="https://gyazo.com/a948e12d11adbd8f49ad45b2f623b44e" target="_blank" rel="noopener"><img src="https://i.gyazo.com/a948e12d11adbd8f49ad45b2f623b44e.png" alt="Image from Gyazo"></a></p><p>Boot Optionsを選択</p><p><a href="https://gyazo.com/2413e127a71c44c27d86b1096519ef82" target="_blank" rel="noopener"><img src="https://i.gyazo.com/2413e127a71c44c27d86b1096519ef82.png" alt="Image from Gyazo"></a></p><p>Wait for Network at Bootを選択</p><p><a href="https://gyazo.com/98b1ab3d7834ed281b4442edf8779717" target="_blank" rel="noopener"><img src="https://i.gyazo.com/98b1ab3d7834ed281b4442edf8779717.png" alt="Image from Gyazo"></a></p><p>はいを選択</p><p><a href="https://gyazo.com/96f182577ba2f6de15e61e110cda42bb" target="_blank" rel="noopener"><img src="https://i.gyazo.com/96f182577ba2f6de15e61e110cda42bb.png" alt="Image from Gyazo"></a></p><p>了解を選択</p><p>これでOK</p><h2 id="crontabのログ設定"><a href="#crontabのログ設定" class="headerlink" title="crontabのログ設定"></a>crontabのログ設定</h2><p>実行されているか確認するために、ログが残るよう設定しましょう。</p><p><code>sudo nano /etc/rsyslog.conf</code></p><p>でファイルを開き</p><p><code>#cron.* /var/log/cron.log</code></p><p>と書いてある行を見つけて、#を外します（コメントアウト）</p><p><code>cron.* /var/log/cron.log</code></p><p>あとはCtrl+Xを押して、保存するか聞かれるのでyを押す。<br>終わったらログの設定は完了です。</p><h2 id="crontabの設定"><a href="#crontabの設定" class="headerlink" title="crontabの設定"></a>crontabの設定</h2><p>crontabには@rebootという、起動時に処理されるトリガがあり、今回はこれを利用していきます。<br>raspbianには標準で備わっているので、利用していきましょう。</p><p><code>crontab -e</code>で編集します。</p><p>初回はどのエディタを使うか確認されます。nanoでよければEnterを、他がよければ数字で選択してください。<br>（私はnano使いなのでそのままEnter）</p><p>そしたら、nanoが起動して編集可能になるので、一番下に<code>@reboot [実行したいコマンド]</code>を追記してください。<br>今回はVNCサーバーが起動時に立ち上がるようにしたかったので、<code>@reboot vncserver -localhost no</code>を追記しました。</p><p>そしたら保存して、<code>crontab -l</code>で今入力した内容があるかを確認してください。</p><h2 id="再起動"><a href="#再起動" class="headerlink" title="再起動"></a>再起動</h2><p>再起動して実行されていればOK。</p><h2 id="実行されていなかった場合"><a href="#実行されていなかった場合" class="headerlink" title="実行されていなかった場合"></a>実行されていなかった場合</h2><p>しっかりcrontabが動いているかはログで確認できます。</p><p><code>sudo cat /var/log/cron.log</code>を確認して、エラーだったり、入力したコマンドがないようでしたら検索してみてください。</p><p>こんな感じで簡単に実装できました。やったぜ。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;私、めんどくさいのが大嫌いなので、超簡単に起動時処理を実装します。&lt;/p&gt;
-&lt;p&gt;ほとんどの記事ではlocal.rcで実装してたんですが、rootで実行されるのとうまくいかなかったので今回はcronで実装します。&lt;/p&gt;
-&lt;h2 id=&quot;raspi-configの設定&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-      <category term="RaspberryPi" scheme="https://blog.minato86.me/tags/RaspberryPi/"/>
-    
-      <category term="Raspbian" scheme="https://blog.minato86.me/tags/Raspbian/"/>
     
   </entry>
   
