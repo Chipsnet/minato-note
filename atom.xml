@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-07-23T16:44:41.772Z</updated>
+  <updated>2020-07-28T12:06:19.193Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Goで独自パッケージがimportできない</title>
+    <link href="https://blog.minato86.me/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/"/>
+    <id>https://blog.minato86.me/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/</id>
+    <published>2020-07-28T11:05:11.000Z</published>
+    <updated>2020-07-28T12:06:19.193Z</updated>
+    
+    <content type="html"><![CDATA[<p>現在、以下の構成</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">warbot-go</span><br><span class="line">├ test</span><br><span class="line">│ └ test.go</span><br><span class="line">├ go.mod</span><br><span class="line">└ hello.go</span><br></pre></td></tr></table></figure><p>この状態で<code>hello.go</code>から<code>test.go</code>をimportできない。<br>まず、保存しようとするとコードが消える</p><p>これはVSCodeに入れているGolintが消してるっぽい<br>ログには<br><code>Not able to determine import path of current package by using cwd: c:\Users\Minato86\repos\MyRepository\warbot-go and Go workspace: </code><br>と記録されていた。</p><p>まずは今の状況を振り返っておくと</p><ul><li><code>go mod init warbot-go</code>でmodを初期化済み</li><li><code>go env</code>の<code>GO111MODULE</code>はonになっている</li></ul><p>というわけで、今はGo Modulesが使える環境が整っているはずです。</p><p><code>main.go</code>と<code>test.go</code>は以下のようになっています</p><p>main.go</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line"><span class="string">"fmt"</span></span><br><span class="line"><span class="comment">//ここに"warbot-go/test"をimportしたい</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">fmt.Println(<span class="string">"Hello, world."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>test.go</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line"><span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Test</span><span class="params">()</span></span> &#123;</span><br><span class="line">fmt.Println(<span class="string">"test module ready."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="linterを無効にしてみる"><a href="#linterを無効にしてみる" class="headerlink" title="linterを無効にしてみる"></a>linterを無効にしてみる</h1><p><img src="https://i.gyazo.com/2fd55a2ce3bace7661665a70d5dd51c9.png" alt="2fd55a2ce3bace7661665a70d5dd51c9.png"></p><p>VSCodeのワークスペース設定から、Lint On Saveをoffにしてみる。</p><p>結論からいうと、offにしたのに普通に実行された。<br>なんでや。と思ったら、どうやらこの動作はlinterの仕業ではなく、formatterの仕業みたい。</p><h1 id="formatterを変えてみる"><a href="#formatterを変えてみる" class="headerlink" title="formatterを変えてみる"></a>formatterを変えてみる</h1><p><img src="https://i.gyazo.com/b373f1c941646a7873dc5913665eb082.png" alt="b373f1c941646a7873dc5913665eb082.png"></p><p>デフォルトのgoreturnsではなく、gofmtに変えてみた。<br>結論から言えば、うまくいった。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line"><span class="string">"fmt"</span></span><br><span class="line"><span class="string">"warbot-go/test"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">test.Test()</span><br><span class="line">fmt.Println(<span class="string">"Hello, world."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>消されずにこのように書くことができた。<br>また、普通に実行できた。</p><h1 id="そういえば"><a href="#そういえば" class="headerlink" title="そういえば"></a>そういえば</h1><p>Githubでリポジトリを公開する場合、こっちのほうが正しいっぽい</p><p><code>go mod init github.com/chipsnet/warbot-go</code></p><p>あとはimportも<code>github.com/chipsnet/warbot-go/test</code>に書き換える。</p><p>↓GoなんもわからんからDiscordBotを作っている<br><a href="https://github.com/Chipsnet/warbot-go" target="_blank" rel="noopener">GitHub - Chipsnet/warbot-go: WARbot written in golang</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;現在、以下の構成&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span
+      
+    
+    </summary>
+    
+    
+      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+      <category term="Golang" scheme="https://blog.minato86.me/tags/Golang/"/>
+    
+      <category term="VisualStudioCode" scheme="https://blog.minato86.me/tags/VisualStudioCode/"/>
+    
+  </entry>
   
   <entry>
     <title>Google Drive FileStream上でYarnは使えない</title>
@@ -565,46 +594,6 @@
       <category term="RaspberryPi" scheme="https://blog.minato86.me/tags/RaspberryPi/"/>
     
       <category term="Raspbian" scheme="https://blog.minato86.me/tags/Raspbian/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ウチのWifiが異様の遅いのでどうにかしてみる</title>
-    <link href="https://blog.minato86.me/2020/03/02/%E3%82%A6%E3%83%81%E3%81%AEWifi%E3%81%8C%E7%95%B0%E6%A7%98%E3%81%AE%E9%81%85%E3%81%84%E3%81%AE%E3%81%A7%E3%81%A9%E3%81%86%E3%81%AB%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/"/>
-    <id>https://blog.minato86.me/2020/03/02/%E3%82%A6%E3%83%81%E3%81%AEWifi%E3%81%8C%E7%95%B0%E6%A7%98%E3%81%AE%E9%81%85%E3%81%84%E3%81%AE%E3%81%A7%E3%81%A9%E3%81%86%E3%81%AB%E3%81%8B%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/</id>
-    <published>2020-03-02T11:23:28.000Z</published>
-    <updated>2020-05-21T00:34:27.798Z</updated>
-    
-    <content type="html"><![CDATA[<p>私の家には3つのSSIDがあって</p><table><thead><tr><th>SSID</th><th>周波数</th></tr></thead><tbody><tr><td>pr500m-*-3</td><td>5GHz</td></tr><tr><td>pr500m-*-1</td><td>2.4GHz</td></tr><tr><td>MyPlace_*</td><td>2.4GHz</td></tr></tbody></table><p>という3つのWi-FiのSSIDがあります。</p><p>上のpr500mから始まる２つは、NTTから貸し出しされている「PR500MI」というルーター（ONUの機能も持っている）から出ているWi-Fiです。</p><p>下のMyPlaceは、Fonというルーター（ちょっと特殊なやつ）の電波です。<br>（まぁ今回はFonはあんまり関係ないです。）</p><p>そして、<strong>PR500MIの2.4GHzが異様に遅い。</strong></p><p>記憶では、使い始めは結構早かったと思うんですよ。<br>でも異様に遅い。</p><p>速度を測定すると</p><p><a href="https://gyazo.com/466cf818ded75c6a353f9265c87bff73" target="_blank" rel="noopener"><img src="https://i.gyazo.com/466cf818ded75c6a353f9265c87bff73.png" alt="Image from Gyazo"></a></p><p>こんな感じ。</p><p>「家のネットが遅いんじゃないの？」とお思いのアナタ。</p><p><a href="https://gyazo.com/080b3ca15a6ae41f79e22a589cdb1950" target="_blank" rel="noopener"><img src="https://i.gyazo.com/080b3ca15a6ae41f79e22a589cdb1950.png" alt="Image from Gyazo"></a></p><p>5GHzはこんな感じ。</p><p>「流石に差がありすぎじゃない？」</p><p>と思ったので、なんとかしてみようと思います。</p><h2 id="チャンネルの設定"><a href="#チャンネルの設定" class="headerlink" title="チャンネルの設定"></a>チャンネルの設定</h2><p><a href="https://gyazo.com/b5b4309022daad7d04d2184975b74b5d" target="_blank" rel="noopener"><img src="https://i.gyazo.com/b5b4309022daad7d04d2184975b74b5d.png" alt="Image from Gyazo"></a></p><p>とりあえずチャンネルがこのように設定されているので、競合していないチャンネルを探します。</p><p>それに使用するのは、<a href="https://www.microsoft.com/ja-jp/p/wifi-analyzer/9nblggh33n0n#activetab=pivot:overviewtab" target="_blank" rel="noopener">WiFi Analyzer</a>というWindowsアプリケーションです。</p><p><a href="https://gyazo.com/24d88856d55a167bcbefe21f12f949a7" target="_blank" rel="noopener"><img src="https://i.gyazo.com/24d88856d55a167bcbefe21f12f949a7.png" alt="Image from Gyazo"></a></p><p>現在はこのようになっています。</p><p><a href="https://gyazo.com/c3fe9811b97a5ff3d0acf451d610d569" target="_blank" rel="noopener"><img src="https://i.gyazo.com/c3fe9811b97a5ff3d0acf451d610d569.png" alt="Image from Gyazo"></a></p><p>現在はCH1ですが、これは他のWiFiと干渉しているようです。</p><p><a href="https://gyazo.com/25977972f9d5c8d9359fd3d0684512e6" target="_blank" rel="noopener"><img src="https://i.gyazo.com/25977972f9d5c8d9359fd3d0684512e6.png" alt="Image from Gyazo"></a></p><p>ですので、CH3に変更してみました。</p><p>さらに、pr500mには2というアクセスポイントもありますが、通常使用しないので無効にしてみます。</p><p><a href="https://gyazo.com/00ee799fd91fb27ea011bc6ec39ca0f0" target="_blank" rel="noopener"><img src="https://i.gyazo.com/00ee799fd91fb27ea011bc6ec39ca0f0.png" alt="Image from Gyazo"></a></p><p>結果、通信速度が2ケタになるようになりました。</p><p>これでまぁ実用的に使えるようになってしまったので、とりあえず大丈夫としましょう。</p><p>チャンネル変更、結構効果ありました。お試しあれ。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;私の家には3つのSSIDがあって&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;SSID&lt;/th&gt;
-&lt;th&gt;周波数&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;pr500m-*-3&lt;/td&gt;
-&lt;td&gt;5GHz&lt;/td&gt;
-&lt;/tr&gt;
-&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-      <category term="ネットワーク" scheme="https://blog.minato86.me/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/"/>
-    
-      <category term="Wi-Fi" scheme="https://blog.minato86.me/tags/Wi-Fi/"/>
     
   </entry>
   

@@ -10,11 +10,11 @@
 
     <!--Description-->
     
-        <meta name="description" content="結論からいうと、請求情報が入った箱みたいなやつ
-請求先アカウント、必要ある？
-プロジェクトごとの請求先（クレジットカードとか）が分けられるので管理が楽になるぞ
-請求先アカウントごとに費用のレポートや概要が出るので、プロジェクトごとの費用がわかりやすいぞ
-請求先アカウントごとに予算が決定できるので、柔">
+        <meta name="description" content="現在、以下の構成
+12345warbot-go├ test│ └ test.go├ go.mod└ hello.go
+
+この状態でhello.goからtest.goをimportできない。まず、保存しようとするとコードが消える
+これはVSCodeに入れているGolintが消してるっぽいログにはNot">
     
 
     <!--Author-->
@@ -24,7 +24,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Google Cloud Platformの請求先アカウントとはなにか"/>
+        <meta property="og:title" content="Goで独自パッケージがimportできない"/>
     
 
     <!--Open Graph Description-->
@@ -46,7 +46,7 @@
 
     <!-- Title -->
     
-    <title>Google Cloud Platformの請求先アカウントとはなにか - MinatoNote</title>
+    <title>Goで独自パッケージがimportできない - MinatoNote</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -129,8 +129,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">Google Cloud Platformの請求先アカウントとはなにか</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2020-04-29</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Goで独自パッケージがimportできない</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2020-07-28</p>
         </div>
     </div>
 
@@ -150,27 +150,48 @@
                     
                         <div class="tags-container-vertical">
                             <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/GoogleCloudPlatform/">#GoogleCloudPlatform</a>
+                                <a class="fw3 ph1 dib" href="/tags/Golang/">#Golang</a> <a class="fw3 ph1 dib" href="/tags/VisualStudioCode/">#VisualStudioCode</a>
                             </div>
                         </div>
                     
 
                     <!-- Main Post Content -->
-                    <p>結論からいうと、請求情報が入った箱みたいなやつ</p>
-<h1 id="請求先アカウント、必要ある？"><a href="#請求先アカウント、必要ある？" class="headerlink" title="請求先アカウント、必要ある？"></a>請求先アカウント、必要ある？</h1><ul>
-<li>プロジェクトごとの請求先（クレジットカードとか）が分けられるので管理が楽になるぞ</li>
-<li>請求先アカウントごとに費用のレポートや概要が出るので、プロジェクトごとの費用がわかりやすいぞ</li>
-<li>請求先アカウントごとに予算が決定できるので、柔軟な予算設定ができるぞ</li>
+                    <p>現在、以下の構成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">warbot-go</span><br><span class="line">├ test</span><br><span class="line">│ └ test.go</span><br><span class="line">├ go.mod</span><br><span class="line">└ hello.go</span><br></pre></td></tr></table></figure>
+
+<p>この状態で<code>hello.go</code>から<code>test.go</code>をimportできない。<br>まず、保存しようとするとコードが消える</p>
+<p>これはVSCodeに入れているGolintが消してるっぽい<br>ログには<br><code>Not able to determine import path of current package by using cwd: c:\Users\Minato86\repos\MyRepository\warbot-go and Go workspace: </code><br>と記録されていた。</p>
+<p>まずは今の状況を振り返っておくと</p>
+<ul>
+<li><code>go mod init warbot-go</code>でmodを初期化済み</li>
+<li><code>go env</code>の<code>GO111MODULE</code>はonになっている</li>
 </ul>
-<p>といった感じでした。</p>
-<p>Azureで言うところのサブスクリプションですね。</p>
-<h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>料金設定や管理を柔軟にするための仕組みでした</p>
+<p>というわけで、今はGo Modulesが使える環境が整っているはずです。</p>
+<p><code>main.go</code>と<code>test.go</code>は以下のようになっています</p>
+<p>main.go</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="comment">//ここに"warbot-go/test"をimportしたい</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"Hello, world."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>test.go</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Test</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">"test module ready."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="linterを無効にしてみる"><a href="#linterを無効にしてみる" class="headerlink" title="linterを無効にしてみる"></a>linterを無効にしてみる</h1><p><img src="https://i.gyazo.com/2fd55a2ce3bace7661665a70d5dd51c9.png" alt="2fd55a2ce3bace7661665a70d5dd51c9.png"></p>
+<p>VSCodeのワークスペース設定から、Lint On Saveをoffにしてみる。</p>
+<p>結論からいうと、offにしたのに普通に実行された。<br>なんでや。と思ったら、どうやらこの動作はlinterの仕業ではなく、formatterの仕業みたい。</p>
+<h1 id="formatterを変えてみる"><a href="#formatterを変えてみる" class="headerlink" title="formatterを変えてみる"></a>formatterを変えてみる</h1><p><img src="https://i.gyazo.com/b373f1c941646a7873dc5913665eb082.png" alt="b373f1c941646a7873dc5913665eb082.png"></p>
+<p>デフォルトのgoreturnsではなく、gofmtに変えてみた。<br>結論から言えば、うまくいった。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"warbot-go/test"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	test.Test()</span><br><span class="line">	fmt.Println(<span class="string">"Hello, world."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>消されずにこのように書くことができた。<br>また、普通に実行できた。</p>
+<h1 id="そういえば"><a href="#そういえば" class="headerlink" title="そういえば"></a>そういえば</h1><p>Githubでリポジトリを公開する場合、こっちのほうが正しいっぽい</p>
+<p><code>go mod init github.com/chipsnet/warbot-go</code></p>
+<p>あとはimportも<code>github.com/chipsnet/warbot-go/test</code>に書き換える。</p>
+<p>↓GoなんもわからんからDiscordBotを作っている<br><a href="https://github.com/Chipsnet/warbot-go" target="_blank" rel="noopener">GitHub - Chipsnet/warbot-go: WARbot written in golang</a></p>
 
                     
                     <!-- Tags Bottom -->
                     
                         <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/GoogleCloudPlatform/">#GoogleCloudPlatform</a>
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Golang/">#Golang</a> <a class="fw3 ph1 dib" href="/tags/VisualStudioCode/">#VisualStudioCode</a>
                         </div>
                     
 
