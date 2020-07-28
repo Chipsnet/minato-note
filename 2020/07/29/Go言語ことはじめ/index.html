@@ -176,7 +176,7 @@ VSCodeに拡張機能を導入
 <p>これは、importするときに指定される名前です。</p>
 <p>基本的にはディレクトリ名を付けることが推奨されていて、例えば<code>app</code>というディレクトリに<code>main.go</code>を作ったとすると、最初を<code>package app</code>とすることが推奨されているということです。</p>
 <p>Go Modulesの仕様上、外部からダウンロードしたパッケージと被っても問題ありません。</p>
-<p>そこらへんはここに書いてます <a href="http://localhost:4000/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/" target="_blank" rel="noopener">Goで独自パッケージがimportできない - MinatoNote</a></p>
+<p>そこらへんはここに書いてます <a href="https://blog.minato86.me/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/">Goで独自パッケージがimportできない - MinatoNote</a></p>
 <p>そしてこれが最も重要ですが、ルートディレクトリに配置されているプログラムは<code>package main</code>とする必要がります。</p>
 <p>そうしないと<code>go run: cannot run non-main package</code>というエラーで実行できません。</p>
 <h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><p>パッケージをimportします。</p>
