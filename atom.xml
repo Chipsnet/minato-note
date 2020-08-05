@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-08-05T02:05:42.007Z</updated>
+  <updated>2020-08-05T22:01:55.443Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020年8月5日</title>
+    <link href="https://blog.minato86.me/2020/08/06/2020%E5%B9%B48%E6%9C%885%E6%97%A5/"/>
+    <id>https://blog.minato86.me/2020/08/06/2020%E5%B9%B48%E6%9C%885%E6%97%A5/</id>
+    <published>2020-08-05T22:01:24.000Z</published>
+    <updated>2020-08-05T22:01:55.443Z</updated>
+    
+    <content type="html"><![CDATA[<p>トマトトーストを作った。めちゃくちゃおいしかったのでまた作りたい。</p><p>朝4時くらいに起きてすこし作業、その後noteを読み漁ってた。</p><p>今回調べたテーマは「いかに妥協するか」</p><p>運営しているTeamOpenWorldで、理想を追求するあまり1人が病んでしまう事案が発生した。<br>ぶっちゃけ僕も理想を追い求めすぎだと思った。</p><p>でもどこまで理想を追い求めるか、どこまで妥協するか、明確な基準を僕は知らない。</p><p>だから調べた。というか自分の結論を出すためのリファレンスを探した。</p><p><a href="https://note.com/yamkaz/n/nf69300efc6ed">妥協する力｜やまかず｜note</a></p><p>こんなnoteを見つけた。<br>少しこころが軽くなったが、まだ結論には至らない。</p><p>もっと調べる必要がある。</p><p>一つ気づいたことがある。<br>僕は完璧主義がきらいだ。</p><p>それは自分みたいだからだと思う。</p><p>少し前、僕は完璧主義者だった。<br>完璧を追求して、完璧にならないと、投げた。</p><p>完璧主義をやめるきっかけは、通話のノリで初めた企画だった。</p><p>完璧主義ではなく、できることを、できる範囲で解決した。<br>その結果、爆速で、ちゃんとした面白い企画を作ることができた。</p><p>完璧主義はダメだ。<br>ハッキリ言う。</p><p>完璧主義でいいことなんか何一つ無い。</p><p>完璧主義は仕事にならない。<br>何も作れない、何も生み出せない。<br>見てるとイライラする。周りが迷惑する。</p><p>重要なのは、できる範囲でできることを最大限にやること。<br>クオリティアップはもちろん大切だ。でもそれを追い求めすぎると人はいなくなる。<br>というか、追い求めていたらキリがない。</p><p>できる範囲で最大限の努力をする。それが大切だ。</p><p>あと、修正を頼む人はもっと責任持ったほうが良いと思う。<br>責任を持たない修正は、大企業の「これやっといて！できるよね？ｗ」と同じだと思ってる。<br>結構最低。というか大嫌いだ。<br>修正が、相手にどんな印象やどんな影響を与えるのかもっと考えろ<br>というか、考えてくれ。マジで。</p><p>上の日記は朝書いたものだけど、今見返すとめちゃくちゃ怒ってますね。こっわ。</p><p>午後もいろいろ読み漁りました。</p><p>任天堂の岩田社長の「やったほうがよいこと」と「やるべきこと」は分けて考えて、やるべきことに優先順位を付けてやる。</p><p>やったほうがよいことを全てやっていると倒れてしまう</p><p>という考えに感銘を受けました。</p><p>自分が目指すべき経営者はこの人だと思いました。</p><p>今日はなんかとりあえずこのへんで</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;トマトトーストを作った。めちゃくちゃおいしかったのでまた作りたい。&lt;/p&gt;
+&lt;p&gt;朝4時くらいに起きてすこし作業、その後noteを読み漁ってた。&lt;/p&gt;
+&lt;p&gt;今回調べたテーマは「いかに妥協するか」&lt;/p&gt;
+&lt;p&gt;運営しているTeamOpenWorldで、理想を追求するあま
+      
+    
+    </summary>
+    
+    
+      <category term="日記" scheme="https://blog.minato86.me/categories/%E6%97%A5%E8%A8%98/"/>
+    
+    
+      <category term="日記" scheme="https://blog.minato86.me/tags/%E6%97%A5%E8%A8%98/"/>
+    
+  </entry>
   
   <entry>
     <title>2020年8月4日</title>
@@ -568,33 +597,6 @@
       <category term="RaspberryPi" scheme="https://blog.minato86.me/tags/RaspberryPi/"/>
     
       <category term="Redis" scheme="https://blog.minato86.me/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>クソ今更だけどCoffeeScript入門してみた</title>
-    <link href="https://blog.minato86.me/2020/03/13/%E3%82%AF%E3%82%BD%E4%BB%8A%E6%9B%B4%E3%81%A0%E3%81%91%E3%81%A9CoffeeScript%E5%85%A5%E9%96%80%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/"/>
-    <id>https://blog.minato86.me/2020/03/13/%E3%82%AF%E3%82%BD%E4%BB%8A%E6%9B%B4%E3%81%A0%E3%81%91%E3%81%A9CoffeeScript%E5%85%A5%E9%96%80%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F/</id>
-    <published>2020-03-12T20:49:11.000Z</published>
-    <updated>2020-05-21T00:34:48.664Z</updated>
-    
-    <content type="html"><![CDATA[<p>コミュニティ死んでてマジで終わりそうなCoffeeScriptを書きます。<br>覚書がてら環境構築をしていく。</p><h1 id="なぜ今更？"><a href="#なぜ今更？" class="headerlink" title="なぜ今更？"></a>なぜ今更？</h1><ul><li>Pythonっぽかったから</li><li>JavaScript書くの飽きたから</li><li>単純に面白そうだったから</li></ul><p>やっていこう</p><h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><ul><li>Node.jsがインストールされている<ul><li>今回のバージョンは<code>v12.13.1</code></li></ul></li><li>npmがインストールされている<ul><li>今回のバージョンは<code>v6.12.1</code></li></ul></li></ul><h1 id="CoffeeScriptのインストール"><a href="#CoffeeScriptのインストール" class="headerlink" title="CoffeeScriptのインストール"></a>CoffeeScriptのインストール</h1><p>WindowsならコマンドプロンプトとかPowershell、その他ならTerminalで以下のコマンドを実行するだけ</p><p><code>npm install --global coffeescript</code></p><p>一発で入ってしまう。</p><p>ちなみにそのプロジェクトだけで使いたい場合は<code>--global</code>を<code>--save-dev</code>に読み替えてください。</p><p><code>coffee -v</code>と打ってバージョン情報が出たらOK</p><p>出なかったらシェルを再起動してください。</p><h1 id="やってみる"><a href="#やってみる" class="headerlink" title="やってみる"></a>やってみる</h1><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hello = <span class="string">"hello"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log hello</span><br></pre></td></tr></table></figure><p>これでhelloができる（変数作る必要なかったろというツッコミはなしで）</p><p>これを<code>index.coffee</code>で保存、<code>coffee index.coffee</code>で実行できます。</p><h1 id="やってみる②"><a href="#やってみる②" class="headerlink" title="やってみる②"></a>やってみる②</h1><p>APIにリクエストして結果を得るやつやってみます。</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cat_api = <span class="string">'https://aws.random.cat/meow'</span></span><br><span class="line"></span><br><span class="line">request.get &#123;</span><br><span class="line">    uri: cat_api,</span><br><span class="line">    headers: &#123;<span class="string">'Content-type'</span>: <span class="string">'application/json'</span>&#125;,</span><br><span class="line">    json: <span class="literal">true</span></span><br><span class="line">&#125;, <span class="function"><span class="params">(err, req, data)</span> -&gt;</span></span><br><span class="line">    <span class="built_in">console</span>.log data.file</span><br></pre></td></tr></table></figure><p>明らかに書きやすい。</p><h1 id="やってみる③"><a href="#やってみる③" class="headerlink" title="やってみる③"></a>やってみる③</h1><p>DiscordBot作成に使ってみた。</p><h2 id="コマンドリストにprefixつけるやつ"><a href="#コマンドリストにprefixつけるやつ" class="headerlink" title="コマンドリストにprefixつけるやつ"></a>コマンドリストにprefixつけるやつ</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">command_list = [<span class="string">'cat'</span>, <span class="string">'help'</span>]</span><br><span class="line"></span><br><span class="line">command_list_withprefix = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> command_list</span><br><span class="line">    command_list_withprefix.push prefix+i</span><br></pre></td></tr></table></figure><p>Pythonみたいですごく書きやすい</p><p>// 追記 2020-03-13</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">command_list_withprefix = command_list.map (element) -&gt; prefix+element</span><br></pre></td></tr></table></figure><p>こっちのほうが賢そう</p><h2 id="Botは弾くやつ"><a href="#Botは弾くやつ" class="headerlink" title="Botは弾くやつ"></a>Botは弾くやつ</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> message.author.bot <span class="keyword">and</span> message.author <span class="keyword">is</span> <span class="keyword">not</span> client.user</span><br><span class="line">    <span class="keyword">return</span></span><br></pre></td></tr></table></figure><p>これもPythonみたいな書き方ができるので、コードがとても読みやすい</p><p>（カッコとかカギカッコだらけだとやっぱり読みづらい）</p><h2 id="開発モードをコマンドライン引数から判断する"><a href="#開発モードをコマンドライン引数から判断する" class="headerlink" title="開発モードをコマンドライン引数から判断する"></a>開発モードをコマンドライン引数から判断する</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devmode = <span class="keyword">if</span> process.argv[<span class="number">2</span>]? <span class="keyword">and</span> process.argv[<span class="number">2</span>] <span class="keyword">is</span> <span class="string">'true'</span> <span class="keyword">then</span> <span class="literal">true</span> <span class="keyword">else</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure><p>nullとかundefinedを?って書くだけで判断してくれる神仕様</p><h2 id="開発モードと通常モードでトークンを分ける"><a href="#開発モードと通常モードでトークンを分ける" class="headerlink" title="開発モードと通常モードでトークンを分ける"></a>開発モードと通常モードでトークンを分ける</h2><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">token_dev = <span class="string">'dev token here'</span></span><br><span class="line">token_default = <span class="string">'default token here'</span></span><br><span class="line"></span><br><span class="line">token = <span class="keyword">if</span> devmode <span class="keyword">then</span> token_dev <span class="keyword">else</span> token_default</span><br></pre></td></tr></table></figure><p>こんな簡単に書けちゃうのか・・・・<br>最高すぎ</p><h1 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h1><p>ここまで使いやすい言語とは思わなかったです。<br>めちゃ使いやすかったので（正直今後の保証はないけど）これからはCoffeeScriptで書いてみようと思います。</p><p>また何かCoffeeScriptに関する知見があればここに書いていきます。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;コミュニティ死んでてマジで終わりそうなCoffeeScriptを書きます。&lt;br&gt;覚書がてら環境構築をしていく。&lt;/p&gt;
-&lt;h1 id=&quot;なぜ今更？&quot;&gt;&lt;a href=&quot;#なぜ今更？&quot; class=&quot;headerlink&quot; title=&quot;なぜ今更？&quot;&gt;&lt;/a&gt;なぜ今更？&lt;/
-      
-    
-    </summary>
-    
-    
-      <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-      <category term="CoffeeScript" scheme="https://blog.minato86.me/tags/CoffeeScript/"/>
     
   </entry>
   
