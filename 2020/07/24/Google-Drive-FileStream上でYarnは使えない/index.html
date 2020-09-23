@@ -67,7 +67,7 @@ GSuiteのプランでGoogle Driveを無制限で使用できるようにして�
     
 
 
-<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="MinatoNote" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="MinatoNote" type="application/atom+xml">
 </head>
 
 
@@ -159,7 +159,7 @@ GSuiteのプランでGoogle Driveを無制限で使用できるようにして�
 <p>んでそのYarnなんですが、DriveFS上で使いたいんですよ。<br>てかこれ使えないとNode.jsアプリケーション開発できないし。</p>
 <p>結論から言うと、無理です。</p>
 <h1 id="DriveFS上でYarnは使えない"><a href="#DriveFS上でYarnは使えない" class="headerlink" title="DriveFS上でYarnは使えない"></a>DriveFS上でYarnは使えない</h1><p><code>yarn install</code>を実行すると、以下のエラーが発生します。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">error An unexpected error occurred: <span class="string">"EEXIST: file already exists, mkdir 'G:\\path-to-repos\\node_modules\\@electron\\get\\node_modules'"</span>.</span><br><span class="line">info If you think this is a bug, please open a bug report with the information provided <span class="keyword">in</span> <span class="string">"G:\\path-to-repos\\yarn-error.log"</span>.</span><br><span class="line">info Visit https://yarnpkg.com/en/docs/cli/install <span class="keyword">for</span> documentation about this <span class="built_in">command</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">error An unexpected error occurred: <span class="string">&quot;EEXIST: file already exists, mkdir &#x27;G:\\path-to-repos\\node_modules\\@electron\\get\\node_modules&#x27;&quot;</span>.</span><br><span class="line">info If you think this is a bug, please open a bug report with the information provided <span class="keyword">in</span> <span class="string">&quot;G:\\path-to-repos\\yarn-error.log&quot;</span>.</span><br><span class="line">info Visit https://yarnpkg.com/en/docs/cli/install <span class="keyword">for</span> documentation about this <span class="built_in">command</span>.</span><br></pre></td></tr></table></figure>
 
 <p>ファイルは既に存在しますというエラーですが、おそらくダウンロードされたファイルから順番にDriveFSによって処理されていくので、それでファイルチェックの整合性が取れなくなっているんじゃないかと思います。</p>
 <p>兎にも角にもDriveFSでYarnは使えません。残念。</p>
@@ -208,7 +208,7 @@ GSuiteのプランでGoogle Driveを無制限で使用できるようにして�
                     <!-- Widget 2: Categories -->
                     
                         <div class="mt5 tc tl-l">
-    <h3>Categories</h3>
+    <h3>カテゴリ</h3>
     
         <p>
             <a href="/categories/不具合/">不具合</a>
@@ -222,7 +222,11 @@ GSuiteのプランでGoogle Driveを無制限で使用できるようにして�
 
                     <!-- Widget 3: Recent Posts -->
                     <div class="mt5 tc tl-l">
-    <h3>Recent Posts</h3>
+    <h3>最近の投稿</h3>
+    
+        <p>
+            <a href="/2020/09/24/Hexo%E3%81%A7%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92Github%E3%81%A7%E4%BF%9D%E6%8C%81%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/">Hexoでテーマの設定ファイルをGithubで保持する方法</a>
+        </p>
     
         <p>
             <a href="/2020/08/11/%E5%B1%B1%E6%A2%A8%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F/">山梨に行ってきた day 1</a>
@@ -238,10 +242,6 @@ GSuiteのプランでGoogle Driveを無制限で使用できるようにして�
     
         <p>
             <a href="/2020/08/03/2020%E5%B9%B48%E6%9C%883%E6%97%A5/">2020年8月3日</a>
-        </p>
-    
-        <p>
-            <a href="/2020/07/29/Go%E8%A8%80%E8%AA%9E%E3%81%93%E3%81%A8%E3%81%AF%E3%81%98%E3%82%81/">Go言語ことはじめ</a>
         </p>
     
 </div>
