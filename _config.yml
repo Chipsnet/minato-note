@@ -8,7 +8,7 @@ subtitle: '感じたことの全部'
 description: ''
 keywords:
 author: Minato86
-language: en
+language: ja
 timezone: ''
 
 # URL
@@ -98,12 +98,4 @@ include:
 exclude:
 ignore:
 
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
 theme: anodyne
-
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: ''
