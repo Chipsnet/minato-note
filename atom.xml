@@ -6,7 +6,7 @@
   <link href="https://blog.minato86.me/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-09-23T16:53:33.362Z</updated>
+  <updated>2020-09-25T16:22:38.597Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iPhone版Braveからいつの間にかBrave Syncが消えてた</title>
+    <link href="https://blog.minato86.me/2020/09/26/iPhone%E7%89%88Brave%E3%81%8B%E3%82%89%E3%81%84%E3%81%A4%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8BBrave-Sync%E3%81%8C%E6%B6%88%E3%81%88%E3%81%A6%E3%81%9F/"/>
+    <id>https://blog.minato86.me/2020/09/26/iPhone%E7%89%88Brave%E3%81%8B%E3%82%89%E3%81%84%E3%81%A4%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8BBrave-Sync%E3%81%8C%E6%B6%88%E3%81%88%E3%81%A6%E3%81%9F/</id>
+    <published>2020-09-25T16:09:03.000Z</published>
+    <updated>2020-09-25T16:22:38.597Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんばんは。</p><p><a href="https://brave.com/min233">Braveブラウザ</a>には、Brave Syncというブックマークなどを同期する機能があります。</p><p>パソコンだとこんな感じで</p><p><a href="https://gyazo.com/0bc8b0577da481a126b95f81526b799d"><img src="https://i.gyazo.com/0bc8b0577da481a126b95f81526b799d.png" alt="Image from Gyazo"></a></p><p>デバイスリストとかを確認することができるようになっています。<br>実はこれ、iPhoneにもあったんですが、気づいたら消えてました。</p><h1 id="確かに様子がおかしかった"><a href="#確かに様子がおかしかった" class="headerlink" title="確かに様子がおかしかった"></a>確かに様子がおかしかった</h1><p>PCとiPhoneを同期させようとしたら、なぜか過去に同期したわけわからないものがiPhoneにだけ同期されて、PCの同期チェーンには入ってないなんてことがありました。</p><h1 id="いつ消えたんや"><a href="#いつ消えたんや" class="headerlink" title="いつ消えたんや"></a>いつ消えたんや</h1><p><a href="https://gyazo.com/072163b4437e6fcfb7e742ede86d5afb"><img src="https://i.gyazo.com/072163b4437e6fcfb7e742ede86d5afb.png" alt="Image from Gyazo"></a></p><p>公式サイトのRelease noteを確認すると、消えたのは最新のリリースみたいです。<br>（つい最近だった）</p><p>Temporary disable the Sync UI until Sync V2 · Issue #2718 · brave/brave-ios <a href="https://github.com/brave/brave-ios/issues/2718">https://github.com/brave/brave-ios/issues/2718</a></p><p>どうやらissueによると、現在Brave Syncにはv1とv2があり、今までiPhoneに搭載されていたのはおそらくv1だったんだと思います。</p><p>たぶんv1はスマホでしか正式リリースされてないです。<br>PCのBrave Sync v1はflagsから有効にできたあれじゃないですかね。</p><p>上で紹介した不具合も、恐らくv1とv2でうまく同期できてなかったんじゃないですかね<br>だからv1の時にPCで同期したデータがiPhoneに同期されてたんじゃないかなーと</p><p>兎にも角にも、v2のiPhone上陸を待つしかなさそうですね。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんばんは。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://brave.com/min233&quot;&gt;Braveブラウザ&lt;/a&gt;には、Brave Syncというブックマークなどを同期する機能があります。&lt;/p&gt;
+&lt;p&gt;パソコンだとこんな感じで&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;h</summary>
+      
+    
+    
+    
+    <category term="不具合" scheme="https://blog.minato86.me/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
+    
+    
+    <category term="ブラウザ" scheme="https://blog.minato86.me/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexoでテーマの設定ファイルをGithubで保持する方法</title>
@@ -524,34 +551,6 @@
     
     
     <category term="Kyash" scheme="https://blog.minato86.me/tags/Kyash/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WindowsでNode.jsのバージョン管理をしよう</title>
-    <link href="https://blog.minato86.me/2020/04/15/Windows%E3%81%A7Node-js%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86%E3%82%92%E3%81%97%E3%82%88%E3%81%86/"/>
-    <id>https://blog.minato86.me/2020/04/15/Windows%E3%81%A7Node-js%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86%E3%82%92%E3%81%97%E3%82%88%E3%81%86/</id>
-    <published>2020-04-15T11:36:24.000Z</published>
-    <updated>2020-09-23T15:46:50.058Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><ul><li>Chocolaty導入済み</li><li>Node.js導入済み</li><li>Windows10</li></ul><h1 id="選択肢"><a href="#選択肢" class="headerlink" title="選択肢"></a>選択肢</h1><p>WindowsのNode.jsバージョン管理ツールには２種類ある</p><ul><li>nodist</li><li>nvm-windows</li></ul><p>nvm-windowsとnodist、どちらも人気があるように思える<br>とりあえず今回は頻繁にメンテナンスされている（ように見える）nvm-windowsを使う</p><h1 id="Node-jsのアンインストール"><a href="#Node-jsのアンインストール" class="headerlink" title="Node.jsのアンインストール"></a>Node.jsのアンインストール</h1><p>Node.jsがあるとnvm的に問題がある（nvm側に切り替わらない）らしく、まずはNode.jsをアンインストールしておく。</p><p>これは各自やってください。</p><h1 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h1><p><code>choco install nvm -y</code></p><p>これで勝手にインストールされます。<br>やったぜ</p><h1 id="バージョン切り替え"><a href="#バージョン切り替え" class="headerlink" title="バージョン切り替え"></a>バージョン切り替え</h1><p><code>nvm list available</code> で、インストールできるNodeバージョン（一部）がリストで出ます。</p><p><code>nvm install [version]</code> で指定したバージョンのNode.js（とnpm）がインストールされます。</p><p><code>nvm list</code> で、インストール済みのNode.js一覧が見れます。</p><p><code>nvm use [version]</code> で、インストールしたNode.jsに切り替わります。</p><blockquote><p>nvm use を実行しないと切り替わらないので注意</p></blockquote><h1 id="おわり"><a href="#おわり" class="headerlink" title="おわり"></a>おわり</h1><p>めちゃ簡単でしたね。これでいろいろ楽になりそうです。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;Chocolaty導入済み&lt;/li&gt;
-&lt;li&gt;Node.js導入済み&lt;/li&gt;
-&lt;li&gt;Windows10&lt;/li&gt;
-&lt;/ul&gt;</summary>
-      
-    
-    
-    
-    <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-    <category term="Node.js" scheme="https://blog.minato86.me/tags/Node-js/"/>
     
   </entry>
   
