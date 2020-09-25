@@ -1,22 +1,19 @@
-## blog.minato86.me
-私のブログです。    
-hexo製で、ipfsを使ってホストしています。
+# minato-note
 
-## LICENSE
-`source/*`: CC BY-NC-ND     
-Others: MIT
+私の個人ブログです。        
+以下のような構成で運営しています。
 
-## OSS
-### Apollo Theme
-MIT License     
-Copyright (c) 2015 Sean Sun     
-https://github.com/pinggod/hexo-theme-apollo/blob/master/LICENSE
+- Edit
+    - Markdown(Typora, VSCode, Boostnote)
+- Generate
+    - Node.js
+    - Hexo
+- Deploy
+    - node gh-pages
+- Host
+    - Github pages
 
-### hexo
-MIT License     
-Copyright (c) 2012-2019 Tommy Chen      
-https://github.com/hexojs/hexo/blob/master/LICENSE
+## ライセンス
 
-## DONATE
-donate: https://minato86.me/donate.html     
-brave: https://brave.com/min233
+MIT（ブログコンテンツを除く）     
+ブログコンテンツの権利はすべて私に帰属します
