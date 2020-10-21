@@ -10,6 +10,9 @@ categories: 雑記
 
 [![Image from Gyazo](https://i.gyazo.com/291b617834bae92f083b767c0c64b6df.png)](https://gyazo.com/291b617834bae92f083b767c0c64b6df)
 
+8日にPayPalに入金って書いてあったんですが、割と時間かかりましたね
+2020年10月15日に入金があったみたいです。
+
 結果は7,897円。
 かなり良い結果なんじゃないでしょうか。
 
