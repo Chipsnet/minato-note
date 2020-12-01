@@ -6,7 +6,7 @@
   <link href="https://blog.minato86.me/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-10-16T15:22:32.524Z</updated>
+  <updated>2020-12-01T11:31:52.582Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>バンドルカード結構いいかもねって思ってるけどどうしようって話</title>
+    <link href="https://blog.minato86.me/2020/12/01/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89%E7%B5%90%E6%A7%8B%E3%81%84%E3%81%84%E3%81%8B%E3%82%82%E3%81%AD%E3%81%A3%E3%81%A6%E6%80%9D%E3%81%A3%E3%81%A6%E3%82%8B%E3%81%91%E3%81%A9%E3%81%A9%E3%81%86%E3%81%97%E3%82%88%E3%81%86%E3%81%A3%E3%81%A6%E8%A9%B1/"/>
+    <id>https://blog.minato86.me/2020/12/01/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89%E7%B5%90%E6%A7%8B%E3%81%84%E3%81%84%E3%81%8B%E3%82%82%E3%81%AD%E3%81%A3%E3%81%A6%E6%80%9D%E3%81%A3%E3%81%A6%E3%82%8B%E3%81%91%E3%81%A9%E3%81%A9%E3%81%86%E3%81%97%E3%82%88%E3%81%86%E3%81%A3%E3%81%A6%E8%A9%B1/</id>
+    <published>2020-12-01T11:18:28.000Z</published>
+    <updated>2020-12-01T11:31:52.582Z</updated>
+    
+    <content type="html"><![CDATA[<p>前々からバンドルカードに後払い機能があることは知ってたんですよ。</p><p>最近ですね、給料日前に欲しい物が発生する場合が後を絶たなくってですね、後払いしたいな～という感じが強くなってきたんでバンドルカードいいかなって思った訳なんですよ。</p><p>ちなみに今まで使っていたのはKyashです（というか今も使っています）</p><p><a href="https://gyazo.com/02128d696ba9ed589151adfda928a604"><img src="https://i.gyazo.com/02128d696ba9ed589151adfda928a604.png" alt="Image from Gyazo"></a></p><p>こいつはかなり便利で</p><ul><li>謎技術でリアルタイムチャージができる（予めチャージしなくても、決済時に自動チャージしてくれる）</li><li>ポイントが貯まる（リアルタイムチャージを使えば、チャージ元のポイントも溜まって2倍お得）</li><li>匿名送金ができる</li></ul><p>などがあります<br>まぁ改悪されてだいぶ使いづらくなったんですが（資金移動業者になったせいで本人確認必須になったし送金も受取も本人確認必須になった）、今でもリアルタイムチャージは最強だなと思っているわけです。</p><p>でも、Kyashには後払いがない・・・<br>まぁ対応してるほうが少ないとは思うんですけどね。</p><h1 id="バンドルカードポチっとチャージ"><a href="#バンドルカードポチっとチャージ" class="headerlink" title="バンドルカードポチっとチャージ"></a>バンドルカードポチっとチャージ</h1><p>電話番号や名前などの認証をすると、後払いでチャージができる機能です。</p><p><a href="https://gyazo.com/9cbb353ef034a09e695bede9cdc41051"><img src="https://i.gyazo.com/9cbb353ef034a09e695bede9cdc41051.png" alt="Image from Gyazo"></a></p><p>お支払いは次月の末日まで、最短で一ヶ月の猶予があるわけですね。</p><p>これは便利そう！と思ったんですが、まずKyashみたいにリアルタイムチャージがありません<br>（これはほとんどのアプリがそうです）</p><p>また、後払いに使用できる支払い方法が少ないです</p><ul><li>コンビニ払い</li><li>ネット銀行</li><li>銀行ATM（ペイジー）</li></ul><p>のみとなっています（カスすぎ！）</p><p>ネット銀行の支払い可能銀行に、わたしが使っているソニー銀行がなかったので、私はコンビニで払うしか無いわけですね。面倒過ぎる！</p><p>ちなみにソニー銀行はペイジーも使えません</p><p>（まぁこれはバンドルカードではなくソニー銀行が悪い説もあります）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;前々からバンドルカードに後払い機能があることは知ってたんですよ。&lt;/p&gt;
+&lt;p&gt;最近ですね、給料日前に欲しい物が発生する場合が後を絶たなくってですね、後払いしたいな～という感じが強くなってきたんでバンドルカードいいかなって思った訳なんですよ。&lt;/p&gt;
+&lt;p&gt;ちなみに今まで使</summary>
+      
+    
+    
+    
+    <category term="雑記" scheme="https://blog.minato86.me/categories/%E9%9B%91%E8%A8%98/"/>
+    
+    
+    <category term="Kyash" scheme="https://blog.minato86.me/tags/Kyash/"/>
+    
+    <category term="バンドルカード" scheme="https://blog.minato86.me/tags/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89/"/>
+    
+    <category term="ソニー銀行" scheme="https://blog.minato86.me/tags/%E3%82%BD%E3%83%8B%E3%83%BC%E9%8A%80%E8%A1%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>Brave Rewardsの報酬を初めて受け取った</title>
@@ -524,31 +554,6 @@
     <category term="グラフィックボード" scheme="https://blog.minato86.me/tags/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%83%9C%E3%83%BC%E3%83%89/"/>
     
     <category term="ドライバ" scheme="https://blog.minato86.me/tags/%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google Cloud Platformの請求先アカウントとはなにか</title>
-    <link href="https://blog.minato86.me/2020/04/29/Google-Cloud-Platform%E3%81%AE%E8%AB%8B%E6%B1%82%E5%85%88%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%AB%E3%81%8B/"/>
-    <id>https://blog.minato86.me/2020/04/29/Google-Cloud-Platform%E3%81%AE%E8%AB%8B%E6%B1%82%E5%85%88%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%AB%E3%81%8B/</id>
-    <published>2020-04-29T00:32:10.000Z</published>
-    <updated>2020-09-23T15:46:50.056Z</updated>
-    
-    <content type="html"><![CDATA[<p>結論からいうと、請求情報が入った箱みたいなやつ</p><h1 id="請求先アカウント、必要ある？"><a href="#請求先アカウント、必要ある？" class="headerlink" title="請求先アカウント、必要ある？"></a>請求先アカウント、必要ある？</h1><ul><li>プロジェクトごとの請求先（クレジットカードとか）が分けられるので管理が楽になるぞ</li><li>請求先アカウントごとに費用のレポートや概要が出るので、プロジェクトごとの費用がわかりやすいぞ</li><li>請求先アカウントごとに予算が決定できるので、柔軟な予算設定ができるぞ</li></ul><p>といった感じでした。</p><p>Azureで言うところのサブスクリプションですね。</p><h1 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h1><p>料金設定や管理を柔軟にするための仕組みでした</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;結論からいうと、請求情報が入った箱みたいなやつ&lt;/p&gt;
-&lt;h1 id=&quot;請求先アカウント、必要ある？&quot;&gt;&lt;a href=&quot;#請求先アカウント、必要ある？&quot; class=&quot;headerlink&quot; title=&quot;請求先アカウント、必要ある？&quot;&gt;&lt;/a&gt;請求先アカウント、必要ある</summary>
-      
-    
-    
-    
-    <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-    <category term="GoogleCloudPlatform" scheme="https://blog.minato86.me/tags/GoogleCloudPlatform/"/>
     
   </entry>
   
