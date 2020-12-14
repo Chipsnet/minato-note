@@ -6,7 +6,7 @@
   <link href="https://blog.m86.work/atom.xml" rel="self"/>
   
   <link href="https://blog.m86.work/"/>
-  <updated>2020-12-14T08:12:36.815Z</updated>
+  <updated>2020-12-14T13:33:37.191Z</updated>
   <id>https://blog.m86.work/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Oculus Quest LinkとSteamVR使うと音声が出ない</title>
+    <link href="https://blog.m86.work/2020/12/14/Oculus-Quest-Link%E3%81%A8SteamVR%E4%BD%BF%E3%81%86%E3%81%A8%E9%9F%B3%E5%A3%B0%E3%81%8C%E5%87%BA%E3%81%AA%E3%81%84/"/>
+    <id>https://blog.m86.work/2020/12/14/Oculus-Quest-Link%E3%81%A8SteamVR%E4%BD%BF%E3%81%86%E3%81%A8%E9%9F%B3%E5%A3%B0%E3%81%8C%E5%87%BA%E3%81%AA%E3%81%84/</id>
+    <published>2020-12-14T13:20:19.000Z</published>
+    <updated>2020-12-14T13:33:37.191Z</updated>
+    
+    <content type="html"><![CDATA[<p>おれ「Oculus LinkでVRChatたのし～～～～！」</p><p>おれ「あれ・・・・？」</p><p>＿人人人人人人人人人＿<br>＞　<strong>声が入ってねぇ</strong>　＜<br>￣Y^Y^Y^Y^Y^Y^Y^Y^Y^￣</p><p>Oculus Linkを使用していると、Oculus Virtual Audio Deviceっていうのからマイクが入るんですが、これがVRChatで全く反応しない。</p><h1 id="調べてみた"><a href="#調べてみた" class="headerlink" title="調べてみた"></a>調べてみた</h1><p>Oculus公式サイトにありました</p><p><a href="https://gyazo.com/676135230358680061b37435e8f80bec"><img src="https://i.gyazo.com/676135230358680061b37435e8f80bec.png" alt="Image from Gyazo"></a></p><blockquote><p>A. Oculus Linkを使用しているときに、マイクがボイスチャットで機能しません。<br>Q. Oculus LinkでQuestを使用すると、OculusQuestマイクが現在正しく機能していません。 今後数回のアップデートでこれを修正する予定です。<br><a href="https://support.oculus.com/572216283519517/">Oculus Linkのトラブルシューティングのアドバイス</a></p></blockquote><p>結果、<strong>既知の問題</strong>でした。<br>つまりどうやってもなおんねぇということらしい。</p><h1 id="治し方（治るかもしれない）"><a href="#治し方（治るかもしれない）" class="headerlink" title="治し方（治るかもしれない）"></a>治し方（治るかもしれない）</h1><p>とりあえずいろいろ調べたり自分でやってみて、以下の解決法をやればそこそこの確率で治りました。</p><ul><li><code>Oculusソフトウェア &gt; 設定 &gt; ベータ &gt; Oculusを再起動</code> を実行して、Oculusの諸々を再起動</li><li>Steam VRを経由せずにVRChatを起動（なぜかSteam VR経由より激重だけどマイクの動作率は結構高い）</li><li>ひたすら音声が出るまでOculus Linkをやりなおし</li></ul><p>こんな感じです。<br>パッとするものは正直ないっすわ</p><p>修正を待つしかなさそうですねオワオワリ</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;おれ「Oculus LinkでVRChatたのし～～～～！」&lt;/p&gt;
+&lt;p&gt;おれ「あれ・・・・？」&lt;/p&gt;
+&lt;p&gt;＿人人人人人人人人人＿&lt;br&gt;＞　&lt;strong&gt;声が入ってねぇ&lt;/strong&gt;　＜&lt;br&gt;￣Y^Y^Y^Y^Y^Y^Y^Y^Y^￣&lt;/p&gt;
+&lt;p&gt;Oculu</summary>
+      
+    
+    
+    
+    <category term="不具合" scheme="https://blog.m86.work/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
+    
+    
+    <category term="VR" scheme="https://blog.m86.work/tags/VR/"/>
+    
+    <category term="Oculus Quest" scheme="https://blog.m86.work/tags/Oculus-Quest/"/>
+    
+  </entry>
   
   <entry>
     <title>大人の事情によりこのサイトのドメインとデザインが変わりました</title>
@@ -522,37 +551,6 @@
     <category term="React" scheme="https://blog.m86.work/tags/React/"/>
     
     <category term="CSS" scheme="https://blog.m86.work/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Crowdin高いからほかの使おうぜ</title>
-    <link href="https://blog.m86.work/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/"/>
-    <id>https://blog.m86.work/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/</id>
-    <published>2020-06-19T16:58:34.000Z</published>
-    <updated>2020-09-23T15:46:50.056Z</updated>
-    
-    <content type="html"><![CDATA[<p>Crowdinは、リポジトリのファイルを翻訳とかできるやつなんですけど<br>クソ高いので他のやつないか模索してみた</p><p>Github MarketPlace見てみると</p><ul><li>Crowdin</li><li>POEditor</li><li>GitLocalize</li></ul><p>があった。</p><p>1プロジェクトの最低価格的には以下のような感じ</p><table><thead><tr><th>アプリケーション</th><th>プラン名</th><th>文字列数</th><th>価格</th></tr></thead><tbody><tr><td>Crowdin</td><td>Micro</td><td>500</td><td>$16/month</td></tr><tr><td>POEditor</td><td>Free</td><td>1000</td><td>-</td></tr><tr><td>GitLocalize</td><td>-</td><td>-</td><td>-</td></tr></tbody></table><p>こんな感じ。</p><p>GitLocalizeは完全無料っぽいけどサポートしてるファイルが少なそう。<br>現時点では</p><ul><li>Markdown</li><li>PO（なにこの拡張子）</li><li>JSON</li><li>HTML</li><li>YAML</li><li>Localizable Strings（iOS）</li></ul><p>に対応してるっぽい。</p><p>とりあえず完全無料っぽいのでGitLocalizeをテストで使ってみる。</p><p>サイトにアクセス</p><p>GitLocalize - Continuous Localization for GitHub Projects <a href="https://gitlocalize.com/">https://gitlocalize.com/</a></p><p>Githubアカウントでログインする</p><p><a href="https://gyazo.com/5bb2317875f600a03702222f0eb1632d"><img src="https://i.gyazo.com/5bb2317875f600a03702222f0eb1632d.png" alt="Image from Gyazo"></a></p><p>こうなった。</p><p>そしたらAdd repository</p><p><a href="https://gyazo.com/887ebb26d82221944c7b4fd63893fdaf"><img src="https://i.gyazo.com/887ebb26d82221944c7b4fd63893fdaf.png" alt="Image from Gyazo"></a></p><p>リポジトリを設定</p><p><a href="https://gyazo.com/d7564d5091f6fd1ff4161d0c64c546e9"><img src="https://i.gyazo.com/d7564d5091f6fd1ff4161d0c64c546e9.png" alt="Image from Gyazo"></a></p><p>ターゲットパスを設定</p><p>あとはGithubと連携すれば設定は完了です。<br>かんたんですね。</p><p><a href="https://gyazo.com/b1aab64acbfc0c6f0683a67e0d1ec7cc"><img src="https://i.gyazo.com/b1aab64acbfc0c6f0683a67e0d1ec7cc.png" alt="Image from Gyazo"></a></p><p>必要な機能は一通り揃っています。<br>正直これくらいあれば随分という気がする。</p><p>結論: Crowdinにお金払わなくてもGitLocalizeでそこそこやっていける</p><p>2020年6月21日追記：</p><p>そういえばGitLocalizeはログイン＋メンバー登録必須でした<br>不特定多数からコントリビュート受けることはできないっぽい</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Crowdinは、リポジトリのファイルを翻訳とかできるやつなんですけど&lt;br&gt;クソ高いので他のやつないか模索してみた&lt;/p&gt;
-&lt;p&gt;Github MarketPlace見てみると&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Crowdin&lt;/li&gt;
-&lt;li&gt;POEditor&lt;/li&gt;
-&lt;li</summary>
-      
-    
-    
-    
-    <category term="ウェブサービスレポート" scheme="https://blog.m86.work/categories/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
-    
-    
-    <category term="Github" scheme="https://blog.m86.work/tags/Github/"/>
-    
-    <category term="Crowdin" scheme="https://blog.m86.work/tags/Crowdin/"/>
     
   </entry>
   
