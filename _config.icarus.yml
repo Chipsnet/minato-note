@@ -17,12 +17,12 @@ head:
         # when there is not enough space to display full name
         short_name: 
         # The start URL of the web application
-        start_url: 
+        start_url: https://blog.m86.work
         # The default theme color for the application
-        theme_color: 
+        theme_color: white
         # A placeholder background color for the application page to display
         # before its stylesheet is loaded
-        background_color: 
+        background_color: white
         # The preferred display mode for the website
         display: standalone
         # Image files that can serve as application icons for different contexts
@@ -59,11 +59,11 @@ head:
         # You should leave this blank for most of the time
         description: 
         # Twitter card type (twitter:card)
-        twitter_card: 
+        twitter_card: summary
         # Twitter ID (twitter:creator)
-        twitter_id: 
+        twitter_id: minatoo86
         # Twitter Site (twitter:site)
-        twitter_site: 
+        twitter_site: minatoo86
         # Google+ profile link (deprecated)
         google_plus: 
         # Facebook admin ID
