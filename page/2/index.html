@@ -1,406 +1,338 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>MinatoNote</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="MinatoNote"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MinatoNote"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="MinatoNote"><meta property="og:url" content="https://blog.minato86.me/"><meta property="og:site_name" content="MinatoNote"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://blog.minato86.me/img/og_image.png"><meta property="article:author" content="巳波みなと"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.minato86.me"},"headline":"MinatoNote","image":["https://blog.minato86.me/img/og_image.png"],"author":{"@type":"Person","name":"巳波みなと"},"description":""}</script><link rel="alternate" href="/atom.xml" title="MinatoNote" type="application/atom+xml"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><script data-ad-client="ca-pub-7860710257272145" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><meta name="generator" content="Hexo 5.2.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">MinatoNote</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" target="_blank" rel="noopener" href="https://minato86.me/">About</a></div><div class="navbar-end"><a class="navbar-item search" title="検索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-28T11:05:11.000Z" title="2020-07-28T11:05:11.000Z">2020-07-28</time>に投稿</span><span class="level-item"><time dateTime="2020-09-23T15:46:50.057Z" title="2020-09-23T15:46:50.057Z">2020-09-24</time>に更新</span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E8%A1%93/">技術</a></span><span class="level-item">4分で読む (約553語)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/">Goで独自パッケージがimportできない</a></h1><div class="content"><p>現在、以下の構成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">warbot-go</span><br><span class="line">├ test</span><br><span class="line">│ └ test.go</span><br><span class="line">├ go.mod</span><br><span class="line">└ hello.go</span><br></pre></td></tr></table></figure>
 
-<!-- Head tag -->
-<head>
+<p>この状態で<code>hello.go</code>から<code>test.go</code>をimportできない。<br>まず、保存しようとするとコードが消える</p>
+<p>これはVSCodeに入れているGolintが消してるっぽい<br>ログには<br><code>Not able to determine import path of current package by using cwd: c:\Users\Minato86\repos\MyRepository\warbot-go and Go workspace: </code><br>と記録されていた。</p>
+<p>まずは今の状況を振り返っておくと</p>
+<ul>
+<li><code>go mod init warbot-go</code>でmodを初期化済み</li>
+<li><code>go env</code>の<code>GO111MODULE</code>はonになっている</li>
+</ul>
+<p>というわけで、今はGo Modulesが使える環境が整っているはずです。</p>
+<p><code>main.go</code>と<code>test.go</code>は以下のようになっています</p>
+<p>main.go</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="comment">//ここに&quot;warbot-go/test&quot;をimportしたい</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;Hello, world.&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<p>test.go</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Test</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;test module ready.&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    <!--Description-->
-    
+<h1 id="linterを無効にしてみる"><a href="#linterを無効にしてみる" class="headerlink" title="linterを無効にしてみる"></a>linterを無効にしてみる</h1><p><img src="https://i.gyazo.com/2fd55a2ce3bace7661665a70d5dd51c9.png" alt="2fd55a2ce3bace7661665a70d5dd51c9.png"></p>
+<p>VSCodeのワークスペース設定から、Lint On Saveをoffにしてみる。</p>
+<p>結論からいうと、offにしたのに普通に実行された。<br>なんでや。と思ったら、どうやらこの動作はlinterの仕業ではなく、formatterの仕業みたい。</p>
+<h1 id="formatterを変えてみる"><a href="#formatterを変えてみる" class="headerlink" title="formatterを変えてみる"></a>formatterを変えてみる</h1><p><img src="https://i.gyazo.com/b373f1c941646a7873dc5913665eb082.png" alt="b373f1c941646a7873dc5913665eb082.png"></p>
+<p>デフォルトのgoreturnsではなく、gofmtに変えてみた。<br>結論から言えば、うまくいった。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;warbot-go/test&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	test.Test()</span><br><span class="line">	fmt.Println(<span class="string">&quot;Hello, world.&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    <!--Author-->
-    
-        <meta name="author" content="Minato86">
-    
+<p>消されずにこのように書くことができた。<br>また、普通に実行できた。</p>
+<h1 id="そういえば"><a href="#そういえば" class="headerlink" title="そういえば"></a>そういえば</h1><p>Githubでリポジトリを公開する場合、こっちのほうが正しいっぽい</p>
+<p><code>go mod init github.com/chipsnet/warbot-go</code></p>
+<p>あとはimportも<code>github.com/chipsnet/warbot-go/test</code>に書き換える。</p>
+<p>↓GoなんもわからんからDiscordBotを作っている<br><a target="_blank" rel="noopener" href="https://github.com/Chipsnet/warbot-go">GitHub - Chipsnet/warbot-go: WARbot written in golang</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-23T16:42:38.000Z" title="2020-07-23T16:42:38.000Z">2020-07-24</time>に投稿</span><span class="level-item"><time dateTime="2020-09-23T15:46:50.056Z" title="2020-09-23T15:46:50.056Z">2020-09-24</time>に更新</span><span class="level-item"><a class="link-muted" href="/categories/%E4%B8%8D%E5%85%B7%E5%90%88/">不具合</a></span><span class="level-item">4分で読む (約545語)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/24/Google-Drive-FileStream%E4%B8%8A%E3%81%A7Yarn%E3%81%AF%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/">Google Drive FileStream上でYarnは使えない</a></h1><div class="content"><p>Google Drive File Stream（以下DriveFS）、知ってますか？<br>GSuiteの人限定で使える、Google Driveを外部ストレージとしてマウントするソフトウェアです。</p>
+<p>GSuiteのプランでGoogle Driveを無制限で使用できるようにしておけば、PCの容量を気にせず作業できるので、非常に便利で重宝しています。</p>
+<h1 id="DriveFS上でYarnを使いたい"><a href="#DriveFS上でYarnを使いたい" class="headerlink" title="DriveFS上でYarnを使いたい"></a>DriveFS上でYarnを使いたい</h1><p>Yarn Pkg（以下Yarn）は、Node.jsのパッケージ管理ソフトです。<br>npmとかありますが、僕はYarn派です。</p>
+<p>んでそのYarnなんですが、DriveFS上で使いたいんですよ。<br>てかこれ使えないとNode.jsアプリケーション開発できないし。</p>
+<p>結論から言うと、無理です。</p>
+<h1 id="DriveFS上でYarnは使えない"><a href="#DriveFS上でYarnは使えない" class="headerlink" title="DriveFS上でYarnは使えない"></a>DriveFS上でYarnは使えない</h1><p><code>yarn install</code>を実行すると、以下のエラーが発生します。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">error An unexpected error occurred: <span class="string">&quot;EEXIST: file already exists, mkdir &#x27;G:\\path-to-repos\\node_modules\\@electron\\get\\node_modules&#x27;&quot;</span>.</span><br><span class="line">info If you think this is a bug, please open a bug report with the information provided <span class="keyword">in</span> <span class="string">&quot;G:\\path-to-repos\\yarn-error.log&quot;</span>.</span><br><span class="line">info Visit https://yarnpkg.com/en/docs/cli/install <span class="keyword">for</span> documentation about this <span class="built_in">command</span>.</span><br></pre></td></tr></table></figure>
 
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="MinatoNote"/>
-    
+<p>ファイルは既に存在しますというエラーですが、おそらくダウンロードされたファイルから順番にDriveFSによって処理されていくので、それでファイルチェックの整合性が取れなくなっているんじゃないかと思います。</p>
+<p>兎にも角にもDriveFSでYarnは使えません。残念。</p>
+<p>ちなみに、pipとかは依存関係のインストールをリポジトリフォルダ内ではなくPC内に行うので、PythonとかはDriveFS内で作業できます。</p>
+<p>たぶんnpmも同じ感じで依存関係インストールするので、npmもDriveFS内で使えないと思います。はい。</p>
+<blockquote>
+<p>追記:<br>npmも使えませんでした。</p>
+</blockquote>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-23T01:47:46.000Z" title="2020-07-23T01:47:46.000Z">2020-07-23</time>に投稿</span><span class="level-item"><time dateTime="2020-09-23T15:46:50.059Z" title="2020-09-23T15:46:50.059Z">2020-09-24</time>に更新</span><span class="level-item"><a class="link-muted" href="/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/">ソフトウェアレポート</a></span><span class="level-item">10分で読む (約1462語)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/23/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E3%81%AE%E3%81%A7%E5%85%A5%E3%82%8C%E3%81%A6%E3%82%8B%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B/">ブラウザを変えたので入れてる拡張機能を紹介する</a></h1><div class="content"><p>おはようございます。</p>
+<p><a href="https://blog.minato86.me/2020/07/23/%E4%BF%BA%E3%81%AFBrave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A8%E3%81%84%E3%81%86%E5%B9%BB%E6%83%B3%E3%81%AB%E7%B8%9B%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B/">俺はBraveブラウザという幻想に縛られている - MinatoNote</a>で書いたとおり、Braveの呪縛から解き放たれたので、ブラウザを変更しました。</p>
+<p>GoogleChrome, Vivaldiを使ってみたんですがしっくりこなかったので、今回はFirefoxを選択しました。<br>決め手となったのは Firefox Lockwiseです。iOSアプリもあり、AutoFill Passwordsにも対応していたので、丁度いいと思って導入しました。</p>
+<p>Chrome系はBlinkというレンダリングエンジンを採用していますが、FirefoxはChromiumベースでは無いため、レンダリングエンジンが異なります。<br>その関係で拡張機能の互換性が無く、一部の拡張機能は代替になりましたが、BraveからFirefoxに拡張機能を移行したので、どうせなので普段使っている拡張機能を紹介したいと思います。</p>
+<h1 id="Wappalyzer-Chrome系-Firefox"><a href="#Wappalyzer-Chrome系-Firefox" class="headerlink" title="Wappalyzer(Chrome系, Firefox)"></a>Wappalyzer(Chrome系, Firefox)</h1><p>最初はこれ、Wappalyzerです。<br>開発者のみなさんは割と入れてる人多いんじゃないですかね。</p>
+<p>これは、ウェブサイトの使用技術がわかる拡張機能です。</p>
+<p>「このサイト、何で作ってるんだろ・・・？」って思うことありますよね？</p>
+<p>この拡張機能はそれを解決してくれます。</p>
+<p><img src="https://i.gyazo.com/b5d7d6a01580df27bc5e086a62853203.png"></p>
+<p>これは私のブログを見た場合の画面ですが、このようにHexoで作成しているのがバレています。</p>
+<p>すげえ。</p>
+<h1 id="Refined-Github-Chrome系-Firefox"><a href="#Refined-Github-Chrome系-Firefox" class="headerlink" title="Refined Github(Chrome系, Firefox)"></a>Refined Github(Chrome系, Firefox)</h1><p>これはGithubに追加機能を与える拡張機能です。</p>
+<p><img src="https://i.gyazo.com/be81415bbc745aa21ae973d629091476.png"></p>
+<p>めちゃくちゃ好きな機能がこれです。</p>
+<p>Yoursに私が作成したIssueすべてが入ってます。<br>CreatedだとPrivateとかが表示されなくて困ってたんですが、これのおかげで万事解決でした。</p>
+<p>他にも、MDファイルがソースで表示できる機能やTabインデント機能など、かなり良い機能がたくさんあります。</p>
+<p>Githubユーザーは是非入れましょう</p>
+<h1 id="Advanced-GitHub-Notifer-Chrome系-Notifer-for-Github"><a href="#Advanced-GitHub-Notifer-Chrome系-Notifer-for-Github" class="headerlink" title="Advanced GitHub Notifer(Chrome系: Notifer for Github)"></a>Advanced GitHub Notifer(Chrome系: Notifer for Github)</h1><p>Chrome未対応の拡張機能です。</p>
+<p>今まではNotifer for Githubを使っていましたが、こっちのほうが機能が多いのでこっちを採用しました。</p>
+<p>その名の通りGithubの通知を表示してくれる拡張機能です。</p>
+<p>Notifer for Githubと違うのは、Githubにアクセスしなくても通知を確認できる部分です。</p>
+<p><img src="https://i.gyazo.com/4cd7c0ea7ef74991fd0d53cd02565c7f.png"></p>
+<p>これはかなり便利です。<br>緊急の場合とそうでない場合が簡単に把握できます。</p>
+<h1 id="Link-Text-and-Location-Copier-Chrome系-Create-Link"><a href="#Link-Text-and-Location-Copier-Chrome系-Create-Link" class="headerlink" title="Link Text and Location Copier(Chrome系: Create Link)"></a>Link Text and Location Copier(Chrome系: Create Link)</h1><p>MinatoNote — <a href="https://blog.minato86.me/">https://blog.minato86.me/</a></p>
+<p>こんな感じのリンクを生成する拡張機能です。</p>
+<p>私はTwitterにリンクを共有するときよくこの拡張機能を使うので、代替がFirefoxにあり助かりました。</p>
+<p>というかこれないと死活問題です。。。</p>
+<p><a href="https://blog.minato86.me/">MinatoNote</a></p>
+<p>Markdownにも対応しているので、非常に便利です。</p>
+<h1 id="Copy-Link-Text-Chrome系-Firefox"><a href="#Copy-Link-Text-Chrome系-Firefox" class="headerlink" title="Copy Link Text(Chrome系, Firefox)"></a>Copy Link Text(Chrome系, Firefox)</h1><p>リンクの文字をコピーする拡張機能です。</p>
+<p>リンクのコピーって面倒ですよね。<br>結構こうなりがち</p>
+<p><a target="_blank" rel="noopener" href="https://gyazo.com/f58738c532b9a86a6d6546b4a36d89fe"><img src="https://i.gyazo.com/f58738c532b9a86a6d6546b4a36d89fe.gif" alt="Image from Gyazo"></a></p>
+<p>でもこの拡張機能なら、ワンクリックでコピー可能です。</p>
+<p>操作は簡単で、リンク文字の上で右クリック、</p>
+<p>リンク文字列をコピー をクリックするだけです。</p>
+<h1 id="Twitter-メディアダウンローダ-Chrome系-Firefox"><a href="#Twitter-メディアダウンローダ-Chrome系-Firefox" class="headerlink" title="Twitter メディアダウンローダ(Chrome系, Firefox)"></a>Twitter メディアダウンローダ(Chrome系, Firefox)</h1><p>Twitterの画像や動画を保存する拡張機能です。</p>
+<p>検索画面などでのダウンロードにも対応していて、めちゃくちゃ使い勝手が良いです。</p>
+<p>Twitterの新デザインにもちゃんと対応していて、良かったです。</p>
+<h1 id="Gyazo-Firefox-未対応"><a href="#Gyazo-Firefox-未対応" class="headerlink" title="Gyazo(Firefox 未対応)"></a>Gyazo(Firefox 未対応)</h1><p>一個だけ、移行できない拡張機能がありました。<br>Gyazoです。</p>
+<p>私はGyazoProを使っているので、スクショなどをよくGyazoに保存するんですが、サイト内要素を選択して撮影するのに重宝していました。</p>
+<p>しかし、Firefoxの拡張機能ページからは削除されていて、ダウンロードすることはできませんでした。</p>
+<p>これに関してはよくわかりません。</p>
+<blockquote>
+<p>2020年7月27日追記<br>拡張機能復旧してました。Gyazo公式サイトのリンクからダウンロードできます。<br>めちゃくちゃ不便だったので助かりました</p>
+</blockquote>
+<p>導入している拡張機能はこんな感じです。</p>
+<p>よかったら参考にしてみてください。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-23T01:28:42.000Z" title="2020-07-23T01:28:42.000Z">2020-07-23</time>に投稿</span><span class="level-item"><time dateTime="2020-09-23T15:46:50.059Z" title="2020-09-23T15:46:50.059Z">2020-09-24</time>に更新</span><span class="level-item"><a class="link-muted" href="/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/">ソフトウェアレポート</a></span><span class="level-item">14分で読む (約2148語)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/23/%E4%BF%BA%E3%81%AFBrave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A8%E3%81%84%E3%81%86%E5%B9%BB%E6%83%B3%E3%81%AB%E7%B8%9B%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B/">俺はBraveブラウザという幻想に縛られている</a></h1><div class="content"><h1 id="Braveなら、理想のインターネットを作ってくれる。そう信じていた"><a href="#Braveなら、理想のインターネットを作ってくれる。そう信じていた" class="headerlink" title="Braveなら、理想のインターネットを作ってくれる。そう信じていた"></a>Braveなら、理想のインターネットを作ってくれる。そう信じていた</h1><p>みなさんはBraveブラウザをご存知だろうか。</p>
+<p>2020年6月に月間アクティブユーザー1500万人を達成した、新しいブラウザである。</p>
+<p>特徴は</p>
+<ul>
+<li>標準搭載のAIによる広告・トラッカーブロック機能</li>
+<li>通知型広告を受け取ることでBATという仮想通貨（なお日本はおま国なのでBATポイントと呼ばれるポイント）がもらえる</li>
+<li>BATを用いてDonateできる</li>
+<li>履歴を一切外部に漏らさない</li>
+<li>暗号通貨ウォレットを標準搭載</li>
+<li>Torプライベートブラウジング機能</li>
+</ul>
+<p>など、”プライベートに重きを置いたブラウザ”であることがわかる。</p>
+<p>キャッチコピーは”インターネットをもっと素晴らしく”<br>初めて見つけた時、心が踊ったのを覚えている。</p>
+<h1 id="理想のインターネットなんて、無かった。"><a href="#理想のインターネットなんて、無かった。" class="headerlink" title="理想のインターネットなんて、無かった。"></a>理想のインターネットなんて、無かった。</h1><p>私はBraveブラウザの過度な期待を抱いていた。</p>
+<p>Braveなら、インターネットの収益システムを正しく変えてくれるだろう、そう思っていた。</p>
+<p>だからBraveの広告の不安定には驚いた。</p>
+<p>来るときは一日に15件ほど広告が来る（これでも少ない）</p>
+<p>来ない日は1件も来ない。</p>
+<p>4,5月頃は割と頻繁に広告が来ていたと記憶しているが、今はそんなことは無くなってしまった。<br>2日に1回来れば良いほうだろう。その程度である。</p>
+<p>広告主が集まらない理由、それはBraveの広告システムに原因があると思う。</p>
+<p>Brave広告は、クリックすればBATがもらえる。<br>だからクリックが作業のように繰り返しの動作になり、宣伝効果が薄れてしまう。</p>
+<p>普通の広告の場合、嫌でも画像を見ることになり、多少なり記憶に何かしらの影響を起こす。</p>
+<p>「この広告、見たことあるぞ・・？」という風に、自分は記憶していなくても、脳が勝手に記憶しているものである。</p>
+<p>こういった効果がBrave広告には無い。<br>だから広告主が少ないのではないかと私は思う。</p>
+<h1 id="Braveブラウザという幻想に縛られている"><a href="#Braveブラウザという幻想に縛られている" class="headerlink" title="Braveブラウザという幻想に縛られている"></a>Braveブラウザという幻想に縛られている</h1><p>Braveブラウザは幻想だ。</p>
+<p>Braveブラウザの目指す、広告で手に入れたBATを送り合い、サイト運営者を支援する世界は、きっと訪れない。</p>
+<p>でも、私は今までずっと”いつかは変わるだろう”と思い、言わば惰性でBraveを使っていた。</p>
+<p>使いやすさから目を背け、Brave Rewardsという幻のためにブラウザを使ってきた。</p>
+<p>Braveブラウザのどこが使いにくかったのか、数個挙げてみようと思う。</p>
+<h2 id="Brave-Shields"><a href="#Brave-Shields" class="headerlink" title="Brave Shields"></a>Brave Shields</h2><p>これは、Braveの広告・トラッカーブロックのことである。</p>
+<p>こいつ、AIによって処理されていて、通常のAdblockでは消せない広告を消せるらしい。</p>
+<p>と聞いていた。が、実際は酷かった。</p>
+<p>広告は消えるものと消えないものがまばら、トラッカーブロック機能が暴走してまともにサイトが動かない</p>
+<p>実用に耐えない場面が多かった。</p>
+<p>「あれ、このサイトなんか動作がおかしいぞ」と思うと、だいたいこいつのせいだった。</p>
+<p>これなら普通にAdblock拡張機能入れたほうがマシだった。</p>
+<h2 id="Brave-Rewards"><a href="#Brave-Rewards" class="headerlink" title="Brave Rewards"></a>Brave Rewards</h2><p>BraveのBATなどのDonate機能の総称である。</p>
+<p>よくバグる。</p>
+<p>一ヶ月に1回しか受け取れないのに、それがバグって受け取れないことがある。</p>
+<p>たまに意味不明なエラー（支援してないのに支援エラーがずっと出る）などがある。</p>
+<p>広告も全くと行っていいほどでなくなった。</p>
+<p>これが1番の魅力なのに。</p>
+<h2 id="メモリ消費"><a href="#メモリ消費" class="headerlink" title="メモリ消費"></a>メモリ消費</h2><p>メモリ消費がすごい</p>
+<p>単純比較Chromeの1.5倍あった。<br>ただでさえメモリ消費の鬼であるChromeの1.5倍なのだ。</p>
+<p>たぶん、裏でBrave Shieldsとか、その他の機能が動いているからだと思う。</p>
+<p>改めてHPを確認してみると、Chrome, Firefoxより高速というのは書いてあるが、メモリ消費については一切触れられていなかった。</p>
+<blockquote>
+<p>追記<br>実はCNETの記事で「Braveは、モバイルとデスクトップの両方で、私が今年使った中で最も高速なブラウザです。ブラウザのメモリ使用量は他のほとんどのブラウザをはるかに下回っており、ウェブサイトの読み込みははるかに速くなっています。」<br>と書かれていました。それがHPに載ってた。<br>でも、インストール直後で比較してもBraveがメモリ消費で勝ってることなんてなかったので、これガセでは？となっている</p>
+</blockquote>
+<p>つまりはそういうことである。</p>
+<h2 id="高速ではない"><a href="#高速ではない" class="headerlink" title="高速ではない"></a>高速ではない</h2><p>初期の読み込みがワンテンポ遅い。</p>
+<p>CNNのBrave, Chrome, Firefoxの比較動画を見てほしい</p>
+<p><a target="_blank" rel="noopener" href="https://player.vimeo.com/video/371512354?dnt=true">https://player.vimeo.com/video/371512354?dnt=true</a></p>
+<p>これを見れば、Braveは広告を読み込まないから高速なだけというのがわかると思う。</p>
+<p>つまり、アンフェアな検証だ。</p>
+<p>ChromeとFirefoxだって、広告ブロッカー拡張を入れれば、たぶんBraveと同じレベルで高速化できる。</p>
+<p>Braveは早くない。むしろワンテンポ遅い。</p>
+<h2 id="細かいフリーズ"><a href="#細かいフリーズ" class="headerlink" title="細かいフリーズ"></a>細かいフリーズ</h2><p>たまに固まる。</p>
+<p>スクロールとか、クリックとか、タブ移動とか。</p>
+<p>いちいちストレスが溜まっていく。</p>
+<h2 id="いつ実装されるかわからない同期機能"><a href="#いつ実装されるかわからない同期機能" class="headerlink" title="いつ実装されるかわからない同期機能"></a>いつ実装されるかわからない同期機能</h2><p>Brave syncという、同期機能がある。</p>
+<p>これはブックマーク共有のための機能であるが、これがいつまで経っても実装されない。</p>
+<p>実は有効化することはできる。</p>
+<p>brave://flagsにアクセスして、brave syncを有効にすると、使うことができる。</p>
+<p>が、アップデートで設定時に落ちるようになってしまった。なんで。</p>
+<p>まともに使えない。</p>
+<p>ブックマーク同期ができないのは、非常に迷惑である。</p>
+<p>スマホとブックマーク同期ができれば、もっと簡単にスムーズなインターネット体験ができるはずだ。</p>
+<p>なのにまだ実装されない。どうして。</p>
+<h1 id="効率だいじに"><a href="#効率だいじに" class="headerlink" title="効率だいじに"></a>効率だいじに</h1><p>今まで、Braveでできないことは全部Chromeを起動してやってきた。<br>（たまにBrave Shields外しても正常動作しないサイトがある）</p>
+<p>Chromeなら、Brave Rewards以外普通のブラウザ機能は全部揃ってる。</p>
+<p>果たしてどっちが優秀な選択か、考えなくてもわかる。</p>
+<p>そろそろ、幻想を見るのはやめます。</p>
+<p>Braveが本当の”Brave ブラウザー”になったとき、また戻ってきます。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-17T06:48:54.000Z" title="2020-07-17T06:48:54.000Z">2020-07-17</time>に投稿</span><span class="level-item"><time dateTime="2020-09-23T15:46:50.058Z" title="2020-09-23T15:46:50.058Z">2020-09-24</time>に更新</span><span class="level-item"><a class="link-muted" href="/categories/%E9%9B%91%E8%A8%98/">雑記</a></span><span class="level-item">4分で読む (約549語)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/17/%E3%81%BC%E3%81%8F%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8C%E5%8C%97%E6%A5%B5%E3%81%AB%E4%BF%9D%E5%AD%98%E3%81%95%E3%82%8C%E3%81%9F/">ぼくのリポジトリが北極に保存された</a></h1><div class="content"><p><img src="https://i.gyazo.com/df7d68a765003b8b3568067dd77c7077.png" alt="df7d68a765003b8b3568067dd77c7077.png"></p>
+<p>こんな感じのバッジをGithubで貰いました。<br>なにこれ？って思って調べたら、千年くらいプログラムのリポジトリを北極に保存するプロジェクトで、あなたのプログラムが保存されましたよってことらしいです。</p>
+<h2 id="Arctic-Code-Vault"><a href="#Arctic-Code-Vault" class="headerlink" title="Arctic Code Vault"></a>Arctic Code Vault</h2><p>Arcticとは北極圏のことです。<br>Vaultとは保管庫という意味で、北極圏のコード保管庫という意味になります。</p>
+<p>その名の通り、後世にプログラムを残していこうという試みみたいです。</p>
+<p>これは、Github Archive Programの一環で、他にも石英ガラスにデータを保存する方法などが開発・進行しているようです。</p>
+<h2 id="保管方法"><a href="#保管方法" class="headerlink" title="保管方法"></a>保管方法</h2><p>なんと、piqlFilmというフィルムに、物理的に保存されているようです。すげえ。<br>自分のプログラムがフィルムに保存されて北極にあるってなんか感動しますよね。</p>
+<p>フィルムにはコードが文字としてではなく、QRコードのようなもので保存されていて</p>
+<p><img src="https://i.gyazo.com/a684277b5d63072721ddbf6df740932a.jpg" alt="a684277b5d63072721ddbf6df740932a.jpg"><br>（公式動画より）</p>
+<p>このように拡大すると、バーコードなどが確認できます。</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fzI9FNjXQ0o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <!--Open Graph Description-->
-    
+<h2 id="対象"><a href="#対象" class="headerlink" title="対象"></a>対象</h2><ul>
+<li>2019/11/13 ~ 2020/02/02までのリポジトリ</li>
+<li>2019/02/03 ~ 2020/02/02までに星が1つ以上付いたリポジトリ</li>
+<li>期間問わず、250以上の星が付いたリポジトリ</li>
+</ul>
+<p>らしいです。<br>自分の場合は、星の付いたリポジトリと期間内のコミットと両方あったので、たぶん10リポジトリくらい保存されたと思います。</p>
+<p>みなさんも自分にバッジが付いているか確認してみてはどうでしょうか？</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-10T17:28:53.000Z" title="2020-07-10T17:28:53.000Z">2020-07-11</time>に投稿</span><span class="level-item"><time dateTime="2020-09-23T15:46:50.060Z" title="2020-09-23T15:46:50.060Z">2020-09-24</time>に更新</span><span class="level-item"><a class="link-muted" href="/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/">お知らせ</a></span><span class="level-item">4分で読む (約587語)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/11/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A%E3%81%8C%E7%AC%AC100%E5%9B%9E%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99/">限界映像大会が第100回になります</a></h1><div class="content"><p>2018年12月19日に第1回限界映像大会が開催されてから、1年6ヶ月と22日。<br>本日2020年7月11日に限界映像大会は第100回を迎えます。</p>
+<p>多くの人に支えられて限界映像大会はここまでこれました。<br>本当にありがとうございました。</p>
+<p>限界大会は、最初は限界創作村というコミュニティーサーバーのモデリング大会から始まり、限界大会公式サーバーができ、その後限界映像大会などの大会を増やし、ここまで運営してきました。<br>途中なんども運営を断念しようとしたりしましたが、多くの人に支えられ、これまで続いています。</p>
+<p>これはひとえに参加して頂いている皆様のおかげです。ありがとうございます。<br>また、限界映像大会への楽曲利用に協力していただいた作曲者の皆様に、この場を借りてお礼申しあげます。</p>
+<p>100回という数字、運営である私自信が１番現実味がありません。<br>どうしてこうなってしまったんだ。。。。。。。。。。。。。</p>
+<p>さて、これからも限界大会は続いていきます。<br>どうかご支援、ご参加、よろしくお願いします！</p>
+<p>限界大会への参加はこちら<br><a target="_blank" rel="noopener" href="https://genkai.open-w.net/">限界大会 - TeamOpenWorld</a></p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">🔥限界映像大会100回記念🔥<br><br>限界映像大会は、次の開催で100回を迎えます。<br>そこで、参加者様から限界大会にまつわるエピソードを募集します。<br>募集したエピソードは、限界大会公式HPに掲載致します。<br><br>ぜひ皆さんのエピソードをお寄せください！<a target="_blank" rel="noopener" href="https://t.co/XOP9hskuIo">https://t.co/XOP9hskuIo</a></p>&mdash; 限界大会 運営チーム (@genkai_eizo) <a target="_blank" rel="noopener" href="https://twitter.com/genkai_eizo/status/1279733259518136321?ref_src=twsrc%5Etfw">July 5, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="MinatoNote"/>
+<p>エピソード募集してます↑</p>
+<p><a target="_blank" rel="noopener" href="https://ko-fi.com/A0A81VPXD"><img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi"></a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-10T13:02:51.000Z" title="2020-07-10T13:02:51.000Z">2020-07-10</time>に投稿</span><span class="level-item"><time dateTime="2020-09-23T15:46:50.056Z" title="2020-09-23T15:46:50.056Z">2020-09-24</time>に更新</span><span class="level-item"><a class="link-muted" href="/categories/%E4%B8%8D%E5%85%B7%E5%90%88/">不具合</a></span><span class="level-item">1分で読む (約180語)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/10/Google-Cloud-SDK%E3%81%A7UnicodeEncodeError%E3%81%8C%E5%87%BA%E3%82%8B/">Google Cloud SDKでUnicodeEncodeErrorが出る</a></h1><div class="content"><blockquote>
+<p>はてなブログで過去に公開した記事を移行しました<br>元リンクはこちら <a target="_blank" rel="noopener" href="https://minato86.hatenablog.com/entry/2019/12/06/025130">https://minato86.hatenablog.com/entry/2019/12/06/025130</a></p>
+</blockquote>
+<p>こんなエラーが出た</p>
+<p><code>ERROR: gcloud crashed (UnicodeEncodeError): &#39;ascii&#39; codec can&#39;t encode characters in position 3-8: ordinal not in range(128)</code></p>
+<p>エラーから察するに文字コード系のエラーっぽい。</p>
+<p>このエラーはGAEにデプロイする時やGCSDKのアップデートをする時とかに出るっぽい。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>何故かWindowsのPowerShellで<code>gcloud</code>コマンドを使用すると<code>ascii</code>を使ってしまうらしい。<br>それが悪さしてるっぽい</p>
+<h2 id="解決策"><a href="#解決策" class="headerlink" title="解決策"></a>解決策</h2><p>Git導入してGitbashを使いましょう</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-07-08T18:28:40.000Z" title="2020-07-08T18:28:40.000Z">2020-07-09</time>に投稿</span><span class="level-item"><time dateTime="2020-09-23T15:46:50.058Z" title="2020-09-23T15:46:50.058Z">2020-09-24</time>に更新</span><span class="level-item"><a class="link-muted" href="/categories/%E6%8A%80%E8%A1%93/">技術</a></span><span class="level-item">数秒で読む (約105語)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/07/09/Material-UI%E3%81%AETabs%E3%81%AEindicator%E3%81%AECSS%E3%82%92%E3%81%84%E3%81%98%E3%82%8B/">Material UIのTabsのindicatorのCSSをいじる</a></h1><div class="content"><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> StyledTabs = withStyles(&#123;</span><br><span class="line">    indicator: &#123;</span><br><span class="line">        display: <span class="string">&quot;flex&quot;</span>,</span><br><span class="line">        justifyContent: <span class="string">&quot;center&quot;</span>,</span><br><span class="line">        backgroundColor: <span class="string">&quot;transparent&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&amp; &gt; span&quot;</span>: &#123;</span><br><span class="line">            maxWidth: <span class="number">0</span>,</span><br><span class="line">            width: <span class="string">&quot;100%&quot;</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;)(<span class="function">(<span class="params">props</span>) =&gt;</span> <span class="xml"><span class="tag">&lt;<span class="name">Tabs</span> &#123;<span class="attr">...props</span>&#125; <span class="attr">TabIndicatorProps</span>=<span class="string">&#123;&#123;</span> <span class="attr">children:</span> &lt;<span class="attr">span</span> /&gt;</span> &#125;&#125; /&gt;</span>);</span><br></pre></td></tr></table></figure>
 
-    <!--Type page-->
-    
-        <meta property="og:type" content="website" />
-    
-
-    <!--Page Cover-->
-    
-
-    <meta name="twitter:card" content="summary" />
-    
-
-    <!-- Title -->
-    
-    <title>page - MinatoNote</title>
-
-    <!-- Tachyons Core CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Custom CSS -->
-    
-<link rel="stylesheet" href="/css/style.css">
-
-
-    <!-- Google Analytics -->
-    
-
-
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="MinatoNote" type="application/atom+xml">
-</head>
-
-
-<body>
-
-<!-- Main Content -->
-<!-- Banner -->
-<!-- Banner -->
-<div class="w-100 bg-1 ph5-ns ph3 text-light">
-    
-    <nav class="db dt-l w-100 mw8 center border-box pv3">
-        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="MinatoNote">
-            <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f530.svg" class="dib h3" alt="MinatoNote">
-        </a>
-        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/" 
-                    title="Home">
-                    Home
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/archives" 
-                    title="Archives">
-                    Archives
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/tags" 
-                    title="Tags">
-                    Tags
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/categories" 
-                    title="Categories">
-                    Categories
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    target="_blank" rel="noopener" href="https://minato86.me/about.html" 
-                    title="About">
-                    About
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    target="_blank" rel="noopener" href="https://minato86.me/contact.html" 
-                    title="Contact">
-                    Contact
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    target="_blank" rel="noopener" href="https://ko-fi.com/minato86" 
-                    title="Donation">
-                    Donation
-                </a>
-            
-        </div>
-    </nav>
-
-    <!-- Title -->
-    <div class="w-100 mw8 center vh-40 dt">
-        <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">Minato Note</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">なんか適当に書いている</p>
-        </div>
-    </div>
-
-    <!-- Icon -->
-    <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa fa-magic"></i>
-    </div>
-</div>
-
-<!-- Content -->
-<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
-    <div class="content">
-        <div class="mw8 center">
-            
-                <a href="/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2020-07-28</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Golang/'; return false;">#Golang</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/VisualStudioCode/'; return false;">#VisualStudioCode</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Goで独自パッケージがimportできない<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2020/07/24/Google-Drive-FileStream%E4%B8%8A%E3%81%A7Yarn%E3%81%AF%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2020-07-24</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node-js/'; return false;">#Node.js</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Yarn/'; return false;">#Yarn</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Google Drive FileStream上でYarnは使えない<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2020/07/23/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E3%81%AE%E3%81%A7%E5%85%A5%E3%82%8C%E3%81%A6%E3%82%8B%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2020-07-23</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ブラウザ/'; return false;">#ブラウザ</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/拡張機能/'; return false;">#拡張機能</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">ブラウザを変えたので入れてる拡張機能を紹介する<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2020/07/23/%E4%BF%BA%E3%81%AFBrave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A8%E3%81%84%E3%81%86%E5%B9%BB%E6%83%B3%E3%81%AB%E7%B8%9B%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2020-07-23</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ブラウザ/'; return false;">#ブラウザ</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">俺はBraveブラウザという幻想に縛られている<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2020/07/17/%E3%81%BC%E3%81%8F%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8C%E5%8C%97%E6%A5%B5%E3%81%AB%E4%BF%9D%E5%AD%98%E3%81%95%E3%82%8C%E3%81%9F/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2020-07-17</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Github/'; return false;">#Github</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">ぼくのリポジトリが北極に保存された<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2020/07/11/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A%E3%81%8C%E7%AC%AC100%E5%9B%9E%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2020-07-11</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/運営/'; return false;">#運営</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">限界映像大会が第100回になります<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2020/07/10/Google-Cloud-SDK%E3%81%A7UnicodeEncodeError%E3%81%8C%E5%87%BA%E3%82%8B/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2020-07-10</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/GoogleCloudPlatform/'; return false;">#GoogleCloudPlatform</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/GitBash/'; return false;">#GitBash</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Google Cloud SDKでUnicodeEncodeErrorが出る<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2020/07/09/Material-UI%E3%81%AETabs%E3%81%AEindicator%E3%81%AECSS%E3%82%92%E3%81%84%E3%81%98%E3%82%8B/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2020-07-09</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node-js/'; return false;">#Node.js</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/React/'; return false;">#React</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS/'; return false;">#CSS</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Material UIのTabsのindicatorのCSSをいじる<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2020-06-20</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Github/'; return false;">#Github</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Crowdin/'; return false;">#Crowdin</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">Crowdin高いからほかの使おうぜ<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-                <a href="/2020/05/24/%E4%BF%BA%E3%81%AEGeForce-Shadow-Play%E3%81%8C%E9%8C%B2%E7%94%BB%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%81%AA%E3%81%84/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
-        <div class="dtc v-mid w-90 black-70">
-            <div>
-                
-                    <span class="f5 fw3 lh-copy pr4">2020-05-24</span> 
-                
-                
-                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/GeForce/'; return false;">#GeForce</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/グラフィックボード/'; return false;">#グラフィックボード</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ドライバ/'; return false;">#ドライバ</span>
-                
-            </div>
-            <span class="f3 fw3 lh-copy">俺のGeForce Shadow Playが録画してくれない<span>
-        </div>
-        <div class="dtc v-mid w-10 f1 black-50 tr">
-            <i class="fa fa-file-text-o"></i>
-        </div>
-    </div>
-</a>
-            
-        </div>
-    </div>
-    
-    <div class="flex items-center justify-center pa4">
-        <a href="/" 
-            class="f5 no-underline inline-flex items-center pa3 ba border-box mr4 gray hover-border-main-color hover-text-main-color">
-            <i class="w1 pr2 fa fa-chevron-left" aria-hidden="true"></i>
-            <span class="pl1">前の記事</span>
-        </a>
-        <a href="/page/3/" 
-            class="f5 no-underline inline-flex items-center pa3 ba border-box gray hover-border-main-color hover-text-main-color">
-            <span class="pr1">次の記事</span>
-            <i class="w1 pl2 fa fa-chevron-right" aria-hidden="true"></i>
-        </a>
-    </div>
-
-</div>
-
-
-<!-- Footer -->
-<div class="bg-1 ph2 ph5-ns pv5">
-        <div class="mv8">
-            <div class="center tc">
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://twitter.com/minatoo86" target="_blank">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://github.com/Chipsnet" target="_blank">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://minato86.me" target="_blank">
-                            <i class="fa fa-home"></i>
-                        </a>
-                    </div>
-                
-            </div>
-            <div class="f6 f5-ns center tc white pt5 fw3">
-                ©2020 Minami Minato
-            </div>
-        </div>
-    </div>
-
-<!-- After Footer -->
-<!-- Disqus Comments -->
-
-<script type="text/javascript">
-    var disqus_shortname = 'minatonote';
-
-    (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-</body>
-
-</html>
+<p>こんな感じ<br>上記はindicatorのmaxWidthを0にして消してます</p>
+<p>あとは通常<code>&lt;tabs&gt;&lt;/tabs&gt;</code>なところを<code>&lt;StyledTabs&gt;&lt;/StyledTabs&gt;</code>に変える<br>これでおｋ</p>
+<p>基本的にはリファレンスとかに書いてあります<br>以下参考ページ</p>
+<p><a target="_blank" rel="noopener" href="https://material-ui.com/components/tabs/#experimental-api">Tabs React component - Material-UI</a><br><a target="_blank" rel="noopener" href="https://material-ui.com/api/tabs/">Tabs API - Material-UI</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-06-19T16:58:34.000Z" title="2020-06-19T16:58:34.000Z">2020-06-20</time>に投稿</span><span class="level-item"><time dateTime="2020-09-23T15:46:50.056Z" title="2020-09-23T15:46:50.056Z">2020-09-24</time>に更新</span><span class="level-item"><a class="link-muted" href="/categories/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/">ウェブサービスレポート</a></span><span class="level-item">3分で読む (約512語)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/">Crowdin高いからほかの使おうぜ</a></h1><div class="content"><p>Crowdinは、リポジトリのファイルを翻訳とかできるやつなんですけど<br>クソ高いので他のやつないか模索してみた</p>
+<p>Github MarketPlace見てみると</p>
+<ul>
+<li>Crowdin</li>
+<li>POEditor</li>
+<li>GitLocalize</li>
+</ul>
+<p>があった。</p>
+<p>1プロジェクトの最低価格的には以下のような感じ</p>
+<table>
+<thead>
+<tr>
+<th>アプリケーション</th>
+<th>プラン名</th>
+<th>文字列数</th>
+<th>価格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Crowdin</td>
+<td>Micro</td>
+<td>500</td>
+<td>$16/month</td>
+</tr>
+<tr>
+<td>POEditor</td>
+<td>Free</td>
+<td>1000</td>
+<td>-</td>
+</tr>
+<tr>
+<td>GitLocalize</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>こんな感じ。</p>
+<p>GitLocalizeは完全無料っぽいけどサポートしてるファイルが少なそう。<br>現時点では</p>
+<ul>
+<li>Markdown</li>
+<li>PO（なにこの拡張子）</li>
+<li>JSON</li>
+<li>HTML</li>
+<li>YAML</li>
+<li>Localizable Strings（iOS）</li>
+</ul>
+<p>に対応してるっぽい。</p>
+<p>とりあえず完全無料っぽいのでGitLocalizeをテストで使ってみる。</p>
+<p>サイトにアクセス</p>
+<p>GitLocalize - Continuous Localization for GitHub Projects <a target="_blank" rel="noopener" href="https://gitlocalize.com/">https://gitlocalize.com/</a></p>
+<p>Githubアカウントでログインする</p>
+<p><a target="_blank" rel="noopener" href="https://gyazo.com/5bb2317875f600a03702222f0eb1632d"><img src="https://i.gyazo.com/5bb2317875f600a03702222f0eb1632d.png" alt="Image from Gyazo"></a></p>
+<p>こうなった。</p>
+<p>そしたらAdd repository</p>
+<p><a target="_blank" rel="noopener" href="https://gyazo.com/887ebb26d82221944c7b4fd63893fdaf"><img src="https://i.gyazo.com/887ebb26d82221944c7b4fd63893fdaf.png" alt="Image from Gyazo"></a></p>
+<p>リポジトリを設定</p>
+<p><a target="_blank" rel="noopener" href="https://gyazo.com/d7564d5091f6fd1ff4161d0c64c546e9"><img src="https://i.gyazo.com/d7564d5091f6fd1ff4161d0c64c546e9.png" alt="Image from Gyazo"></a></p>
+<p>ターゲットパスを設定</p>
+<p>あとはGithubと連携すれば設定は完了です。<br>かんたんですね。</p>
+<p><a target="_blank" rel="noopener" href="https://gyazo.com/b1aab64acbfc0c6f0683a67e0d1ec7cc"><img src="https://i.gyazo.com/b1aab64acbfc0c6f0683a67e0d1ec7cc.png" alt="Image from Gyazo"></a></p>
+<p>必要な機能は一通り揃っています。<br>正直これくらいあれば随分という気がする。</p>
+<p>結論: Crowdinにお金払わなくてもGitLocalizeでそこそこやっていける</p>
+<p>2020年6月21日追記：</p>
+<p>そういえばGitLocalizeはログイン＋メンバー登録必須でした<br>不特定多数からコントリビュート受けることはできないっぽい</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2020-05-24T07:31:06.000Z" title="2020-05-24T07:31:06.000Z">2020-05-24</time>に投稿</span><span class="level-item"><time dateTime="2020-09-23T15:46:50.059Z" title="2020-09-23T15:46:50.059Z">2020-09-24</time>に更新</span><span class="level-item"><a class="link-muted" href="/categories/%E4%B8%8D%E5%85%B7%E5%90%88/">不具合</a></span><span class="level-item">3分で読む (約407語)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/05/24/%E4%BF%BA%E3%81%AEGeForce-Shadow-Play%E3%81%8C%E9%8C%B2%E7%94%BB%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%81%AA%E3%81%84/">俺のGeForce Shadow Playが録画してくれない</a></h1><div class="content"><p><a target="_blank" rel="noopener" href="https://gyazo.com/bcc59ecc25348acaa2630b47f158f7b5"><img src="https://i.gyazo.com/bcc59ecc25348acaa2630b47f158f7b5.png" alt="Image from Gyazo"></a></p>
+<p>こんな表示がでてGeForce Shadow Playの録画ができない。</p>
+<ul>
+<li>最新のGeForce Game Ready Driverを導入済み</li>
+<li>GeForce Experienceも最新</li>
+</ul>
+<p>こんな感じ。</p>
+<p>スペック的には</p>
+<p><a target="_blank" rel="noopener" href="https://gyazo.com/632295ab455798906a43c34506fa0472"><img src="https://i.gyazo.com/632295ab455798906a43c34506fa0472.png" alt="Image from Gyazo"></a></p>
+<p>こんな感じ。<br>一応必要な要件は満たしてる。</p>
+<h1 id="DDU使ってみる"><a href="#DDU使ってみる" class="headerlink" title="DDU使ってみる"></a>DDU使ってみる</h1><p>DDUを使ってみよう。<br>というか検索してもほとんどこれだし。</p>
+<h2 id="DDUってなーに"><a href="#DDUってなーに" class="headerlink" title="DDUってなーに"></a>DDUってなーに</h2><p>Display Driver Uninstallerです。</p>
+<p>普通にドライバアンインストールすると、いろいろ残ったりするんですが、こいつは跡形もなく消し去ってくれます。<br>グラボ周辺の機能問題で異常が出たときはこれをやるといいっていうのがセオリーみたいです。</p>
+<h2 id="使い方"><a href="#使い方" class="headerlink" title="使い方"></a>使い方</h2><p>以下の記事を参照に。<br>私は一応セーフモードにしました。</p>
+<p><a target="_blank" rel="noopener" href="http://www.himajin-block30.com/entry/2018/12/01/165457">【Shadowplay】録画が機能しなくなった時の対処法一例 - 暇人雑記</a></p>
+<h1 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h1><p>とりあえず動いてる</p>
+<p>まぁいつも、数回録画できてからいきなり不可になるので、今後どうなるかはわかりません。<br>もしも問題起きたら追記するので、追記がなかったら問題がなかったということです。</p>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/">前</a></div><div class="pagination-next"><a href="/page/3/">次</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><a class="pagination-link is-current" href="/page/2/">2</a></li><li><a class="pagination-link" href="/page/3/">3</a></li><li><a class="pagination-link" href="/page/4/">4</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://i.gyazo.com/f1474692c18a4db231034524dd85b794.jpg" alt="巳波みなと"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">巳波みなと</p><p class="is-size-6 is-block">インターネッツオタク。インターネット上に生存。</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Japan</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">投稿</p><a href="/archives"><p class="title">34</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">カテゴリ</p><a href="/categories"><p class="title">12</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">タグ</p><a href="/tags"><p class="title">39</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://twitter.com/minatoo86" target="_blank" rel="noopener">フォローする</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Chipsnet"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/minatoo86"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">リンク</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://minato86.me/" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">HP</span></span><span class="level-right"><span class="level-item tag">minato86.me</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">カテゴリ</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"><span class="level-start"><span class="level-item">お知らせ</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E3%82%A2%E3%83%97%E3%83%AA%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"><span class="level-start"><span class="level-item">アプリレポート</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"><span class="level-start"><span class="level-item">イベントレポート</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"><span class="level-start"><span class="level-item">ウェブサービスレポート</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"><span class="level-start"><span class="level-item">ソフトウェアレポート</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"><span class="level-start"><span class="level-item">不具合</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%8A%80%E8%A1%93/"><span class="level-start"><span class="level-item">技術</span></span><span class="level-end"><span class="level-item tag">12</span></span></a><ul><li><a class="level is-mobile" href="/categories/%E6%8A%80%E8%A1%93/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/"><span class="level-start"><span class="level-item">データベース</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/%E6%97%85%E8%A1%8C/"><span class="level-start"><span class="level-item">旅行</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E6%97%A5%E8%A8%98/"><span class="level-start"><span class="level-item">日記</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%B2%B7%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE/"><span class="level-start"><span class="level-item">買ったもの</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%9B%91%E8%A8%98/"><span class="level-start"><span class="level-item">雑記</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最近の記事</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-12-01T11:18:28.000Z">2020-12-01</time></p><p class="title"><a href="/2020/12/01/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89%E7%B5%90%E6%A7%8B%E3%81%84%E3%81%84%E3%81%8B%E3%82%82%E3%81%AD%E3%81%A3%E3%81%A6%E6%80%9D%E3%81%A3%E3%81%A6%E3%82%8B%E3%81%91%E3%81%A9%E3%81%A9%E3%81%86%E3%81%97%E3%82%88%E3%81%86%E3%81%A3%E3%81%A6%E8%A9%B1/">バンドルカード結構いいかもねって思ってるけどどうしようって話</a></p><p class="categories"><a href="/categories/%E9%9B%91%E8%A8%98/">雑記</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-10-16T06:56:16.000Z">2020-10-16</time></p><p class="title"><a href="/2020/10/16/Brave-Rewards%E3%81%AE%E5%A0%B1%E9%85%AC%E3%82%92%E5%88%9D%E3%82%81%E3%81%A6%E5%8F%97%E3%81%91%E5%8F%96%E3%81%A3%E3%81%9F/">Brave Rewardsの報酬を初めて受け取った</a></p><p class="categories"><a href="/categories/%E9%9B%91%E8%A8%98/">雑記</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-10-06T17:23:45.000Z">2020-10-07</time></p><p class="title"><a href="/2020/10/07/%E6%96%B0%E3%81%97%E3%81%84%E7%9C%BC%E9%8F%A1%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F/">新しい眼鏡を作った</a></p><p class="categories"><a href="/categories/%E8%B2%B7%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE/">買ったもの</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-09-25T16:09:03.000Z">2020-09-26</time></p><p class="title"><a href="/2020/09/26/iPhone%E7%89%88Brave%E3%81%8B%E3%82%89%E3%81%84%E3%81%A4%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8BBrave-Sync%E3%81%8C%E6%B6%88%E3%81%88%E3%81%A6%E3%81%9F/">iPhone版Braveからいつの間にかBrave Syncが消えてた</a></p><p class="categories"><a href="/categories/%E4%B8%8D%E5%85%B7%E5%90%88/">不具合</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2020-09-23T16:46:38.000Z">2020-09-24</time></p><p class="title"><a href="/2020/09/24/Hexo%E3%81%A7%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92Github%E3%81%A7%E4%BF%9D%E6%8C%81%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/">Hexoでテーマの設定ファイルをGithubで保持する方法</a></p><p class="categories"><a href="/categories/%E6%8A%80%E8%A1%93/">技術</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">アーカイブ</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2020/12/"><span class="level-start"><span class="level-item">12月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/10/"><span class="level-start"><span class="level-item">10月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/09/"><span class="level-start"><span class="level-item">9月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/08/"><span class="level-start"><span class="level-item">8月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/07/"><span class="level-start"><span class="level-item">7月 2020</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/06/"><span class="level-start"><span class="level-item">6月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/05/"><span class="level-start"><span class="level-item">5月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/04/"><span class="level-start"><span class="level-item">4月 2020</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/03/"><span class="level-start"><span class="level-item">3月 2020</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/02/"><span class="level-start"><span class="level-item">2月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">タグ</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Atom/"><span class="tag">Atom</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Brave-Rewards/"><span class="tag">Brave Rewards</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CoffeeScript/"><span class="tag">CoffeeScript</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Crowdin/"><span class="tag">Crowdin</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GeForce/"><span class="tag">GeForce</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GitBash/"><span class="tag">GitBash</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github/"><span class="tag">Github</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Golang/"><span class="tag">Golang</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GoogleCloudPlatform/"><span class="tag">GoogleCloudPlatform</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML5/"><span class="tag">HTML5</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IPFS/"><span class="tag">IPFS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IRIAM/"><span class="tag">IRIAM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Kyash/"><span class="tag">Kyash</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LXQt/"><span class="tag">LXQt</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lubuntu/"><span class="tag">Lubuntu</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Node-js/"><span class="tag">Node.js</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RaspberryPi/"><span class="tag">RaspberryPi</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Raspbian/"><span class="tag">Raspbian</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/React/"><span class="tag">React</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Redis/"><span class="tag">Redis</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VNC/"><span class="tag">VNC</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VisualStudioCode/"><span class="tag">VisualStudioCode</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WebP/"><span class="tag">WebP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Wi-Fi/"><span class="tag">Wi-Fi</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Yarn/"><span class="tag">Yarn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97/"><span class="tag">キャンプ</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%83%9C%E3%83%BC%E3%83%89/"><span class="tag">グラフィックボード</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E3%82%BD%E3%83%8B%E3%83%BC%E9%8A%80%E8%A1%8C/"><span class="tag">ソニー銀行</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90/"><span class="tag">ドライバ</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/"><span class="tag">ネットワーク</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E3%83%8F%E3%83%AF%E3%82%A4/"><span class="tag">ハワイ</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89/"><span class="tag">バンドルカード</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"><span class="tag">ブラウザ</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B1%B1%E6%A2%A8/"><span class="tag">山梨</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD/"><span class="tag">拡張機能</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A5%E8%A8%98/"><span class="tag">日記</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%9C%BC%E9%8F%A1/"><span class="tag">眼鏡</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%81%8B%E5%96%B6/"><span class="tag">運営</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">更新を購読する</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="購読する"></div></div></form></div></div></div><div class="card widget" data-type="adsense"><div class="card-content"><div class="menu"><h3 class="menu-label">広告</h3><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7860710257272145" data-ad-slot="9995533657" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">MinatoNote</a><p class="is-size-7"><span>&copy; 2020 巳波みなと</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("ja");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="トップに戻る" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "このウェブサイトはあなたの経験を改善するためにCookieを使用しています。",
+          dismiss: "了解しました",
+          allow: "Cookiesを許可する",
+          deny: "拒否する",
+          link: "もっと詳しく知る",
+          policy: "Cookieポリシー",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="何かを入力してください..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"何かを入力してください...","untitled":"(無題)","posts":"投稿","pages":"ページ","categories":"カテゴリ","tags":"タグ"});
+        });</script></body></html>
