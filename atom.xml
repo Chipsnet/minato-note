@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>MinatoNote</title>
   
-  <subtitle>感じたことの全部</subtitle>
+  
   <link href="https://blog.m86.work/atom.xml" rel="self"/>
   
   <link href="https://blog.m86.work/"/>
