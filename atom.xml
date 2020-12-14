@@ -3,11 +3,11 @@
   <title>MinatoNote</title>
   
   <subtitle>感じたことの全部</subtitle>
-  <link href="https://blog.minato86.me/atom.xml" rel="self"/>
+  <link href="https://blog.m86.work/atom.xml" rel="self"/>
   
-  <link href="https://blog.minato86.me/"/>
+  <link href="https://blog.m86.work/"/>
   <updated>2020-12-14T08:12:36.815Z</updated>
-  <id>https://blog.minato86.me/</id>
+  <id>https://blog.m86.work/</id>
   
   <author>
     <name>巳波みなと</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>大人の事情によりこのサイトのドメインとデザインが変わりました</title>
-    <link href="https://blog.minato86.me/2020/12/14/%E5%A4%A7%E4%BA%BA%E3%81%AE%E4%BA%8B%E6%83%85%E3%81%AB%E3%82%88%E3%82%8A%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F/"/>
-    <id>https://blog.minato86.me/2020/12/14/%E5%A4%A7%E4%BA%BA%E3%81%AE%E4%BA%8B%E6%83%85%E3%81%AB%E3%82%88%E3%82%8A%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F/</id>
+    <link href="https://blog.m86.work/2020/12/14/%E5%A4%A7%E4%BA%BA%E3%81%AE%E4%BA%8B%E6%83%85%E3%81%AB%E3%82%88%E3%82%8A%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F/"/>
+    <id>https://blog.m86.work/2020/12/14/%E5%A4%A7%E4%BA%BA%E3%81%AE%E4%BA%8B%E6%83%85%E3%81%AB%E3%82%88%E3%82%8A%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F/</id>
     <published>2020-12-14T08:02:55.000Z</published>
     <updated>2020-12-14T08:12:36.815Z</updated>
     
@@ -36,17 +36,17 @@
     
     
     
-    <category term="お知らせ" scheme="https://blog.minato86.me/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"/>
+    <category term="お知らせ" scheme="https://blog.m86.work/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"/>
     
     
-    <category term="Hexo" scheme="https://blog.minato86.me/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://blog.m86.work/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>バンドルカード結構いいかもねって思ってるけどどうしようって話</title>
-    <link href="https://blog.minato86.me/2020/12/01/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89%E7%B5%90%E6%A7%8B%E3%81%84%E3%81%84%E3%81%8B%E3%82%82%E3%81%AD%E3%81%A3%E3%81%A6%E6%80%9D%E3%81%A3%E3%81%A6%E3%82%8B%E3%81%91%E3%81%A9%E3%81%A9%E3%81%86%E3%81%97%E3%82%88%E3%81%86%E3%81%A3%E3%81%A6%E8%A9%B1/"/>
-    <id>https://blog.minato86.me/2020/12/01/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89%E7%B5%90%E6%A7%8B%E3%81%84%E3%81%84%E3%81%8B%E3%82%82%E3%81%AD%E3%81%A3%E3%81%A6%E6%80%9D%E3%81%A3%E3%81%A6%E3%82%8B%E3%81%91%E3%81%A9%E3%81%A9%E3%81%86%E3%81%97%E3%82%88%E3%81%86%E3%81%A3%E3%81%A6%E8%A9%B1/</id>
+    <link href="https://blog.m86.work/2020/12/01/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89%E7%B5%90%E6%A7%8B%E3%81%84%E3%81%84%E3%81%8B%E3%82%82%E3%81%AD%E3%81%A3%E3%81%A6%E6%80%9D%E3%81%A3%E3%81%A6%E3%82%8B%E3%81%91%E3%81%A9%E3%81%A9%E3%81%86%E3%81%97%E3%82%88%E3%81%86%E3%81%A3%E3%81%A6%E8%A9%B1/"/>
+    <id>https://blog.m86.work/2020/12/01/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89%E7%B5%90%E6%A7%8B%E3%81%84%E3%81%84%E3%81%8B%E3%82%82%E3%81%AD%E3%81%A3%E3%81%A6%E6%80%9D%E3%81%A3%E3%81%A6%E3%82%8B%E3%81%91%E3%81%A9%E3%81%A9%E3%81%86%E3%81%97%E3%82%88%E3%81%86%E3%81%A3%E3%81%A6%E8%A9%B1/</id>
     <published>2020-12-01T11:18:28.000Z</published>
     <updated>2020-12-08T13:33:30.244Z</updated>
     
@@ -62,21 +62,21 @@
     
     
     
-    <category term="雑記" scheme="https://blog.minato86.me/categories/%E9%9B%91%E8%A8%98/"/>
+    <category term="雑記" scheme="https://blog.m86.work/categories/%E9%9B%91%E8%A8%98/"/>
     
     
-    <category term="Kyash" scheme="https://blog.minato86.me/tags/Kyash/"/>
+    <category term="Kyash" scheme="https://blog.m86.work/tags/Kyash/"/>
     
-    <category term="バンドルカード" scheme="https://blog.minato86.me/tags/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89/"/>
+    <category term="バンドルカード" scheme="https://blog.m86.work/tags/%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB%E3%82%AB%E3%83%BC%E3%83%89/"/>
     
-    <category term="ソニー銀行" scheme="https://blog.minato86.me/tags/%E3%82%BD%E3%83%8B%E3%83%BC%E9%8A%80%E8%A1%8C/"/>
+    <category term="ソニー銀行" scheme="https://blog.m86.work/tags/%E3%82%BD%E3%83%8B%E3%83%BC%E9%8A%80%E8%A1%8C/"/>
     
   </entry>
   
   <entry>
     <title>Brave Rewardsの報酬を初めて受け取った</title>
-    <link href="https://blog.minato86.me/2020/10/16/Brave-Rewards%E3%81%AE%E5%A0%B1%E9%85%AC%E3%82%92%E5%88%9D%E3%82%81%E3%81%A6%E5%8F%97%E3%81%91%E5%8F%96%E3%81%A3%E3%81%9F/"/>
-    <id>https://blog.minato86.me/2020/10/16/Brave-Rewards%E3%81%AE%E5%A0%B1%E9%85%AC%E3%82%92%E5%88%9D%E3%82%81%E3%81%A6%E5%8F%97%E3%81%91%E5%8F%96%E3%81%A3%E3%81%9F/</id>
+    <link href="https://blog.m86.work/2020/10/16/Brave-Rewards%E3%81%AE%E5%A0%B1%E9%85%AC%E3%82%92%E5%88%9D%E3%82%81%E3%81%A6%E5%8F%97%E3%81%91%E5%8F%96%E3%81%A3%E3%81%9F/"/>
+    <id>https://blog.m86.work/2020/10/16/Brave-Rewards%E3%81%AE%E5%A0%B1%E9%85%AC%E3%82%92%E5%88%9D%E3%82%81%E3%81%A6%E5%8F%97%E3%81%91%E5%8F%96%E3%81%A3%E3%81%9F/</id>
     <published>2020-10-16T06:56:16.000Z</published>
     <updated>2020-10-16T15:22:32.524Z</updated>
     
@@ -91,19 +91,19 @@
     
     
     
-    <category term="雑記" scheme="https://blog.minato86.me/categories/%E9%9B%91%E8%A8%98/"/>
+    <category term="雑記" scheme="https://blog.m86.work/categories/%E9%9B%91%E8%A8%98/"/>
     
     
-    <category term="ブラウザ" scheme="https://blog.minato86.me/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"/>
+    <category term="ブラウザ" scheme="https://blog.m86.work/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"/>
     
-    <category term="Brave Rewards" scheme="https://blog.minato86.me/tags/Brave-Rewards/"/>
+    <category term="Brave Rewards" scheme="https://blog.m86.work/tags/Brave-Rewards/"/>
     
   </entry>
   
   <entry>
     <title>新しい眼鏡を作った</title>
-    <link href="https://blog.minato86.me/2020/10/07/%E6%96%B0%E3%81%97%E3%81%84%E7%9C%BC%E9%8F%A1%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F/"/>
-    <id>https://blog.minato86.me/2020/10/07/%E6%96%B0%E3%81%97%E3%81%84%E7%9C%BC%E9%8F%A1%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F/</id>
+    <link href="https://blog.m86.work/2020/10/07/%E6%96%B0%E3%81%97%E3%81%84%E7%9C%BC%E9%8F%A1%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F/"/>
+    <id>https://blog.m86.work/2020/10/07/%E6%96%B0%E3%81%97%E3%81%84%E7%9C%BC%E9%8F%A1%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F/</id>
     <published>2020-10-06T17:23:45.000Z</published>
     <updated>2020-10-10T18:19:51.207Z</updated>
     
@@ -118,17 +118,17 @@
     
     
     
-    <category term="買ったもの" scheme="https://blog.minato86.me/categories/%E8%B2%B7%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE/"/>
+    <category term="買ったもの" scheme="https://blog.m86.work/categories/%E8%B2%B7%E3%81%A3%E3%81%9F%E3%82%82%E3%81%AE/"/>
     
     
-    <category term="眼鏡" scheme="https://blog.minato86.me/tags/%E7%9C%BC%E9%8F%A1/"/>
+    <category term="眼鏡" scheme="https://blog.m86.work/tags/%E7%9C%BC%E9%8F%A1/"/>
     
   </entry>
   
   <entry>
     <title>iPhone版Braveからいつの間にかBrave Syncが消えてた</title>
-    <link href="https://blog.minato86.me/2020/09/26/iPhone%E7%89%88Brave%E3%81%8B%E3%82%89%E3%81%84%E3%81%A4%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8BBrave-Sync%E3%81%8C%E6%B6%88%E3%81%88%E3%81%A6%E3%81%9F/"/>
-    <id>https://blog.minato86.me/2020/09/26/iPhone%E7%89%88Brave%E3%81%8B%E3%82%89%E3%81%84%E3%81%A4%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8BBrave-Sync%E3%81%8C%E6%B6%88%E3%81%88%E3%81%A6%E3%81%9F/</id>
+    <link href="https://blog.m86.work/2020/09/26/iPhone%E7%89%88Brave%E3%81%8B%E3%82%89%E3%81%84%E3%81%A4%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8BBrave-Sync%E3%81%8C%E6%B6%88%E3%81%88%E3%81%A6%E3%81%9F/"/>
+    <id>https://blog.m86.work/2020/09/26/iPhone%E7%89%88Brave%E3%81%8B%E3%82%89%E3%81%84%E3%81%A4%E3%81%AE%E9%96%93%E3%81%AB%E3%81%8BBrave-Sync%E3%81%8C%E6%B6%88%E3%81%88%E3%81%A6%E3%81%9F/</id>
     <published>2020-09-25T16:09:03.000Z</published>
     <updated>2020-09-25T16:22:38.597Z</updated>
     
@@ -145,17 +145,17 @@
     
     
     
-    <category term="不具合" scheme="https://blog.minato86.me/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
+    <category term="不具合" scheme="https://blog.m86.work/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
     
     
-    <category term="ブラウザ" scheme="https://blog.minato86.me/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"/>
+    <category term="ブラウザ" scheme="https://blog.m86.work/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"/>
     
   </entry>
   
   <entry>
     <title>Hexoでテーマの設定ファイルをGithubで保持する方法</title>
-    <link href="https://blog.minato86.me/2020/09/24/Hexo%E3%81%A7%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92Github%E3%81%A7%E4%BF%9D%E6%8C%81%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/"/>
-    <id>https://blog.minato86.me/2020/09/24/Hexo%E3%81%A7%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92Github%E3%81%A7%E4%BF%9D%E6%8C%81%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</id>
+    <link href="https://blog.m86.work/2020/09/24/Hexo%E3%81%A7%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92Github%E3%81%A7%E4%BF%9D%E6%8C%81%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/"/>
+    <id>https://blog.m86.work/2020/09/24/Hexo%E3%81%A7%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92Github%E3%81%A7%E4%BF%9D%E6%8C%81%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</id>
     <published>2020-09-23T16:46:38.000Z</published>
     <updated>2020-09-23T16:53:33.362Z</updated>
     
@@ -171,17 +171,17 @@
     
     
     
-    <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    <category term="技術" scheme="https://blog.m86.work/categories/%E6%8A%80%E8%A1%93/"/>
     
     
-    <category term="Github" scheme="https://blog.minato86.me/tags/Github/"/>
+    <category term="Github" scheme="https://blog.m86.work/tags/Github/"/>
     
   </entry>
   
   <entry>
     <title>山梨に行ってきた day 1</title>
-    <link href="https://blog.minato86.me/2020/08/11/%E5%B1%B1%E6%A2%A8%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F/"/>
-    <id>https://blog.minato86.me/2020/08/11/%E5%B1%B1%E6%A2%A8%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F/</id>
+    <link href="https://blog.m86.work/2020/08/11/%E5%B1%B1%E6%A2%A8%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F/"/>
+    <id>https://blog.m86.work/2020/08/11/%E5%B1%B1%E6%A2%A8%E3%81%AB%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8D%E3%81%9F/</id>
     <published>2020-08-10T20:46:02.000Z</published>
     <updated>2020-09-23T15:46:50.060Z</updated>
     
@@ -195,19 +195,19 @@
     
     
     
-    <category term="旅行" scheme="https://blog.minato86.me/categories/%E6%97%85%E8%A1%8C/"/>
+    <category term="旅行" scheme="https://blog.m86.work/categories/%E6%97%85%E8%A1%8C/"/>
     
     
-    <category term="山梨" scheme="https://blog.minato86.me/tags/%E5%B1%B1%E6%A2%A8/"/>
+    <category term="山梨" scheme="https://blog.m86.work/tags/%E5%B1%B1%E6%A2%A8/"/>
     
-    <category term="キャンプ" scheme="https://blog.minato86.me/tags/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97/"/>
+    <category term="キャンプ" scheme="https://blog.m86.work/tags/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%97/"/>
     
   </entry>
   
   <entry>
     <title>2020年8月5日</title>
-    <link href="https://blog.minato86.me/2020/08/06/2020%E5%B9%B48%E6%9C%885%E6%97%A5/"/>
-    <id>https://blog.minato86.me/2020/08/06/2020%E5%B9%B48%E6%9C%885%E6%97%A5/</id>
+    <link href="https://blog.m86.work/2020/08/06/2020%E5%B9%B48%E6%9C%885%E6%97%A5/"/>
+    <id>https://blog.m86.work/2020/08/06/2020%E5%B9%B48%E6%9C%885%E6%97%A5/</id>
     <published>2020-08-05T22:01:24.000Z</published>
     <updated>2020-09-23T15:46:50.055Z</updated>
     
@@ -224,17 +224,17 @@
     
     
     
-    <category term="日記" scheme="https://blog.minato86.me/categories/%E6%97%A5%E8%A8%98/"/>
+    <category term="日記" scheme="https://blog.m86.work/categories/%E6%97%A5%E8%A8%98/"/>
     
     
-    <category term="日記" scheme="https://blog.minato86.me/tags/%E6%97%A5%E8%A8%98/"/>
+    <category term="日記" scheme="https://blog.m86.work/tags/%E6%97%A5%E8%A8%98/"/>
     
   </entry>
   
   <entry>
     <title>2020年8月4日</title>
-    <link href="https://blog.minato86.me/2020/08/05/2020%E5%B9%B48%E6%9C%884%E6%97%A5/"/>
-    <id>https://blog.minato86.me/2020/08/05/2020%E5%B9%B48%E6%9C%884%E6%97%A5/</id>
+    <link href="https://blog.m86.work/2020/08/05/2020%E5%B9%B48%E6%9C%884%E6%97%A5/"/>
+    <id>https://blog.m86.work/2020/08/05/2020%E5%B9%B48%E6%9C%884%E6%97%A5/</id>
     <published>2020-08-05T02:05:21.000Z</published>
     <updated>2020-09-23T15:46:50.055Z</updated>
     
@@ -252,17 +252,17 @@
     
     
     
-    <category term="日記" scheme="https://blog.minato86.me/categories/%E6%97%A5%E8%A8%98/"/>
+    <category term="日記" scheme="https://blog.m86.work/categories/%E6%97%A5%E8%A8%98/"/>
     
     
-    <category term="日記" scheme="https://blog.minato86.me/tags/%E6%97%A5%E8%A8%98/"/>
+    <category term="日記" scheme="https://blog.m86.work/tags/%E6%97%A5%E8%A8%98/"/>
     
   </entry>
   
   <entry>
     <title>2020年8月3日</title>
-    <link href="https://blog.minato86.me/2020/08/03/2020%E5%B9%B48%E6%9C%883%E6%97%A5/"/>
-    <id>https://blog.minato86.me/2020/08/03/2020%E5%B9%B48%E6%9C%883%E6%97%A5/</id>
+    <link href="https://blog.m86.work/2020/08/03/2020%E5%B9%B48%E6%9C%883%E6%97%A5/"/>
+    <id>https://blog.m86.work/2020/08/03/2020%E5%B9%B48%E6%9C%883%E6%97%A5/</id>
     <published>2020-08-03T12:43:59.000Z</published>
     <updated>2020-09-23T15:46:50.055Z</updated>
     
@@ -279,17 +279,17 @@
     
     
     
-    <category term="日記" scheme="https://blog.minato86.me/categories/%E6%97%A5%E8%A8%98/"/>
+    <category term="日記" scheme="https://blog.m86.work/categories/%E6%97%A5%E8%A8%98/"/>
     
     
-    <category term="日記" scheme="https://blog.minato86.me/tags/%E6%97%A5%E8%A8%98/"/>
+    <category term="日記" scheme="https://blog.m86.work/tags/%E6%97%A5%E8%A8%98/"/>
     
   </entry>
   
   <entry>
     <title>Go言語ことはじめ</title>
-    <link href="https://blog.minato86.me/2020/07/29/Go%E8%A8%80%E8%AA%9E%E3%81%93%E3%81%A8%E3%81%AF%E3%81%98%E3%82%81/"/>
-    <id>https://blog.minato86.me/2020/07/29/Go%E8%A8%80%E8%AA%9E%E3%81%93%E3%81%A8%E3%81%AF%E3%81%98%E3%82%81/</id>
+    <link href="https://blog.m86.work/2020/07/29/Go%E8%A8%80%E8%AA%9E%E3%81%93%E3%81%A8%E3%81%AF%E3%81%98%E3%82%81/"/>
+    <id>https://blog.m86.work/2020/07/29/Go%E8%A8%80%E8%AA%9E%E3%81%93%E3%81%A8%E3%81%AF%E3%81%98%E3%82%81/</id>
     <published>2020-07-28T19:23:08.000Z</published>
     <updated>2020-09-23T15:46:50.057Z</updated>
     
@@ -307,17 +307,17 @@
     
     
     
-    <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    <category term="技術" scheme="https://blog.m86.work/categories/%E6%8A%80%E8%A1%93/"/>
     
     
-    <category term="Golang" scheme="https://blog.minato86.me/tags/Golang/"/>
+    <category term="Golang" scheme="https://blog.m86.work/tags/Golang/"/>
     
   </entry>
   
   <entry>
     <title>Goで独自パッケージがimportできない</title>
-    <link href="https://blog.minato86.me/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/"/>
-    <id>https://blog.minato86.me/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/</id>
+    <link href="https://blog.m86.work/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/"/>
+    <id>https://blog.m86.work/2020/07/28/Go%E3%81%A7%E7%8B%AC%E8%87%AA%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%8Cimport%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/</id>
     <published>2020-07-28T11:05:11.000Z</published>
     <updated>2020-09-23T15:46:50.057Z</updated>
     
@@ -332,19 +332,19 @@
     
     
     
-    <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    <category term="技術" scheme="https://blog.m86.work/categories/%E6%8A%80%E8%A1%93/"/>
     
     
-    <category term="Golang" scheme="https://blog.minato86.me/tags/Golang/"/>
+    <category term="Golang" scheme="https://blog.m86.work/tags/Golang/"/>
     
-    <category term="VisualStudioCode" scheme="https://blog.minato86.me/tags/VisualStudioCode/"/>
+    <category term="VisualStudioCode" scheme="https://blog.m86.work/tags/VisualStudioCode/"/>
     
   </entry>
   
   <entry>
     <title>Google Drive FileStream上でYarnは使えない</title>
-    <link href="https://blog.minato86.me/2020/07/24/Google-Drive-FileStream%E4%B8%8A%E3%81%A7Yarn%E3%81%AF%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/"/>
-    <id>https://blog.minato86.me/2020/07/24/Google-Drive-FileStream%E4%B8%8A%E3%81%A7Yarn%E3%81%AF%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/</id>
+    <link href="https://blog.m86.work/2020/07/24/Google-Drive-FileStream%E4%B8%8A%E3%81%A7Yarn%E3%81%AF%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/"/>
+    <id>https://blog.m86.work/2020/07/24/Google-Drive-FileStream%E4%B8%8A%E3%81%A7Yarn%E3%81%AF%E4%BD%BF%E3%81%88%E3%81%AA%E3%81%84/</id>
     <published>2020-07-23T16:42:38.000Z</published>
     <updated>2020-09-23T15:46:50.056Z</updated>
     
@@ -359,19 +359,19 @@
     
     
     
-    <category term="不具合" scheme="https://blog.minato86.me/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
+    <category term="不具合" scheme="https://blog.m86.work/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
     
     
-    <category term="Node.js" scheme="https://blog.minato86.me/tags/Node-js/"/>
+    <category term="Node.js" scheme="https://blog.m86.work/tags/Node-js/"/>
     
-    <category term="Yarn" scheme="https://blog.minato86.me/tags/Yarn/"/>
+    <category term="Yarn" scheme="https://blog.m86.work/tags/Yarn/"/>
     
   </entry>
   
   <entry>
     <title>ブラウザを変えたので入れてる拡張機能を紹介する</title>
-    <link href="https://blog.minato86.me/2020/07/23/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E3%81%AE%E3%81%A7%E5%85%A5%E3%82%8C%E3%81%A6%E3%82%8B%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B/"/>
-    <id>https://blog.minato86.me/2020/07/23/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E3%81%AE%E3%81%A7%E5%85%A5%E3%82%8C%E3%81%A6%E3%82%8B%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B/</id>
+    <link href="https://blog.m86.work/2020/07/23/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E3%81%AE%E3%81%A7%E5%85%A5%E3%82%8C%E3%81%A6%E3%82%8B%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B/"/>
+    <id>https://blog.m86.work/2020/07/23/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%92%E5%A4%89%E3%81%88%E3%81%9F%E3%81%AE%E3%81%A7%E5%85%A5%E3%82%8C%E3%81%A6%E3%82%8B%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD%E3%82%92%E7%B4%B9%E4%BB%8B%E3%81%99%E3%82%8B/</id>
     <published>2020-07-23T01:47:46.000Z</published>
     <updated>2020-09-23T15:46:50.059Z</updated>
     
@@ -386,19 +386,19 @@
     
     
     
-    <category term="ソフトウェアレポート" scheme="https://blog.minato86.me/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
+    <category term="ソフトウェアレポート" scheme="https://blog.m86.work/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
     
     
-    <category term="ブラウザ" scheme="https://blog.minato86.me/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"/>
+    <category term="ブラウザ" scheme="https://blog.m86.work/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"/>
     
-    <category term="拡張機能" scheme="https://blog.minato86.me/tags/%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD/"/>
+    <category term="拡張機能" scheme="https://blog.m86.work/tags/%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD/"/>
     
   </entry>
   
   <entry>
     <title>俺はBraveブラウザという幻想に縛られている</title>
-    <link href="https://blog.minato86.me/2020/07/23/%E4%BF%BA%E3%81%AFBrave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A8%E3%81%84%E3%81%86%E5%B9%BB%E6%83%B3%E3%81%AB%E7%B8%9B%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B/"/>
-    <id>https://blog.minato86.me/2020/07/23/%E4%BF%BA%E3%81%AFBrave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A8%E3%81%84%E3%81%86%E5%B9%BB%E6%83%B3%E3%81%AB%E7%B8%9B%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B/</id>
+    <link href="https://blog.m86.work/2020/07/23/%E4%BF%BA%E3%81%AFBrave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A8%E3%81%84%E3%81%86%E5%B9%BB%E6%83%B3%E3%81%AB%E7%B8%9B%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B/"/>
+    <id>https://blog.m86.work/2020/07/23/%E4%BF%BA%E3%81%AFBrave%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A8%E3%81%84%E3%81%86%E5%B9%BB%E6%83%B3%E3%81%AB%E7%B8%9B%E3%82%89%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B/</id>
     <published>2020-07-23T01:28:42.000Z</published>
     <updated>2020-09-23T15:46:50.059Z</updated>
     
@@ -412,17 +412,17 @@
     
     
     
-    <category term="ソフトウェアレポート" scheme="https://blog.minato86.me/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
+    <category term="ソフトウェアレポート" scheme="https://blog.m86.work/categories/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
     
     
-    <category term="ブラウザ" scheme="https://blog.minato86.me/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"/>
+    <category term="ブラウザ" scheme="https://blog.m86.work/tags/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6/"/>
     
   </entry>
   
   <entry>
     <title>ぼくのリポジトリが北極に保存された</title>
-    <link href="https://blog.minato86.me/2020/07/17/%E3%81%BC%E3%81%8F%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8C%E5%8C%97%E6%A5%B5%E3%81%AB%E4%BF%9D%E5%AD%98%E3%81%95%E3%82%8C%E3%81%9F/"/>
-    <id>https://blog.minato86.me/2020/07/17/%E3%81%BC%E3%81%8F%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8C%E5%8C%97%E6%A5%B5%E3%81%AB%E4%BF%9D%E5%AD%98%E3%81%95%E3%82%8C%E3%81%9F/</id>
+    <link href="https://blog.m86.work/2020/07/17/%E3%81%BC%E3%81%8F%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8C%E5%8C%97%E6%A5%B5%E3%81%AB%E4%BF%9D%E5%AD%98%E3%81%95%E3%82%8C%E3%81%9F/"/>
+    <id>https://blog.m86.work/2020/07/17/%E3%81%BC%E3%81%8F%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%8C%E5%8C%97%E6%A5%B5%E3%81%AB%E4%BF%9D%E5%AD%98%E3%81%95%E3%82%8C%E3%81%9F/</id>
     <published>2020-07-17T06:48:54.000Z</published>
     <updated>2020-09-23T15:46:50.058Z</updated>
     
@@ -437,17 +437,17 @@
     
     
     
-    <category term="雑記" scheme="https://blog.minato86.me/categories/%E9%9B%91%E8%A8%98/"/>
+    <category term="雑記" scheme="https://blog.m86.work/categories/%E9%9B%91%E8%A8%98/"/>
     
     
-    <category term="Github" scheme="https://blog.minato86.me/tags/Github/"/>
+    <category term="Github" scheme="https://blog.m86.work/tags/Github/"/>
     
   </entry>
   
   <entry>
     <title>限界映像大会が第100回になります</title>
-    <link href="https://blog.minato86.me/2020/07/11/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A%E3%81%8C%E7%AC%AC100%E5%9B%9E%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99/"/>
-    <id>https://blog.minato86.me/2020/07/11/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A%E3%81%8C%E7%AC%AC100%E5%9B%9E%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99/</id>
+    <link href="https://blog.m86.work/2020/07/11/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A%E3%81%8C%E7%AC%AC100%E5%9B%9E%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99/"/>
+    <id>https://blog.m86.work/2020/07/11/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A%E3%81%8C%E7%AC%AC100%E5%9B%9E%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99/</id>
     <published>2020-07-10T17:28:53.000Z</published>
     <updated>2020-09-23T15:46:50.060Z</updated>
     
@@ -463,17 +463,17 @@
     
     
     
-    <category term="お知らせ" scheme="https://blog.minato86.me/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"/>
+    <category term="お知らせ" scheme="https://blog.m86.work/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"/>
     
     
-    <category term="運営" scheme="https://blog.minato86.me/tags/%E9%81%8B%E5%96%B6/"/>
+    <category term="運営" scheme="https://blog.m86.work/tags/%E9%81%8B%E5%96%B6/"/>
     
   </entry>
   
   <entry>
     <title>Google Cloud SDKでUnicodeEncodeErrorが出る</title>
-    <link href="https://blog.minato86.me/2020/07/10/Google-Cloud-SDK%E3%81%A7UnicodeEncodeError%E3%81%8C%E5%87%BA%E3%82%8B/"/>
-    <id>https://blog.minato86.me/2020/07/10/Google-Cloud-SDK%E3%81%A7UnicodeEncodeError%E3%81%8C%E5%87%BA%E3%82%8B/</id>
+    <link href="https://blog.m86.work/2020/07/10/Google-Cloud-SDK%E3%81%A7UnicodeEncodeError%E3%81%8C%E5%87%BA%E3%82%8B/"/>
+    <id>https://blog.m86.work/2020/07/10/Google-Cloud-SDK%E3%81%A7UnicodeEncodeError%E3%81%8C%E5%87%BA%E3%82%8B/</id>
     <published>2020-07-10T13:02:51.000Z</published>
     <updated>2020-09-23T15:46:50.056Z</updated>
     
@@ -488,19 +488,19 @@
     
     
     
-    <category term="不具合" scheme="https://blog.minato86.me/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
+    <category term="不具合" scheme="https://blog.m86.work/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
     
     
-    <category term="GoogleCloudPlatform" scheme="https://blog.minato86.me/tags/GoogleCloudPlatform/"/>
+    <category term="GoogleCloudPlatform" scheme="https://blog.m86.work/tags/GoogleCloudPlatform/"/>
     
-    <category term="GitBash" scheme="https://blog.minato86.me/tags/GitBash/"/>
+    <category term="GitBash" scheme="https://blog.m86.work/tags/GitBash/"/>
     
   </entry>
   
   <entry>
     <title>Material UIのTabsのindicatorのCSSをいじる</title>
-    <link href="https://blog.minato86.me/2020/07/09/Material-UI%E3%81%AETabs%E3%81%AEindicator%E3%81%AECSS%E3%82%92%E3%81%84%E3%81%98%E3%82%8B/"/>
-    <id>https://blog.minato86.me/2020/07/09/Material-UI%E3%81%AETabs%E3%81%AEindicator%E3%81%AECSS%E3%82%92%E3%81%84%E3%81%98%E3%82%8B/</id>
+    <link href="https://blog.m86.work/2020/07/09/Material-UI%E3%81%AETabs%E3%81%AEindicator%E3%81%AECSS%E3%82%92%E3%81%84%E3%81%98%E3%82%8B/"/>
+    <id>https://blog.m86.work/2020/07/09/Material-UI%E3%81%AETabs%E3%81%AEindicator%E3%81%AECSS%E3%82%92%E3%81%84%E3%81%98%E3%82%8B/</id>
     <published>2020-07-08T18:28:40.000Z</published>
     <updated>2020-09-23T15:46:50.058Z</updated>
     
@@ -514,21 +514,21 @@
     
     
     
-    <category term="技術" scheme="https://blog.minato86.me/categories/%E6%8A%80%E8%A1%93/"/>
+    <category term="技術" scheme="https://blog.m86.work/categories/%E6%8A%80%E8%A1%93/"/>
     
     
-    <category term="Node.js" scheme="https://blog.minato86.me/tags/Node-js/"/>
+    <category term="Node.js" scheme="https://blog.m86.work/tags/Node-js/"/>
     
-    <category term="React" scheme="https://blog.minato86.me/tags/React/"/>
+    <category term="React" scheme="https://blog.m86.work/tags/React/"/>
     
-    <category term="CSS" scheme="https://blog.minato86.me/tags/CSS/"/>
+    <category term="CSS" scheme="https://blog.m86.work/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>Crowdin高いからほかの使おうぜ</title>
-    <link href="https://blog.minato86.me/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/"/>
-    <id>https://blog.minato86.me/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/</id>
+    <link href="https://blog.m86.work/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/"/>
+    <id>https://blog.m86.work/2020/06/20/Crowdin%E9%AB%98%E3%81%84%E3%81%8B%E3%82%89%E3%81%BB%E3%81%8B%E3%81%AE%E4%BD%BF%E3%81%8A%E3%81%86%E3%81%9C/</id>
     <published>2020-06-19T16:58:34.000Z</published>
     <updated>2020-09-23T15:46:50.056Z</updated>
     
@@ -547,12 +547,12 @@
     
     
     
-    <category term="ウェブサービスレポート" scheme="https://blog.minato86.me/categories/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
+    <category term="ウェブサービスレポート" scheme="https://blog.m86.work/categories/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88/"/>
     
     
-    <category term="Github" scheme="https://blog.minato86.me/tags/Github/"/>
+    <category term="Github" scheme="https://blog.m86.work/tags/Github/"/>
     
-    <category term="Crowdin" scheme="https://blog.minato86.me/tags/Crowdin/"/>
+    <category term="Crowdin" scheme="https://blog.m86.work/tags/Crowdin/"/>
     
   </entry>
   
