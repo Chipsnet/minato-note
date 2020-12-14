@@ -6,7 +6,7 @@
   <link href="https://blog.minato86.me/atom.xml" rel="self"/>
   
   <link href="https://blog.minato86.me/"/>
-  <updated>2020-12-08T13:33:30.244Z</updated>
+  <updated>2020-12-14T08:12:36.815Z</updated>
   <id>https://blog.minato86.me/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大人の事情によりこのサイトのドメインとデザインが変わりました</title>
+    <link href="https://blog.minato86.me/2020/12/14/%E5%A4%A7%E4%BA%BA%E3%81%AE%E4%BA%8B%E6%83%85%E3%81%AB%E3%82%88%E3%82%8A%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F/"/>
+    <id>https://blog.minato86.me/2020/12/14/%E5%A4%A7%E4%BA%BA%E3%81%AE%E4%BA%8B%E6%83%85%E3%81%AB%E3%82%88%E3%82%8A%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%81%A8%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%8C%E5%A4%89%E3%82%8F%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F/</id>
+    <published>2020-12-14T08:02:55.000Z</published>
+    <updated>2020-12-14T08:12:36.815Z</updated>
+    
+    <content type="html"><![CDATA[<p>このサイトを公開してもう結構経ちましたが、そろそろデザインでも変更するかということで、しました（事後報告）</p><p>今回デザインを変更するにあたり、使用しているサイトジェネレーターのhexoのテーマを探したんですが、以下の点を条件に探してみました。</p><ul><li>Google Adsenseに標準対応！</li><li>シェアボタンとか充実！</li><li>そこそこ整っている！</li></ul><p>ざっくりこんな感じ。<br>そして見つけたのがこの、icarusというテーマです。</p><h1 id="大人の事情ってなにさ"><a href="#大人の事情ってなにさ" class="headerlink" title="大人の事情ってなにさ"></a>大人の事情ってなにさ</h1><p>Google Adsenseを貼り付けたかったんですよね。<br>それでなんで、今まで使っていたblog.minato86.meからドメインを変更したかというと、minato86.meはGoogle Adsenseの審査に通ってないからですね。</p><p>m86.workは過去に審査通過していたので、もういいかってことでこっちにしました。</p><p>過去サイトに関してはあとで誘導ページを作っとく予定です（予定は未定）</p><p>なんでGoogle Adsenseを貼り付けたかったかというと、タダ単に金欠だからですね。<br>今までみたいに趣味みたいな感じでブログやるんですけど、それで少しでもお金は入ればいいな～っていう感じです。</p><h1 id="icarusの良いところ"><a href="#icarusの良いところ" class="headerlink" title="icarusの良いところ"></a>icarusの良いところ</h1><ul><li>機能ありまくり（使い切れない）</li><li>公式ドキュメントがそこそこわかりやすい</li><li>設定ファイルを自動生成してくれる（初回だけ）</li><li>エラーもモジュール側からでるので追いやすい</li><li>知り合いが使ってました←？</li></ul><p>こんな感じ。</p><p>なんかもうここまでくるとWordpressサイトとマジで見分けつきませんね<br>すげ～～</p><p>というわけで以上です。<br>まだfavconもogタグもなんも設定してないので、これから設定したいと思います。</p><p>なんで後回しかって？<br><strong>今テスト期間だから</strong> だよ</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;このサイトを公開してもう結構経ちましたが、そろそろデザインでも変更するかということで、しました（事後報告）&lt;/p&gt;
+&lt;p&gt;今回デザインを変更するにあたり、使用しているサイトジェネレーターのhexoのテーマを探したんですが、以下の点を条件に探してみました。&lt;/p&gt;
+&lt;ul&gt;
+</summary>
+      
+    
+    
+    
+    <category term="お知らせ" scheme="https://blog.minato86.me/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"/>
+    
+    
+    <category term="Hexo" scheme="https://blog.minato86.me/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>バンドルカード結構いいかもねって思ってるけどどうしようって話</title>
@@ -526,34 +553,6 @@
     <category term="Github" scheme="https://blog.minato86.me/tags/Github/"/>
     
     <category term="Crowdin" scheme="https://blog.minato86.me/tags/Crowdin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>俺のGeForce Shadow Playが録画してくれない</title>
-    <link href="https://blog.minato86.me/2020/05/24/%E4%BF%BA%E3%81%AEGeForce-Shadow-Play%E3%81%8C%E9%8C%B2%E7%94%BB%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%81%AA%E3%81%84/"/>
-    <id>https://blog.minato86.me/2020/05/24/%E4%BF%BA%E3%81%AEGeForce-Shadow-Play%E3%81%8C%E9%8C%B2%E7%94%BB%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%81%AA%E3%81%84/</id>
-    <published>2020-05-24T07:31:06.000Z</published>
-    <updated>2020-09-23T15:46:50.059Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://gyazo.com/bcc59ecc25348acaa2630b47f158f7b5"><img src="https://i.gyazo.com/bcc59ecc25348acaa2630b47f158f7b5.png" alt="Image from Gyazo"></a></p><p>こんな表示がでてGeForce Shadow Playの録画ができない。</p><ul><li>最新のGeForce Game Ready Driverを導入済み</li><li>GeForce Experienceも最新</li></ul><p>こんな感じ。</p><p>スペック的には</p><p><a href="https://gyazo.com/632295ab455798906a43c34506fa0472"><img src="https://i.gyazo.com/632295ab455798906a43c34506fa0472.png" alt="Image from Gyazo"></a></p><p>こんな感じ。<br>一応必要な要件は満たしてる。</p><h1 id="DDU使ってみる"><a href="#DDU使ってみる" class="headerlink" title="DDU使ってみる"></a>DDU使ってみる</h1><p>DDUを使ってみよう。<br>というか検索してもほとんどこれだし。</p><h2 id="DDUってなーに"><a href="#DDUってなーに" class="headerlink" title="DDUってなーに"></a>DDUってなーに</h2><p>Display Driver Uninstallerです。</p><p>普通にドライバアンインストールすると、いろいろ残ったりするんですが、こいつは跡形もなく消し去ってくれます。<br>グラボ周辺の機能問題で異常が出たときはこれをやるといいっていうのがセオリーみたいです。</p><h2 id="使い方"><a href="#使い方" class="headerlink" title="使い方"></a>使い方</h2><p>以下の記事を参照に。<br>私は一応セーフモードにしました。</p><p><a href="http://www.himajin-block30.com/entry/2018/12/01/165457">【Shadowplay】録画が機能しなくなった時の対処法一例 - 暇人雑記</a></p><h1 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h1><p>とりあえず動いてる</p><p>まぁいつも、数回録画できてからいきなり不可になるので、今後どうなるかはわかりません。<br>もしも問題起きたら追記するので、追記がなかったら問題がなかったということです。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://gyazo.com/bcc59ecc25348acaa2630b47f158f7b5&quot;&gt;&lt;img src=&quot;https://i.gyazo.com/bcc59ecc25348acaa2630b47f158f7b5.png&quot; alt=&quot;Ima</summary>
-      
-    
-    
-    
-    <category term="不具合" scheme="https://blog.minato86.me/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
-    
-    
-    <category term="GeForce" scheme="https://blog.minato86.me/tags/GeForce/"/>
-    
-    <category term="グラフィックボード" scheme="https://blog.minato86.me/tags/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%83%9C%E3%83%BC%E3%83%89/"/>
-    
-    <category term="ドライバ" scheme="https://blog.minato86.me/tags/%E3%83%89%E3%83%A9%E3%82%A4%E3%83%90/"/>
     
   </entry>
   
