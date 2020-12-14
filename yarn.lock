@@ -1245,10 +1245,10 @@ buffer-from@^1.0.0:
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
   integrity sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
 
-bulma-stylus@0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/bulma-stylus/-/bulma-stylus-0.8.0.tgz#137c182a1fdf9ac82f2e73bd3163aac454b105ae"
-  integrity sha512-9Q9BMPeHFyJ5EWh/tJPCcLDYEovKzUBOyMHsKEIyxSYEKG8wqt9RVuTumaJ2AfDjyHC9OifWKOfJSweKYD5IMQ==
+bulma-stylus@0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/bulma-stylus/-/bulma-stylus-0.9.1.tgz#a3d52ed078eef35efe5229ff4d8fbddd65d17f32"
+  integrity sha512-00u1O/RTyA+9SYZVYljliZcTltgCeZ/Ln0dLzAhYEWkS8WaMf7KWIimbnozSwemhlM0ZiDsHIMvMjoUAayRZ9Q==
 
 bytes@3.0.0:
   version "3.0.0"
@@ -2336,7 +2336,7 @@ hexo-renderer-ejs@1.0.0:
   dependencies:
     ejs "^2.6.1"
 
-hexo-renderer-inferno@^0.1.3:
+hexo-renderer-inferno@0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/hexo-renderer-inferno/-/hexo-renderer-inferno-0.1.3.tgz#9a83acf342c145e781e4812296f66d78e2d8f23e"
   integrity sha512-crtisttRWnpNKmhscYPTDGOIT7txTQPre9QU4+WkIHKKO7RCjjIT+Qt62GzX5mb0px/BLd2P4gZ5TItNY6ig1g==
@@ -2387,7 +2387,7 @@ hexo-server@2.0.0:
     open "^7.0.0"
     serve-static "^1.14.1"
 
-hexo-theme-icarus@^4.1.1:
+hexo-theme-icarus@4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/hexo-theme-icarus/-/hexo-theme-icarus-4.1.1.tgz#0d1f55181f8bdfb37df8cb1196dce8672e03cdce"
   integrity sha512-mKvvCOjSJ+9lVB/d4yTrrqNJsAc1Lrkag/wiZaHwLqtTexvVeckiUr7/hxPim49azIZM+7wQ79zEN2iMeUWhkQ==
