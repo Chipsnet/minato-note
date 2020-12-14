@@ -7,7 +7,7 @@ title: MinatoNote
 subtitle: '感じたことの全部'
 description: ''
 keywords:
-author: Minato86
+author: 巳波みなと
 language: ja
 timezone: ''
 
@@ -98,4 +98,4 @@ include:
 exclude:
 ignore:
 
-theme: anodyne
+theme: icarus
