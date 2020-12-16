@@ -2,7 +2,7 @@
 title: CoffeeScript + RaspberryPiでRedisを使ってみる
 date: 2020-03-13 14:17:15
 tags: ["CoffeeScript", "RaspberryPi", "Redis"]
-categories: ["技術", "データベース"]
+categories: 技術
 ---
 
 mongoDB入れようと思ったらラズパイでインストールできるバージョン古すぎて使えなかったので
