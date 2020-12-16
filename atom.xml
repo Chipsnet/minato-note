@@ -6,7 +6,7 @@
   <link href="https://blog.m86.work/atom.xml" rel="self"/>
   
   <link href="https://blog.m86.work/"/>
-  <updated>2020-12-14T13:33:37.191Z</updated>
+  <updated>2020-12-16T12:45:02.080Z</updated>
   <id>https://blog.m86.work/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Fediverseとの出会い、鯖の運営、ここまでの軌跡</title>
+    <link href="https://blog.m86.work/2020/12/15/Fediverse%E3%81%A8%E3%81%AE%E5%87%BA%E4%BC%9A%E3%81%84%E3%80%81%E9%AF%96%E3%81%AE%E9%81%8B%E5%96%B6%E3%80%81%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E8%BB%8C%E8%B7%A1/"/>
+    <id>https://blog.m86.work/2020/12/15/Fediverse%E3%81%A8%E3%81%AE%E5%87%BA%E4%BC%9A%E3%81%84%E3%80%81%E9%AF%96%E3%81%AE%E9%81%8B%E5%96%B6%E3%80%81%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E3%81%AE%E8%BB%8C%E8%B7%A1/</id>
+    <published>2020-12-15T13:09:42.000Z</published>
+    <updated>2020-12-16T12:45:02.080Z</updated>
+    
+    <content type="html"><![CDATA[<p>この記事は <strong><a href="https://adventar.org/calendars/6046">Fediverse Advent Calendar 2020</a>の第四会場16日目の記事です。</strong></p><p>noteとかに書こうと思ったんですが、せっかく先日ブログをリニューアルしたので、自分のブログに書いてみます。</p><p>まずは僕のTwitterのフォロワー向けのご挨拶。<br>どうも、みなとです。</p><p>まず最初にみなさんはFediverseってなんや？って思ってると思いますが、簡単に説明すると</p><p>TwitterみたいなSNSがたくさん相互につながった巨大なネットワークと思えばいいです。</p><p>そしてその一つ一つのTwitterみたいなSNSは、個人だったり企業だったりが運営しています。</p><p>そしてその大きなFediverseの中に鎮座している一つのサーバー「misskey.open-w.net」を管理しているのが、私です。</p><p>次にFediverseのみなさんにご挨拶。<br>始めまして、巳波みなとです。</p><p>先述したように、misskey.open-w.netというMisskey鯖の鯖缶をしています。</p><p>今回はMisskey見てたらたまたま見つけたこのアドベントカレンダーに、小さい鯖の鯖缶ですが投稿させてもらおうと思います。</p><p>この記事では、なぜFediverseを見つけ、参加したのか。なぜ一銭も入らないのに鯖缶をやっているのか。</p><p>について話していきたいと思います。</p><h1 id="Fediverseとの出会い"><a href="#Fediverseとの出会い" class="headerlink" title="Fediverseとの出会い"></a>Fediverseとの出会い</h1><p>簡単に言うと、Twitterに疲れて行き着いたのがここ、という感じです。</p><p>Fediverseのみんなほとんどそうでしょ？あたい知ってるよ</p><p>確か<a href="https://misskey.open-w.net/@ePi5131@misskey.io">ePi</a>さんから教えてもらったんじゃないかなと思っています。本当かは知りませんけど。</p><p><a href="https://gyazo.com/073255d4b8d03e1993f6bc1526f432ed"><img src="https://i.gyazo.com/073255d4b8d03e1993f6bc1526f432ed.png" alt="Image from Gyazo"></a></p><p><a href="https://join.misskey.page/ja/">Misskeyをはじめよう</a></p><p>このサイトを見て、「なんか面白そ～だな～」「てか和製なのかこれすごいな」と思った気がします。</p><p>そんなわけで、Misskey.ioがまだxyzだった時代に、Misskeyへ突入しました。</p><h1 id="Misskey-xyzでの生活"><a href="#Misskey-xyzでの生活" class="headerlink" title="Misskey.xyzでの生活"></a>Misskey.xyzでの生活</h1><p>なんかオセロばっかやってた記憶しかないですね。<br>あとはグローバルの流れの速さにめっちゃ驚きましたね。</p><p>ローカルはかなり内輪ノリな雰囲気で、入っていくのに苦労しましたが、一方で「はじめました！」と投稿するとめっちゃリアクション付くみたいなことがあって、それはかなり良かったですね。</p><p>でも一方で、やっぱり自分にはTwitterのほうが向いているなと感じて、徐々にMisskeyから離れていきます。</p><h1 id="Twitter危機"><a href="#Twitter危機" class="headerlink" title="Twitter危機"></a>Twitter危機</h1><p>Twitterが、「エロ絵師凍結するぜ」みたいなことになって（本当は今までと対して変わってなかったんだけど）一斉にPawooに流れ込んだことありましたよね。<br>その時に同時に僕もPawooに逃げ込みました。</p><p>それがFediverseとの再会でしたね。</p><p>でも、「あ、Pawoo合わないな」と思って、次はmstdn.jpに行きました。<br>ここでもなんか違う感があって、結局またMisskeyに戻ってきました。</p><h1 id="Misskey-ioでの生活"><a href="#Misskey-ioでの生活" class="headerlink" title="Misskey.ioでの生活"></a>Misskey.ioでの生活</h1><p>なんかMisskey.xyzがいつの間にか飛んでいて、Misskey.ioになりました。</p><p>LTLたのし～～～～～～～～っていって生活していたら、ここで</p><p>Misskey.ioのLTLが廃止されました。<br>原因は、開発者であるしゅいろさんがそもそもLTLが好きじゃなかったことが原因だった気がします。</p><p>ともかく、LTLしか使っていなかった私はどうしようかと思いました。<br>そこで思いついたのが、「自鯖でMisskey.ioと連合すれば、実質LTLじゃん」ということでした。</p><h1 id="自鯖での生活"><a href="#自鯖での生活" class="headerlink" title="自鯖での生活"></a>自鯖での生活</h1><p>Nginxのリバースプロキシ設定に苦戦しつつも、なんとかサーバーを開けることができました。</p><p>鯖機はマイクラサーバーとして稼働していた自宅サーバーに、Minecraftと共存させる形で稼働。</p><p>そこそこ楽しい生活を送っています。</p><p>Twitterでは言えないようなことを投稿したり、MisskeyやMastodonならではのガジェトークを覗いたりしています。</p><p>現在はマイクラ鯖と分断して、自宅に転がっていた低スペPC上で動いていますが、非常に快適です。</p><h1 id="なんで鯖缶やってるの？"><a href="#なんで鯖缶やってるの？" class="headerlink" title="なんで鯖缶やってるの？"></a>なんで鯖缶やってるの？</h1><p>理由は一つ、なんでも自由にできるからです。</p><p>自分の裁量で機能を取り込んだり、自分の連合したい場所だけ連合したり、なんでも思い通りです。</p><p>マジで最高。</p><h1 id="おわりに"><a href="#おわりに" class="headerlink" title="おわりに"></a>おわりに</h1><p>いかがでしたでしょうか。<br>これがFediverseとの出会い、そして現在までの軌跡です。</p><p>これを参考にしてもしなくてもいいですが、よいFediverseライフを。</p><p>↓ウチの鯖です。登録自由です。<br><a href="https://misskey.open-w.net/">OpenWorld.net</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;この記事は &lt;strong&gt;&lt;a href=&quot;https://adventar.org/calendars/6046&quot;&gt;Fediverse Advent Calendar 2020&lt;/a&gt;の第四会場16日目の記事です。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;noteとかに書こうと</summary>
+      
+    
+    
+    
+    <category term="雑記" scheme="https://blog.m86.work/categories/%E9%9B%91%E8%A8%98/"/>
+    
+    
+    <category term="運営" scheme="https://blog.m86.work/tags/%E9%81%8B%E5%96%B6/"/>
+    
+    <category term="自宅鯖" scheme="https://blog.m86.work/tags/%E8%87%AA%E5%AE%85%E9%AF%96/"/>
+    
+    <category term="Fediverse" scheme="https://blog.m86.work/tags/Fediverse/"/>
+    
+  </entry>
   
   <entry>
     <title>Oculus Quest LinkとSteamVR使うと音声が出ない</title>
@@ -523,34 +552,6 @@
     <category term="GoogleCloudPlatform" scheme="https://blog.m86.work/tags/GoogleCloudPlatform/"/>
     
     <category term="GitBash" scheme="https://blog.m86.work/tags/GitBash/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Material UIのTabsのindicatorのCSSをいじる</title>
-    <link href="https://blog.m86.work/2020/07/09/Material-UI%E3%81%AETabs%E3%81%AEindicator%E3%81%AECSS%E3%82%92%E3%81%84%E3%81%98%E3%82%8B/"/>
-    <id>https://blog.m86.work/2020/07/09/Material-UI%E3%81%AETabs%E3%81%AEindicator%E3%81%AECSS%E3%82%92%E3%81%84%E3%81%98%E3%82%8B/</id>
-    <published>2020-07-08T18:28:40.000Z</published>
-    <updated>2020-09-23T15:46:50.058Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> StyledTabs = withStyles(&#123;</span><br><span class="line">    indicator: &#123;</span><br><span class="line">        display: <span class="string">&quot;flex&quot;</span>,</span><br><span class="line">        justifyContent: <span class="string">&quot;center&quot;</span>,</span><br><span class="line">        backgroundColor: <span class="string">&quot;transparent&quot;</span>,</span><br><span class="line">        <span class="string">&quot;&amp; &gt; span&quot;</span>: &#123;</span><br><span class="line">            maxWidth: <span class="number">0</span>,</span><br><span class="line">            width: <span class="string">&quot;100%&quot;</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;)(<span class="function">(<span class="params">props</span>) =&gt;</span> <span class="xml"><span class="tag">&lt;<span class="name">Tabs</span> &#123;<span class="attr">...props</span>&#125; <span class="attr">TabIndicatorProps</span>=<span class="string">&#123;&#123;</span> <span class="attr">children:</span> &lt;<span class="attr">span</span> /&gt;</span> &#125;&#125; /&gt;</span>);</span><br></pre></td></tr></table></figure><p>こんな感じ<br>上記はindicatorのmaxWidthを0にして消してます</p><p>あとは通常<code>&lt;tabs&gt;&lt;/tabs&gt;</code>なところを<code>&lt;StyledTabs&gt;&lt;/StyledTabs&gt;</code>に変える<br>これでおｋ</p><p>基本的にはリファレンスとかに書いてあります<br>以下参考ページ</p><p><a href="https://material-ui.com/components/tabs/#experimental-api">Tabs React component - Material-UI</a><br><a href="https://material-ui.com/api/tabs/">Tabs API - Material-UI</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight jsx&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;</summary>
-      
-    
-    
-    
-    <category term="技術" scheme="https://blog.m86.work/categories/%E6%8A%80%E8%A1%93/"/>
-    
-    
-    <category term="Node.js" scheme="https://blog.m86.work/tags/Node-js/"/>
-    
-    <category term="React" scheme="https://blog.m86.work/tags/React/"/>
-    
-    <category term="CSS" scheme="https://blog.m86.work/tags/CSS/"/>
     
   </entry>
   
