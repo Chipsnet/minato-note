@@ -6,7 +6,7 @@
   <link href="https://blog.m86.work/atom.xml" rel="self"/>
   
   <link href="https://blog.m86.work/"/>
-  <updated>2020-12-16T12:45:02.080Z</updated>
+  <updated>2020-12-17T13:02:02.079Z</updated>
   <id>https://blog.m86.work/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>慶安のWIN-70Bのジャンクをもらったので修理してみる</title>
+    <link href="https://blog.m86.work/2020/12/17/%E6%85%B6%E5%AE%89%E3%81%AEWIN-70B%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%B3%E3%82%AF%E3%82%92%E3%82%82%E3%82%89%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A7%E4%BF%AE%E7%90%86%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/"/>
+    <id>https://blog.m86.work/2020/12/17/%E6%85%B6%E5%AE%89%E3%81%AEWIN-70B%E3%81%AE%E3%82%B8%E3%83%A3%E3%83%B3%E3%82%AF%E3%82%92%E3%82%82%E3%82%89%E3%81%A3%E3%81%9F%E3%81%AE%E3%81%A7%E4%BF%AE%E7%90%86%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B/</id>
+    <published>2020-12-17T12:58:32.000Z</published>
+    <updated>2020-12-17T13:02:02.079Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんばんは。</p><p>インターネットフレンドの<a href="https://misskey.open-w.net/@suzumiya">铃宫</a>くんから、慶安のWIN-70Bをもらったので、治してみたいと思います。</p><h1 id="状態"><a href="#状態" class="headerlink" title="状態"></a>状態</h1><ul><li>通常起動可</li><li>タッチパネル操作不可</li></ul><p>こんな感じ。<br>つまりタッチパネル不良のジャンク、というわけですね。</p><p>外傷はなく、特別壊れている感じはありません。</p><h1 id="推測"><a href="#推測" class="headerlink" title="推測"></a>推測</h1><p>中華タブレットをたくさんいじってる人ならまぁわかると思うんですが、中華タブレットのタッチパネルが効かなくなる原因のほとんどが、ドライバの不足なんですよね。</p><p>特に、DoubleDriverなどを使ってもバックアップできない（個別にする必要がある）SileadTouch.fwというドライバ、これがないとタッチパネルが反応しません。</p><p>状態を聞いた時、まずこれが浮かびました。</p><h1 id="準備"><a href="#準備" class="headerlink" title="準備"></a>準備</h1><p>とりあえずドライバを揃えます。</p><p>慶安のこのタブレットは、いろんな型番で販売されているらしく、「KEM-70B」と「KVI-70B」のドライバと互換性があるみたいです。</p><p>そこでまずは、 <a href="http://afritom.blog136.fc2.com/blog-entry-549.html">KEM-70B　KVI-70B　ドライバーはここにある！</a> さんのリンクから、ドライバとSileadTouch.fwをダウンロードしました。</p><h1 id="開封"><a href="#開封" class="headerlink" title="開封"></a>開封</h1><p>届いたので開封します（開封済みだけど）。</p><p><a href="https://gyazo.com/d5c529e78f017c131c9ba27429b21bcb"><img src="https://i.gyazo.com/d5c529e78f017c131c9ba27429b21bcb.jpg" alt="Image from Gyazo"></a></p><p>こんな感じの普通のタブレットですね。</p><p><a href="https://gyazo.com/b624dae7a5ed6bf8dd9f56ecd38b7cf6"><img src="https://i.gyazo.com/b624dae7a5ed6bf8dd9f56ecd38b7cf6.jpg" alt="Image from Gyazo"></a></p><p>中には保証書とマニュアルがありました。</p><p>まぁ読まなくてもどうにかなるでしょ</p><p><a href="https://gyazo.com/124181afd3210aee78c202c7c7a2022b"><img src="https://i.gyazo.com/124181afd3210aee78c202c7c7a2022b.jpg" alt="Image from Gyazo"></a></p><p>外見は聞いていた通りめっちゃ綺麗でした。</p><p>とりあえず充電せずに起動してみると</p><p><a href="https://gyazo.com/3bee14175fb5671d0eedc23bb2471bd2"><img src="https://i.gyazo.com/3bee14175fb5671d0eedc23bb2471bd2.jpg" alt="Image from Gyazo"></a></p><p>あっさり起動しちゃいました。</p><p>そして…………やっぱりタッチは効きませんでした。そりゃそう。</p><p><a href="https://gyazo.com/5c80902ae6bdff0a94095b73b82af8b3"><img src="https://i.gyazo.com/5c80902ae6bdff0a94095b73b82af8b3.jpg" alt="Image from Gyazo"></a></p><p>パソコンの情報を見てみると、タッチパネルは認識されています。</p><p>ということは、タッチパネル・ドライバは存在するようです。</p><h1 id="修理編"><a href="#修理編" class="headerlink" title="修理編"></a>修理編</h1><p>それではやっていきましょう。</p><p>まずは環境を整えます</p><p><a href="https://gyazo.com/a262959fd415bca4ed555a41aee58b83"><img src="https://i.gyazo.com/a262959fd415bca4ed555a41aee58b83.jpg" alt="Image from Gyazo"></a></p><p>充電可能なMicroUSBハブにマウスとキーボードを接続します。</p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">カオスになってきた <a href="https://t.co/smtSnNPmvW">pic.twitter.com/smtSnNPmvW</a></p>&mdash; Minami Minato/巳波みなと (@minatoo86) <a href="https://twitter.com/minatoo86/status/1339538786254917632?ref_src=twsrc%5Etfw">December 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><p>全部つなげるとこんな感じになりました。<br>カオスですね。</p><p><a href="https://gyazo.com/6189c54f033e60ab9005562918cbecd6"><img src="https://i.gyazo.com/6189c54f033e60ab9005562918cbecd6.jpg" alt="Image from Gyazo"></a></p><p>まずはUSBメモリに<code>SileadTouch.fw</code>を入れ、差し込みます。</p><p><a href="https://gyazo.com/09f06f6458500960e61798f09f3cced1"><img src="https://i.gyazo.com/09f06f6458500960e61798f09f3cced1.jpg" alt="Image from Gyazo"></a></p><p>それを、<code>C:\Windows\System32\drivers</code>に入れます。<br>この際管理者権限を求められるので許可します。</p><p>その後、再起動しましょう。</p><p>私の場合、この方法では治りませんでした。</p><p>タップは反応するようになりましたが、思い通りのところにタップされません。</p><p>そんなときは、まずコントロールパネルにアクセスして</p><p><a href="https://gyazo.com/a80bf85b13ae10b7ca2c52c5541da508"><img src="https://i.gyazo.com/a80bf85b13ae10b7ca2c52c5541da508.png" alt="Image from Gyazo"></a></p><p>ハードウェアとサウンドのタブレットPC設定を開きます。</p><p><a href="https://gyazo.com/1da6a03d6bfd4fb5ad606e6b088dcbeb"><img src="https://i.gyazo.com/1da6a03d6bfd4fb5ad606e6b088dcbeb.jpg" alt="Image from Gyazo"></a></p><p>そしてディスプレイオプションに「リセット」があるので選択します。</p><p>すると、使えるようになりました。<br>タッチ修理成功です！</p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">タッチパネルジャンクタブレット、なおったわ <a href="https://t.co/joQt9Tu6wQ">pic.twitter.com/joQt9Tu6wQ</a></p>&mdash; Minami Minato/巳波みなと (@minatoo86) <a href="https://twitter.com/minatoo86/status/1339543003313008641?ref_src=twsrc%5Etfw">December 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><p>こんな感じです。</p><p>参考になりましたかね？<br>最後に参照したサイトを貼っておきます。</p><p><a href="http://afritom.blog136.fc2.com/blog-entry-549.html">KEM-70B　KVI-70B　ドライバーはここにある！</a></p><p><a href="https://plaza.rakuten.co.jp/blucat3f/diary/201811250000/">WinTab7（Win-70B）のWindows10 大型アップデート苦戦 No.1 | 青猫の道草日記 - 楽天ブログ</a></p><p><a href="https://plaza.rakuten.co.jp/ftechworks/diary/202001160001/">Ployer MOMO7(or MOMO8) SileadTouch.fw を失いタッチパネル使用不可 - Windows10 1909 をクリーンインストールして失敗 | ふるた技工所(てっこうしょ) - 楽天ブログ</a></p><p><a href="http://eeepc.dnki.co.jp/?eid=1106892">KEIAN KVI-70B ドライバ保管庫 | Windows 高速化,EeePC,ネットブック カスタマイズ・改造・便利なオプション紹介</a></p><p><a href="https://bbs.kakaku.com/bbs/K0000789714/#19191083">価格.com - KEIAN KEM-70B のクチコミ掲示板</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんばんは。&lt;/p&gt;
+&lt;p&gt;インターネットフレンドの&lt;a href=&quot;https://misskey.open-w.net/@suzumiya&quot;&gt;铃宫&lt;/a&gt;くんから、慶安のWIN-70Bをもらったので、治してみたいと思います。&lt;/p&gt;
+&lt;h1 id=&quot;状態&quot;&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    <category term="技術" scheme="https://blog.m86.work/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+    <category term="Windowsタブレット" scheme="https://blog.m86.work/tags/Windows%E3%82%BF%E3%83%96%E3%83%AC%E3%83%83%E3%83%88/"/>
+    
+  </entry>
   
   <entry>
     <title>Fediverseとの出会い、鯖の運営、ここまでの軌跡</title>
@@ -525,33 +551,6 @@
     
     
     <category term="運営" scheme="https://blog.m86.work/tags/%E9%81%8B%E5%96%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google Cloud SDKでUnicodeEncodeErrorが出る</title>
-    <link href="https://blog.m86.work/2020/07/10/Google-Cloud-SDK%E3%81%A7UnicodeEncodeError%E3%81%8C%E5%87%BA%E3%82%8B/"/>
-    <id>https://blog.m86.work/2020/07/10/Google-Cloud-SDK%E3%81%A7UnicodeEncodeError%E3%81%8C%E5%87%BA%E3%82%8B/</id>
-    <published>2020-07-10T13:02:51.000Z</published>
-    <updated>2020-09-23T15:46:50.056Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>はてなブログで過去に公開した記事を移行しました<br>元リンクはこちら <a href="https://minato86.hatenablog.com/entry/2019/12/06/025130">https://minato86.hatenablog.com/entry/2019/12/06/025130</a></p></blockquote><p>こんなエラーが出た</p><p><code>ERROR: gcloud crashed (UnicodeEncodeError): &#39;ascii&#39; codec can&#39;t encode characters in position 3-8: ordinal not in range(128)</code></p><p>エラーから察するに文字コード系のエラーっぽい。</p><p>このエラーはGAEにデプロイする時やGCSDKのアップデートをする時とかに出るっぽい。</p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>何故かWindowsのPowerShellで<code>gcloud</code>コマンドを使用すると<code>ascii</code>を使ってしまうらしい。<br>それが悪さしてるっぽい</p><h2 id="解決策"><a href="#解決策" class="headerlink" title="解決策"></a>解決策</h2><p>Git導入してGitbashを使いましょう</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;はてなブログで過去に公開した記事を移行しました&lt;br&gt;元リンクはこちら &lt;a href=&quot;https://minato86.hatenablog.com/entry/2019/12/06/025130&quot;&gt;https://minato86.haten</summary>
-      
-    
-    
-    
-    <category term="不具合" scheme="https://blog.m86.work/categories/%E4%B8%8D%E5%85%B7%E5%90%88/"/>
-    
-    
-    <category term="GoogleCloudPlatform" scheme="https://blog.m86.work/tags/GoogleCloudPlatform/"/>
-    
-    <category term="GitBash" scheme="https://blog.m86.work/tags/GitBash/"/>
     
   </entry>
   
