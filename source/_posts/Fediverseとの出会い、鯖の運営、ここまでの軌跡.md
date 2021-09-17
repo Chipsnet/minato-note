@@ -27,6 +27,7 @@ TwitterみたいなSNSがたくさん相互につながった巨大なネット�
 
 そしてその大きなFediverseの中に鎮座している一つのサーバー「misskey.open-w.net」を管理しているのが、私です。
 
+<!--more-->
 
 
 次にFediverseのみなさんにご挨拶。
