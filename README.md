@@ -17,3 +17,11 @@
 
 MIT（ブログコンテンツを除く）     
 ブログコンテンツの権利はすべて私に帰属します
+
+## フォント変更
+
+`theme/icarus/include/style/base.styl`
+
+```stylus
+$family-sans-serif ?= 'Noto Sans JP', Hiragino Sans, Helvetica, Arial, sans-serif
+```
