@@ -7,7 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo generate && gh-pages -d public -t",
     "server": "hexo server",
-    "new": "hexo new"
+    "new": "hexo new",
+    "draft": "hexo server --drafts"
   },
   "hexo": {
     "version": "5.4.0"
