@@ -1,4 +1,2 @@
 [submodule "themes/apollo"]
 	url = https://github.com/pinggod/hexo-theme-apollo
-[submodule "themes/anodyne"]
-	url = https://github.com/klugjo/hexo-theme-anodyne
