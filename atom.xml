@@ -6,7 +6,7 @@
   <link href="https://blog.m86.work/atom.xml" rel="self"/>
   
   <link href="https://blog.m86.work/"/>
-  <updated>2021-10-04T08:49:15.660Z</updated>
+  <updated>2021-10-04T18:18:31.422Z</updated>
   <id>https://blog.m86.work/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Misskey（めいすきー）で検索を有効にする覚書</title>
+    <link href="https://blog.m86.work/2021/10/05/misskey-serch/"/>
+    <id>https://blog.m86.work/2021/10/05/misskey-serch/</id>
+    <published>2021-10-04T17:54:26.000Z</published>
+    <updated>2021-10-04T18:18:31.422Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは。<br>実は私、OpenWorld.netというMisskeyサーバーを運営しています。</p><p>だいぶ前に検索を有効にしたのですが、なにかの拍子で無効になっちゃったみたいなので、有効にするメモです。</p><p>Misskeyについて知りたい人はここへ</p><p><a href="https://join.misskey.page/ja-JP/">https://join.misskey.page/ja-JP/</a></p><span id="more"></span><h1 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h1><p>この記事はめいすきー（Misskeyのフォーク）での方法です。<br>通常のMisskeyでの方法は知りません。</p><p>めいすきーはこちら<br><a href="https://github.com/mei23/misskey">https://github.com/mei23/misskey</a></p><h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><ul><li>Ubuntu 20.04.3 LTS</li></ul><h1 id="MeCabの導入"><a href="#MeCabの導入" class="headerlink" title="MeCabの導入"></a>MeCabの導入</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y mecab mecab-ipadic-utf8</span><br></pre></td></tr></table></figure><p>以上のコマンドでMeCabを導入します。</p><h1 id="Configファイルをいじる"><a href="#Configファイルをいじる" class="headerlink" title="Configファイルをいじる"></a>Configファイルをいじる</h1><p><code>misskey/.config/default.yml</code>を開きます。（nanoとかで大丈夫です）</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Mecab検索インデックス 使用する場合は以下を指定</span></span><br><span class="line"><span class="comment">#mecabSearch:</span></span><br><span class="line"><span class="comment">#  # mecabパス</span></span><br><span class="line"><span class="comment">#  mecabBin: mecab</span></span><br><span class="line"><span class="comment">#  # mecab辞書 (オプション)</span></span><br><span class="line"><span class="comment">#  mecabDic: /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd</span></span><br></pre></td></tr></table></figure><p>以上の箇所を以下のように変更します。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Mecab検索インデックス 使用する場合は以下を指定</span></span><br><span class="line"><span class="attr">mecabSearch:</span></span><br><span class="line">  <span class="comment"># mecabパス</span></span><br><span class="line">  <span class="attr">mecabBin:</span> <span class="string">mecab</span></span><br><span class="line"><span class="comment">#  # mecab辞書 (オプション)</span></span><br><span class="line"><span class="comment">#  mecabDic: /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd</span></span><br></pre></td></tr></table></figure><p>完了したら以下のコマンドで再起動します。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart misskey</span><br></pre></td></tr></table></figure><p><img src="https://i.gyazo.com/91efae6d1f98b4d50bb27a71974467d5.png"></p><p>こんな感じで検索ができるようになりました！</p><h1 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h1><p>検索を有効にした時点から検索できるようになるので、検索を有効にする以前の投稿は検索することができません。<br>なので新しいインスタンスを立てたら早めに有効にしましょう。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;こんにちは。&lt;br&gt;実は私、OpenWorld.netというMisskeyサーバーを運営しています。&lt;/p&gt;
+&lt;p&gt;だいぶ前に検索を有効にしたのですが、なにかの拍子で無効になっちゃったみたいなので、有効にするメモです。&lt;/p&gt;
+&lt;p&gt;Misskeyについて知りたい人はここへ&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://join.misskey.page/ja-JP/&quot;&gt;https://join.misskey.page/ja-JP/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技術" scheme="https://blog.m86.work/categories/%E6%8A%80%E8%A1%93/"/>
+    
+    
+    <category term="Node.js" scheme="https://blog.m86.work/tags/Node-js/"/>
+    
+    <category term="自宅鯖" scheme="https://blog.m86.work/tags/%E8%87%AA%E5%AE%85%E9%AF%96/"/>
+    
+    <category term="Misskey" scheme="https://blog.m86.work/tags/Misskey/"/>
+    
+  </entry>
   
   <entry>
     <title>UberEats収益報告第2週！まさかの時給2000円超え！ #3</title>
@@ -517,32 +545,6 @@
     
     
     <category term="Github" scheme="https://blog.m86.work/tags/Github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>限界映像大会が第100回になります</title>
-    <link href="https://blog.m86.work/2020/07/11/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A%E3%81%8C%E7%AC%AC100%E5%9B%9E%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99/"/>
-    <id>https://blog.m86.work/2020/07/11/%E9%99%90%E7%95%8C%E6%98%A0%E5%83%8F%E5%A4%A7%E4%BC%9A%E3%81%8C%E7%AC%AC100%E5%9B%9E%E3%81%AB%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99/</id>
-    <published>2020-07-10T17:28:53.000Z</published>
-    <updated>2020-09-23T15:46:50.060Z</updated>
-    
-    <content type="html"><![CDATA[<p>2018年12月19日に第1回限界映像大会が開催されてから、1年6ヶ月と22日。<br>本日2020年7月11日に限界映像大会は第100回を迎えます。</p><p>多くの人に支えられて限界映像大会はここまでこれました。<br>本当にありがとうございました。</p><p>限界大会は、最初は限界創作村というコミュニティーサーバーのモデリング大会から始まり、限界大会公式サーバーができ、その後限界映像大会などの大会を増やし、ここまで運営してきました。<br>途中なんども運営を断念しようとしたりしましたが、多くの人に支えられ、これまで続いています。</p><p>これはひとえに参加して頂いている皆様のおかげです。ありがとうございます。<br>また、限界映像大会への楽曲利用に協力していただいた作曲者の皆様に、この場を借りてお礼申しあげます。</p><p>100回という数字、運営である私自信が１番現実味がありません。<br>どうしてこうなってしまったんだ。。。。。。。。。。。。。</p><p>さて、これからも限界大会は続いていきます。<br>どうかご支援、ご参加、よろしくお願いします！</p><p>限界大会への参加はこちら<br><a href="https://genkai.open-w.net/">限界大会 - TeamOpenWorld</a></p><blockquote class="twitter-tweet"><p lang="ja" dir="ltr">🔥限界映像大会100回記念🔥<br><br>限界映像大会は、次の開催で100回を迎えます。<br>そこで、参加者様から限界大会にまつわるエピソードを募集します。<br>募集したエピソードは、限界大会公式HPに掲載致します。<br><br>ぜひ皆さんのエピソードをお寄せください！<a href="https://t.co/XOP9hskuIo">https://t.co/XOP9hskuIo</a></p>&mdash; 限界大会 運営チーム (@genkai_eizo) <a href="https://twitter.com/genkai_eizo/status/1279733259518136321?ref_src=twsrc%5Etfw">July 5, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><p>エピソード募集してます↑</p><p><a href="https://ko-fi.com/A0A81VPXD"><img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="ko-fi"></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;2018年12月19日に第1回限界映像大会が開催されてから、1年6ヶ月と22日。&lt;br&gt;本日2020年7月11日に限界映像大会は第100回を迎えます。&lt;/p&gt;
-&lt;p&gt;多くの人に支えられて限界映像大会はここまでこれました。&lt;br&gt;本当にありがとうございました。&lt;/p&gt;
-&lt;p&gt;</summary>
-      
-    
-    
-    
-    <category term="お知らせ" scheme="https://blog.m86.work/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"/>
-    
-    
-    <category term="運営" scheme="https://blog.m86.work/tags/%E9%81%8B%E5%96%B6/"/>
     
   </entry>
   
