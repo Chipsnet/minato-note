@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.m86.work/2021/10/06/cant-hotreload-tailwind-nuxt/</loc>
+    
+    <lastmod>2021-11-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.m86.work/2021/11/04/nuxt-googlead-test/</loc>
     
     <lastmod>2021-11-04</lastmod>
